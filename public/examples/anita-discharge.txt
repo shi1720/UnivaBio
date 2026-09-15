@@ -1,0 +1,18 @@
+FICTIONAL EXAMPLE - NOT A REAL PATIENT RECORD
+Patient: Anita Rao
+Discharge destination: Home with daughter Maya.
+
+Hospital stay
+Anita was treated for a respiratory infection. Her condition improved during admission.
+
+Unfinished care
+Blood culture results are pending at discharge.
+Follow up with your primary care clinician within 7 days of discharge.
+Repeat a complete blood count in 2 weeks.
+
+Medication and safety instructions
+Continue your medication exactly as prescribed on the medication list.
+Seek emergency care for severe chest pain or difficulty breathing.
+
+Questions and support
+Bring this discharge summary to your next visit.

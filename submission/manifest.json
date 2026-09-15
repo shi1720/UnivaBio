@@ -1,0 +1,103 @@
+{
+  "project": "Looplight",
+  "creator": "Shivam Gupta",
+  "engine_release": "hybrid-1.2",
+  "files": {
+    "looplight-one-page.pdf": {
+      "sha256": "9d8987a0de9b88759690e0597745b06a2f3fa28ae642950cda7b4b8521b21faf",
+      "bytes": 31697
+    },
+    "looplight-pitch.pptx": {
+      "sha256": "629927a03a29a1f5ac0d80bf1aa0349583cae6b841c1f0bf2c83fe7a3cd598e7",
+      "bytes": 75176
+    },
+    "looplight-pitch.pdf": {
+      "sha256": "4d548e5bfa90941015a6cebbd9c22921f770189c97054d5f41ec02c1e3f031bd",
+      "bytes": 247383
+    },
+    "demo-script.md": {
+      "sha256": "497caf6c78c2e8d73f085680aa0aceb2703717e4e85916199684e7ddbea82860",
+      "bytes": 6949
+    },
+    "devpost-copy.md": {
+      "sha256": "ec72b705b9d37a31c54dd1c624f03fe34343a42bc0e7d1d57776490d27c1a15c",
+      "bytes": 7599
+    },
+    "code-walkthrough-and-judge-qa.md": {
+      "sha256": "e1954ff8734e25dbfe2b10be7b0ffee1b0b9705ca461695c4886ace17a52e374",
+      "bytes": 11805
+    },
+    "looplight-screenshot-walkthrough.mp4": {
+      "sha256": "e6f011f1af479a7d7b76c46e6551f506287db718a0be62b1c3de7e3fe73b8cdd",
+      "bytes": 3969952
+    },
+    "looplight-walkthrough.srt": {
+      "sha256": "2f88b56c7681d40483ce9430bc873436df84cccd6cb8341c04e2455e8a504271",
+      "bytes": 3976
+    },
+    "walkthrough-recording-guide.md": {
+      "sha256": "3becaaf1a90ecc1b314208f481ed8cb4ae809b75772528207e0efdec6a4d8f15",
+      "bytes": 3247
+    },
+    "walkthrough-timeline.json": {
+      "sha256": "fb058adec888718f0707eb679b18c87a44d3ecd86d0f81d5cb94a5703dd47d4d",
+      "bytes": 4758
+    },
+    "walkthrough-verification.json": {
+      "sha256": "c1a4ff61659d459e4730f55a2de8cdec0981b09c9ea2bac834df08eb2689f695",
+      "bytes": 1667
+    },
+    "source-inventory.sha256": {
+      "sha256": "ecabbb9a74b500dfe3b5db20ea807072f224fc43281dffaba69cdc002d649f6e",
+      "bytes": 15393
+    },
+    "START-HERE.md": {
+      "sha256": "0170a9baf7955aee31111b7340a94e29866d5844ddc0bad41ed5dbfb762f707a",
+      "bytes": 2025
+    },
+    "source-inventory.json": {
+      "sha256": "0ecdd48fc211951c6ae2bbf9be19a56198a7f43dc9aafc62e7b420d7ff0a32d3",
+      "bytes": 52171
+    },
+    "source-inventory.md": {
+      "sha256": "e2c215bcb21f4323e09a1554e0b764e8b75e3dd86af9e2128db5a9590c230fda",
+      "bytes": 22382
+    },
+    "pdf-verification.json": {
+      "sha256": "69654228cca132591634059e47d53a26a9647e5d21bc74ad48f81573ab212c5e",
+      "bytes": 39524
+    },
+    "looplight-code.pdf": {
+      "sha256": "8a04f0bb66a9ce16cdd599e4cffd86f0a501de39a3c0e2690483291aeec7e005",
+      "bytes": 1594161
+    },
+    "PDF-QA.md": {
+      "sha256": "a5214218a232216d3adcff79a9daad04cdb554ba9568eed30bcc5a56032f3236",
+      "bytes": 1963
+    },
+    "CHECKLIST.md": {
+      "sha256": "a7bd1bc2dc480983675329b91dc9612b13bb87f8a9cccd7495c25044fe8b937c",
+      "bytes": 3740
+    },
+    "looplight-code.pdf.sha256": {
+      "sha256": "19c291b9b4b020cd654d1350942e7874e92e966be82e49648ec636b0aa9dd004",
+      "bytes": 85
+    },
+    "render-verification.json": {
+      "sha256": "86773138592f73f8a275b1d4355acb9f4a27cb166c0ee8f5eb8ef7d57dae9c96",
+      "bytes": 1289
+    }
+  },
+  "verification": {
+    "one_page_pdf_pages": 1,
+    "deck_slides": 7,
+    "deck_all_slides_rendered_and_visually_checked": true,
+    "video_seconds": 189.97,
+    "video_resolution": [
+      1920,
+      1080
+    ],
+    "video_audio": false,
+    "narration_words": 419
+  }
+}

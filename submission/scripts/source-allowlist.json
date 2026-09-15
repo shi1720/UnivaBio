@@ -1,0 +1,87 @@
+{
+  "schema": "looplight-code-inventory-policy-v1",
+  "printed_exact_files": [
+    "package.json",
+    "tsconfig.json",
+    "next.config.ts",
+    "next-env.d.ts",
+    "vite.config.ts",
+    "eslint.config.mjs",
+    "postcss.config.mjs",
+    "drizzle.config.ts",
+    "cloudflare-env.d.ts",
+    "components.json",
+    ".openai/hosting.json",
+    ".gitignore",
+    ".npmrc",
+    ".env.example",
+    "public/favicon.svg",
+    "public/examples/anita-discharge.txt",
+    "submission/scripts/source-allowlist.json",
+    "wrangler.local.jsonc",
+    ".github/workflows/ci.yml"
+  ],
+  "printed_source_directories": [
+    "app",
+    "lib",
+    "tests",
+    "db",
+    "scripts",
+    "submission/scripts",
+    "submission/builders"
+  ],
+  "printed_source_extensions": [
+    ".ts",
+    ".tsx",
+    ".mts",
+    ".js",
+    ".jsx",
+    ".mjs",
+    ".cjs",
+    ".py",
+    ".sh",
+    ".css",
+    ".sql",
+    ".html"
+  ],
+  "printed_globs": [
+    "ml/**/*.py",
+    "ml/**/*.ts",
+    "ml/**/*.mts",
+    "ml/**/*.mjs",
+    "drizzle/*.sql",
+    "ml/**/*.patch"
+  ],
+  "hash_only_globs": [
+    "ml/**/*.json",
+    "ml/**/*.md",
+    "drizzle/meta/*.json",
+    "package-lock.json",
+    "README.md",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "docs/**/*.md",
+    "public/examples/*.pdf",
+    "submission/assets/**/*",
+    "submission/scripts/*.json",
+    "submission/scripts/requirements*.txt",
+    "submission/scripts/*.md",
+    "submission/builders/*.json"
+  ],
+  "excluded_path_parts": [
+    "node_modules",
+    ".git",
+    ".next",
+    "dist",
+    "tmp",
+    ".wrangler",
+    ".sites-runtime",
+    ".vinext",
+    "__pycache__"
+  ],
+  "excluded_root_prefixes": [
+    "Amazon Developer Hackathon",
+    "dayweave"
+  ],
+  "exclusion_note": "No foreign projects, dependency trees, build outputs, real .env files, untouched components/ui, vendored PDF.js worker, or temporary runtime state. Generated model/data/evaluation JSON, the dependency lockfile, supporting prose, and binary assets are hash-listed rather than printed. All printed files are also embedded in the PDF as byte-exact source attachments. Inclusion does not assert that inherited runtime helpers were authored from scratch."
+}

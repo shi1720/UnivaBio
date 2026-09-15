@@ -1,0 +1,15 @@
+{
+  "dataset_sha256": "76acc8b279981a6a3990f6076011ca10bda8e1deb1633b1908811061aeef272e",
+  "source_checkout": "/Users/shivamgupta/Downloads/UnivaBio/UnivaBio",
+  "evaluation_phase": "release_regression_on_seen_fixtures",
+  "files": {
+    "lib/engine.ts": "b4f8bebb0a0af41b4a3286bff67caaa580a748197a51ead2aac4083838b31dcc",
+    "lib/dates.ts": "c1e320dccb8fbac7f590cdfb5d4f84d64427f4bf5a7c774d59081a5c01d630ec",
+    "lib/types.ts": "22cb2337ffcf3ba4ec152d3965951f43fee0d0e4e1deef80c0db321da4b34470",
+    "ml/inference.ts": "00c884afd1fffa0e88c445950184c33d5f949f855591cd4d74b7520efdba69d7",
+    "ml/model.json": "69b5be6a4ea5d32226cc36924ea53550359c672dd62a32b6eb175ae0e5109893"
+  },
+  "policy": "Release regression on seen fixtures; current checkout imported read-only. Exact source copied for reproducibility and rules-only adapter. Initial snapshot and measured results retained.",
+  "rules_only_adapter_sha256": "bccd7dfbff20e39be4f9950cb383861e1753650c814999a4a8e303bc4d98bc3a",
+  "saved_snapshot": "/private/tmp/univabio-pipeline-eval/release-snapshots/run-COVN6G"
+}

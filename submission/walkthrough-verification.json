@@ -1,0 +1,29 @@
+{
+  "video": "looplight-screenshot-walkthrough.mp4",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "duration_seconds": 189.97,
+  "expected_duration_seconds": 189.96666666666667,
+  "audio_stream": false,
+  "decoded_without_error": true,
+  "scene_count": 13,
+  "caption_count": 41,
+  "source_sha256": {
+    "assets/walkthrough/desktop-board.png": "1e75ce05cb5bb0523b2585411d3a17c0fec1db40d9afe79132b2fe7b47a631e5",
+    "assets/walkthrough/source-review.png": "8283f22dfabcea707de03f331f9913b5a126d04c4aa6469d74c4e00ae92d677a",
+    "assets/walkthrough/intake.png": "b6c119fb12fe303ba45616d700203f49c8687dee418c928aac966da99a854ba8",
+    "assets/walkthrough/sentence-review.png": "b8d5645cd817d52a85064bf35251a383022fbd065b6ef8691a5f01136ae42dcc",
+    "assets/walkthrough/confirmed-followup.png": "33bb6dfb97586f32479986aae5fb436ea5fe133521a9351fabf30a21b026e6a7",
+    "assets/walkthrough/result-received.png": "c6fb5f5ae1a31b0a149473b69619ba47331fc8635012790007f04d06f946471c",
+    "assets/walkthrough/reported-closure.png": "e98e062bfaf818719abaa9356fa3c43fdcb281db828142be1f2e8b50aee165f6",
+    "assets/walkthrough/visit-brief.png": "def3a41cee84d7c1da6c5947ecf6370ced733676c1bd9e888d67b45bb7ce1bc7"
+  },
+  "video_sha256": "e6f011f1af479a7d7b76c46e6551f506287db718a0be62b1c3de7e3fe73b8cdd",
+  "visual_qa": "All 13 scene layouts were previously visually inspected. After this narration-only revision, the changed signed-in-space caption was extracted from the final video and visually checked. The complete final video stream decoded without errors.",
+  "narration_word_count": 419,
+  "visual_frames_inspected": 13,
+  "final_changed_caption_checked": true
+}

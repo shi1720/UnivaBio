@@ -1,0 +1,13 @@
+{
+  "dataset_sha256": "76acc8b279981a6a3990f6076011ca10bda8e1deb1633b1908811061aeef272e",
+  "source_checkout": "/Users/shivamgupta/Downloads/UnivaBio/UnivaBio",
+  "files": {
+    "lib/engine.ts": "e0184b7e10cbcc4bcb3d6f5837a487a132a3ef91866e2f9610bc2b2e6d34659a",
+    "lib/dates.ts": "8dacc2163d36e77ae718cb1f28efd6c51cc719f657d89d2aded2220ee9b19b72",
+    "lib/types.ts": "30f1afaf1401c507d5e3f1f057f466d201490a2efeff9651da025590cc0b7eaa",
+    "ml/inference.ts": "92a6f436265899d46db93e0dfc7b4422ddd020bf8d672654f8574e183e93f3a2",
+    "ml/model.json": "69b5be6a4ea5d32226cc36924ea53550359c672dd62a32b6eb175ae0e5109893"
+  },
+  "policy": "Byte-for-byte application snapshot made after dataset freeze; no checkout writes. Baseline changes scoreSentence only.",
+  "rules_only_adapter_sha256": "d34911635bc6e8e4c470281c620e81830bb233e228080486b24c34e2e920ba38"
+}

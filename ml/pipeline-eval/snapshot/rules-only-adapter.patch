@@ -1,0 +1,13 @@
+--- engine.ts
++++ engine.rules-only.ts
+@@ -3,8 +3,8 @@
+ import model from '../ml/model.json';
+ import { createSentenceClassifier } from '../ml/inference';
+ const classifier=createSentenceClassifier(model);
+-function scoreSentence(text: string): { label: Category; score: number } {
+- const result=classifier(text);return {label:result.label,score:result.confidence};
++function scoreSentence(_text: string): { label: Category; score: number } {
++ return {label:'unknown',score:0};
+ }
+ export const ENGINE_VERSION='looplight-hybrid-1.1';
+ const MAX_PROPOSALS=100;

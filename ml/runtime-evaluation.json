@@ -1,0 +1,11 @@
+{
+  "examples": 50,
+  "rawAccuracy": 0.82,
+  "accepted": 6,
+  "abstained": 44,
+  "acceptedCorrect": 6,
+  "meanInferenceMs": 0.029850779999999303,
+  "maxInferenceMs": 0.31604199999999594,
+  "scope": "Synthetic engineering evaluation; local machine timing, not clinical performance.",
+  "modelId": "looplight-sentence-softmax-v1"
+}

@@ -1,0 +1,1956 @@
+{
+  "file": "/private/tmp/univabio-codepdf/output/looplight-code.pdf",
+  "sha256": "8a04f0bb66a9ce16cdd599e4cffd86f0a501de39a3c0e2690483291aeec7e005",
+  "pages": 400,
+  "source_attachment_hashes_verified": 95,
+  "rendered_source_rows": 14711,
+  "source_pages": [
+    {
+      "page": 6,
+      "path": ".env.example",
+      "drawn_rows": 3
+    },
+    {
+      "page": 7,
+      "path": ".github/workflows/ci.yml",
+      "drawn_rows": 36
+    },
+    {
+      "page": 8,
+      "path": ".gitignore",
+      "drawn_rows": 44
+    },
+    {
+      "page": 9,
+      "path": ".gitignore",
+      "drawn_rows": 11
+    },
+    {
+      "page": 10,
+      "path": ".npmrc",
+      "drawn_rows": 3
+    },
+    {
+      "page": 11,
+      "path": ".openai/hosting.json",
+      "drawn_rows": 5
+    },
+    {
+      "page": 12,
+      "path": "app/api/account/route.ts",
+      "drawn_rows": 10
+    },
+    {
+      "page": 13,
+      "path": "app/api/analyze/route.ts",
+      "drawn_rows": 13
+    },
+    {
+      "page": 14,
+      "path": "app/api/episodes/[id]/route.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 15,
+      "path": "app/api/episodes/[id]/route.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 16,
+      "path": "app/api/episodes/[id]/route.ts",
+      "drawn_rows": 7
+    },
+    {
+      "page": 17,
+      "path": "app/api/episodes/route.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 18,
+      "path": "app/api/episodes/route.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 19,
+      "path": "app/api/episodes/route.ts",
+      "drawn_rows": 1
+    },
+    {
+      "page": 20,
+      "path": "app/chatgpt-auth.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 21,
+      "path": "app/chatgpt-auth.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 22,
+      "path": "app/chatgpt-auth.ts",
+      "drawn_rows": 2
+    },
+    {
+      "page": 23,
+      "path": "app/components/brief-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 24,
+      "path": "app/components/brief-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 25,
+      "path": "app/components/brief-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 26,
+      "path": "app/components/brief-dialog.tsx",
+      "drawn_rows": 11
+    },
+    {
+      "page": 27,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 28,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 29,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 30,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 31,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 32,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 33,
+      "path": "app/components/evidence-view.tsx",
+      "drawn_rows": 40
+    },
+    {
+      "page": 34,
+      "path": "app/components/import-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 35,
+      "path": "app/components/import-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 36,
+      "path": "app/components/import-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 37,
+      "path": "app/components/import-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 38,
+      "path": "app/components/import-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 39,
+      "path": "app/components/import-dialog.tsx",
+      "drawn_rows": 24
+    },
+    {
+      "page": 40,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 41,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 42,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 43,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 44,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 45,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 46,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 47,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 48,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 49,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 50,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 51,
+      "path": "app/components/loop-detail.tsx",
+      "drawn_rows": 30
+    },
+    {
+      "page": 52,
+      "path": "app/components/modal.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 53,
+      "path": "app/components/modal.tsx",
+      "drawn_rows": 15
+    },
+    {
+      "page": 54,
+      "path": "app/components/source-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 55,
+      "path": "app/components/source-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 56,
+      "path": "app/components/source-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 57,
+      "path": "app/components/source-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 58,
+      "path": "app/components/source-view.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 59,
+      "path": "app/components/source-view.tsx",
+      "drawn_rows": 17
+    },
+    {
+      "page": 60,
+      "path": "app/components/space-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 61,
+      "path": "app/components/space-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 62,
+      "path": "app/components/space-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 63,
+      "path": "app/components/space-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 64,
+      "path": "app/components/space-dialog.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 65,
+      "path": "app/components/space-dialog.tsx",
+      "drawn_rows": 29
+    },
+    {
+      "page": 66,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 67,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 68,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 69,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 70,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 71,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 72,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 73,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 74,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 75,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 76,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 77,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 78,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 79,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 80,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 81,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 82,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 83,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 84,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 85,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 86,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 87,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 88,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 89,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 90,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 91,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 92,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 93,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 94,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 95,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 96,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 97,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 98,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 99,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 100,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 101,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 102,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 103,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 104,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 105,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 106,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 107,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 108,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 109,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 110,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 111,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 112,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 113,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 114,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 115,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 116,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 117,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 118,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 119,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 120,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 121,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 122,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 123,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 124,
+      "path": "app/globals.css",
+      "drawn_rows": 44
+    },
+    {
+      "page": 125,
+      "path": "app/globals.css",
+      "drawn_rows": 23
+    },
+    {
+      "page": 126,
+      "path": "app/layout.tsx",
+      "drawn_rows": 24
+    },
+    {
+      "page": 127,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 128,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 129,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 130,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 131,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 132,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 133,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 134,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 135,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 136,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 137,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 138,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 139,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 140,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 141,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 142,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 143,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 44
+    },
+    {
+      "page": 144,
+      "path": "app/looplight.tsx",
+      "drawn_rows": 24
+    },
+    {
+      "page": 145,
+      "path": "app/page.tsx",
+      "drawn_rows": 4
+    },
+    {
+      "page": 146,
+      "path": "app/space/page.tsx",
+      "drawn_rows": 12
+    },
+    {
+      "page": 147,
+      "path": "cloudflare-env.d.ts",
+      "drawn_rows": 6
+    },
+    {
+      "page": 148,
+      "path": "components.json",
+      "drawn_rows": 21
+    },
+    {
+      "page": 149,
+      "path": "db/index.ts",
+      "drawn_rows": 14
+    },
+    {
+      "page": 150,
+      "path": "db/schema.ts",
+      "drawn_rows": 17
+    },
+    {
+      "page": 151,
+      "path": "drizzle.config.ts",
+      "drawn_rows": 7
+    },
+    {
+      "page": 152,
+      "path": "drizzle/0000_tiresome_zarek.sql",
+      "drawn_rows": 12
+    },
+    {
+      "page": 153,
+      "path": "eslint.config.mjs",
+      "drawn_rows": 37
+    },
+    {
+      "page": 154,
+      "path": "lib/commands.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 155,
+      "path": "lib/commands.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 156,
+      "path": "lib/commands.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 157,
+      "path": "lib/commands.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 158,
+      "path": "lib/commands.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 159,
+      "path": "lib/commands.ts",
+      "drawn_rows": 4
+    },
+    {
+      "page": 160,
+      "path": "lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 161,
+      "path": "lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 162,
+      "path": "lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 163,
+      "path": "lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 164,
+      "path": "lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 165,
+      "path": "lib/dates.ts",
+      "drawn_rows": 16
+    },
+    {
+      "page": 166,
+      "path": "lib/demo.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 167,
+      "path": "lib/demo.ts",
+      "drawn_rows": 16
+    },
+    {
+      "page": 168,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 169,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 170,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 171,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 172,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 173,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 174,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 175,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 176,
+      "path": "lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 177,
+      "path": "lib/engine.ts",
+      "drawn_rows": 11
+    },
+    {
+      "page": 178,
+      "path": "lib/exports.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 179,
+      "path": "lib/exports.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 180,
+      "path": "lib/exports.ts",
+      "drawn_rows": 6
+    },
+    {
+      "page": 181,
+      "path": "lib/import-file.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 182,
+      "path": "lib/import-file.ts",
+      "drawn_rows": 9
+    },
+    {
+      "page": 183,
+      "path": "lib/server.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 184,
+      "path": "lib/server.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 185,
+      "path": "lib/server.ts",
+      "drawn_rows": 13
+    },
+    {
+      "page": 186,
+      "path": "lib/types.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 187,
+      "path": "lib/types.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 188,
+      "path": "lib/types.ts",
+      "drawn_rows": 13
+    },
+    {
+      "page": 189,
+      "path": "lib/utils.ts",
+      "drawn_rows": 6
+    },
+    {
+      "page": 190,
+      "path": "lib/webmcp.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 191,
+      "path": "lib/webmcp.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 192,
+      "path": "lib/webmcp.ts",
+      "drawn_rows": 1
+    },
+    {
+      "page": 193,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 194,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 195,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 196,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 197,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 198,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 199,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 200,
+      "path": "ml/data/build_data.py",
+      "drawn_rows": 34
+    },
+    {
+      "page": 201,
+      "path": "ml/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 202,
+      "path": "ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 203,
+      "path": "ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 204,
+      "path": "ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 205,
+      "path": "ml/inference.ts",
+      "drawn_rows": 25
+    },
+    {
+      "page": 206,
+      "path": "ml/make_parity_cases.py",
+      "drawn_rows": 23
+    },
+    {
+      "page": 207,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 208,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 209,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 210,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 211,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 212,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 213,
+      "path": "ml/pipeline-eval/author_dataset.py",
+      "drawn_rows": 32
+    },
+    {
+      "page": 214,
+      "path": "ml/pipeline-eval/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 215,
+      "path": "ml/pipeline-eval/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 216,
+      "path": "ml/pipeline-eval/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 217,
+      "path": "ml/pipeline-eval/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 218,
+      "path": "ml/pipeline-eval/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 219,
+      "path": "ml/pipeline-eval/evaluate.mts",
+      "drawn_rows": 24
+    },
+    {
+      "page": 220,
+      "path": "ml/pipeline-eval/initial-1.1/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 221,
+      "path": "ml/pipeline-eval/initial-1.1/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 222,
+      "path": "ml/pipeline-eval/initial-1.1/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 223,
+      "path": "ml/pipeline-eval/initial-1.1/evaluate.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 224,
+      "path": "ml/pipeline-eval/initial-1.1/evaluate.mts",
+      "drawn_rows": 23
+    },
+    {
+      "page": 225,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 226,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 227,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/dates.ts",
+      "drawn_rows": 1
+    },
+    {
+      "page": 228,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 229,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 230,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 231,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 30
+    },
+    {
+      "page": 232,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 233,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 234,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 235,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/engine.ts",
+      "drawn_rows": 30
+    },
+    {
+      "page": 236,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/lib/types.ts",
+      "drawn_rows": 19
+    },
+    {
+      "page": 237,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 238,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 239,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/ml/inference.ts",
+      "drawn_rows": 36
+    },
+    {
+      "page": 240,
+      "path": "ml/pipeline-eval/initial-1.1/snapshot/rules-only-adapter.patch",
+      "drawn_rows": 13
+    },
+    {
+      "page": 241,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 242,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 243,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 244,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 245,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 246,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/dates.ts",
+      "drawn_rows": 16
+    },
+    {
+      "page": 247,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 248,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 249,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 250,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 251,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 252,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 253,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 254,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 255,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 256,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.rules-only.ts",
+      "drawn_rows": 10
+    },
+    {
+      "page": 257,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 258,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 259,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 260,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 261,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 262,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 263,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 264,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 265,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 266,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/engine.ts",
+      "drawn_rows": 11
+    },
+    {
+      "page": 267,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/types.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 268,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/types.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 269,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/lib/types.ts",
+      "drawn_rows": 13
+    },
+    {
+      "page": 270,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 271,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 272,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 273,
+      "path": "ml/pipeline-eval/release-snapshots/run-COVN6G/ml/inference.ts",
+      "drawn_rows": 25
+    },
+    {
+      "page": 274,
+      "path": "ml/pipeline-eval/snapshot/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 275,
+      "path": "ml/pipeline-eval/snapshot/lib/dates.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 276,
+      "path": "ml/pipeline-eval/snapshot/lib/dates.ts",
+      "drawn_rows": 1
+    },
+    {
+      "page": 277,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 278,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 279,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 280,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.rules-only.ts",
+      "drawn_rows": 30
+    },
+    {
+      "page": 281,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 282,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 283,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 284,
+      "path": "ml/pipeline-eval/snapshot/lib/engine.ts",
+      "drawn_rows": 30
+    },
+    {
+      "page": 285,
+      "path": "ml/pipeline-eval/snapshot/lib/types.ts",
+      "drawn_rows": 19
+    },
+    {
+      "page": 286,
+      "path": "ml/pipeline-eval/snapshot/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 287,
+      "path": "ml/pipeline-eval/snapshot/ml/inference.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 288,
+      "path": "ml/pipeline-eval/snapshot/ml/inference.ts",
+      "drawn_rows": 36
+    },
+    {
+      "page": 289,
+      "path": "ml/pipeline-eval/snapshot/rules-only-adapter.patch",
+      "drawn_rows": 13
+    },
+    {
+      "page": 290,
+      "path": "ml/pipeline-eval/snapshot_engine.py",
+      "drawn_rows": 39
+    },
+    {
+      "page": 291,
+      "path": "ml/pipeline-eval/write_report.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 292,
+      "path": "ml/pipeline-eval/write_report.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 293,
+      "path": "ml/pipeline-eval/write_report.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 294,
+      "path": "ml/pipeline-eval/write_report.py",
+      "drawn_rows": 14
+    },
+    {
+      "page": 295,
+      "path": "ml/test-inference.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 296,
+      "path": "ml/test-inference.mjs",
+      "drawn_rows": 6
+    },
+    {
+      "page": 297,
+      "path": "ml/train.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 298,
+      "path": "ml/train.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 299,
+      "path": "ml/train.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 300,
+      "path": "ml/train.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 301,
+      "path": "ml/train.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 302,
+      "path": "ml/train.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 303,
+      "path": "ml/train.py",
+      "drawn_rows": 13
+    },
+    {
+      "page": 304,
+      "path": "next-env.d.ts",
+      "drawn_rows": 7
+    },
+    {
+      "page": 305,
+      "path": "next.config.ts",
+      "drawn_rows": 7
+    },
+    {
+      "page": 306,
+      "path": "package.json",
+      "drawn_rows": 44
+    },
+    {
+      "page": 307,
+      "path": "package.json",
+      "drawn_rows": 37
+    },
+    {
+      "page": 308,
+      "path": "postcss.config.mjs",
+      "drawn_rows": 7
+    },
+    {
+      "page": 309,
+      "path": "public/examples/anita-discharge.txt",
+      "drawn_rows": 18
+    },
+    {
+      "page": 310,
+      "path": "public/favicon.svg",
+      "drawn_rows": 2
+    },
+    {
+      "page": 311,
+      "path": "scripts/build-verified.sh",
+      "drawn_rows": 26
+    },
+    {
+      "page": 312,
+      "path": "scripts/execution-profile.mjs",
+      "drawn_rows": 16
+    },
+    {
+      "page": 313,
+      "path": "scripts/install-ci.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 314,
+      "path": "scripts/install-ci.mjs",
+      "drawn_rows": 7
+    },
+    {
+      "page": 315,
+      "path": "scripts/install-ci.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 316,
+      "path": "scripts/install-ci.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 317,
+      "path": "scripts/install-ci.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 318,
+      "path": "scripts/install-ci.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 319,
+      "path": "scripts/install-ci.sh",
+      "drawn_rows": 35
+    },
+    {
+      "page": 320,
+      "path": "scripts/install-pnpm.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 321,
+      "path": "scripts/install-pnpm.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 322,
+      "path": "scripts/install-pnpm.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 323,
+      "path": "scripts/install-pnpm.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 324,
+      "path": "scripts/install-pnpm.sh",
+      "drawn_rows": 40
+    },
+    {
+      "page": 325,
+      "path": "scripts/make-sample-pdf.py",
+      "drawn_rows": 42
+    },
+    {
+      "page": 326,
+      "path": "scripts/pnpm-install.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 327,
+      "path": "scripts/pnpm-install.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 328,
+      "path": "scripts/pnpm-install.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 329,
+      "path": "scripts/pnpm-install.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 330,
+      "path": "scripts/pnpm-install.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 331,
+      "path": "scripts/pnpm-install.mjs",
+      "drawn_rows": 41
+    },
+    {
+      "page": 332,
+      "path": "scripts/run-framework.mjs",
+      "drawn_rows": 23
+    },
+    {
+      "page": 333,
+      "path": "scripts/sites-env.mjs",
+      "drawn_rows": 22
+    },
+    {
+      "page": 334,
+      "path": "scripts/sites-env.sh",
+      "drawn_rows": 44
+    },
+    {
+      "page": 335,
+      "path": "scripts/sites-env.sh",
+      "drawn_rows": 8
+    },
+    {
+      "page": 336,
+      "path": "submission/scripts/apply-native-crop.py",
+      "drawn_rows": 43
+    },
+    {
+      "page": 337,
+      "path": "submission/scripts/build-deck.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 338,
+      "path": "submission/scripts/build-deck.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 339,
+      "path": "submission/scripts/build-deck.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 340,
+      "path": "submission/scripts/build-deck.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 341,
+      "path": "submission/scripts/build-deck.mjs",
+      "drawn_rows": 14
+    },
+    {
+      "page": 342,
+      "path": "submission/scripts/build-onepager.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 343,
+      "path": "submission/scripts/build-onepager.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 344,
+      "path": "submission/scripts/build-onepager.py",
+      "drawn_rows": 3
+    },
+    {
+      "page": 345,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 346,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 347,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 348,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 349,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 350,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 351,
+      "path": "submission/scripts/build-walkthrough.py",
+      "drawn_rows": 25
+    },
+    {
+      "page": 352,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 353,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 354,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 355,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 356,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 357,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 358,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 359,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 360,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 44
+    },
+    {
+      "page": 361,
+      "path": "submission/scripts/generate_code_pdf.py",
+      "drawn_rows": 40
+    },
+    {
+      "page": 362,
+      "path": "submission/scripts/source-allowlist.json",
+      "drawn_rows": 44
+    },
+    {
+      "page": 363,
+      "path": "submission/scripts/source-allowlist.json",
+      "drawn_rows": 44
+    },
+    {
+      "page": 364,
+      "path": "submission/scripts/source-allowlist.json",
+      "drawn_rows": 2
+    },
+    {
+      "page": 365,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 366,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 367,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 368,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 369,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 370,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 371,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 372,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 44
+    },
+    {
+      "page": 373,
+      "path": "tests/api-integration.mjs",
+      "drawn_rows": 42
+    },
+    {
+      "page": 374,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 375,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 376,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 377,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 378,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 379,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 380,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 381,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 382,
+      "path": "tests/commands.test.mts",
+      "drawn_rows": 9
+    },
+    {
+      "page": 383,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 384,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 385,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 386,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 387,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 388,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 389,
+      "path": "tests/engine-regression.test.mts",
+      "drawn_rows": 37
+    },
+    {
+      "page": 390,
+      "path": "tsconfig.json",
+      "drawn_rows": 44
+    },
+    {
+      "page": 391,
+      "path": "tsconfig.json",
+      "drawn_rows": 12
+    },
+    {
+      "page": 392,
+      "path": "vite.config.ts",
+      "drawn_rows": 44
+    },
+    {
+      "page": 393,
+      "path": "vite.config.ts",
+      "drawn_rows": 37
+    },
+    {
+      "page": 394,
+      "path": "wrangler.local.jsonc",
+      "drawn_rows": 10
+    }
+  ],
+  "source_changed_during_generation": [],
+  "snapshot_sha256": "8cccfbd7962484b17cb17042b9e440de96089731fad3e8c8c4d4269b75d8c0a0"
+}

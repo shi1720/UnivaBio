@@ -1,0 +1,97 @@
+{
+  "duration": 189.96666666666667,
+  "fps": 30,
+  "scenes": [
+    {
+      "number": 1,
+      "title": "The next step, accounted for",
+      "start": 0.0,
+      "duration": 8.0,
+      "text": "Hi, I'm Shivam Gupta, and this is Looplight."
+    },
+    {
+      "number": 2,
+      "title": "01 / Anita is home. Care is still unfinished.",
+      "start": 8.0,
+      "duration": 17.9,
+      "text": "Anita has just left the hospital. Her daughter Maya has the discharge document. But a result is still pending, another test needs follow-up, and someone needs to track what happens next. Anita and Maya are fictional. The coordination problem is real."
+    },
+    {
+      "number": 3,
+      "title": "02 / Every action keeps its source",
+      "start": 25.9,
+      "duration": 12.466666666666667,
+      "text": "Looplight turns the instructions in a discharge document into a follow-up ledger. Every confirmed action keeps its source, the person tracking it, and a record of what happened."
+    },
+    {
+      "number": 4,
+      "title": "03 / The document starts the plan",
+      "start": 38.36666666666667,
+      "duration": 14.533333333333333,
+      "text": "Let's follow Anita's example. I open the sample document and run the analysis. A small trained text model works with explicit rules to suggest follow-up items. It runs without a paid model API."
+    },
+    {
+      "number": 5,
+      "title": "04 / Review the whole source",
+      "start": 52.9,
+      "duration": 17.466666666666665,
+      "text": "The review screen is the important part. I can see the exact sentence behind each suggestion. I review the whole document, including sentences the system did not turn into tasks. I can correct a suggestion or add something it missed."
+    },
+    {
+      "number": 6,
+      "title": "05 / Unclear details stay visible",
+      "start": 70.36666666666666,
+      "duration": 12.066666666666666,
+      "text": "Dates remain connected to the original wording. If the document is unclear, Looplight leaves a question for the care team. It does not invent a clinical deadline."
+    },
+    {
+      "number": 7,
+      "title": "06 / A named tracker for the next step",
+      "start": 82.43333333333334,
+      "duration": 12.9,
+      "text": "I confirm the follow-up and give Maya responsibility for tracking one action. That records who is following up. It does not mean Maya is the clinician responsible for treatment."
+    },
+    {
+      "number": 8,
+      "title": "07 / Receipt and review stay separate",
+      "start": 95.33333333333333,
+      "duration": 12.9,
+      "text": "Now a result has arrived. Watch what happens when I record that. The result can be received while clinician review remains outstanding. A file arriving is only one step."
+    },
+    {
+      "number": 9,
+      "title": "08 / Record the reported ending",
+      "start": 108.23333333333333,
+      "duration": 13.733333333333333,
+      "text": "I record the separate report of clinician review and the outcome before closing the loop. The history shows what the user reported, rather than presenting it as independently verified medical evidence."
+    },
+    {
+      "number": 10,
+      "title": "09 / A plan people can take with them",
+      "start": 121.96666666666667,
+      "duration": 15.4,
+      "text": "The plan can also leave the app. I can print a brief for the next conversation, export calendar reminders, or download the structured record. In a signed-in care space, plans are saved to the account."
+    },
+    {
+      "number": 11,
+      "title": "10 / A business hypothesis to test",
+      "start": 137.36666666666667,
+      "duration": 20.4,
+      "text": "For the first customer, I would test this with a primary-care or transitions coordinator who already chases discharge follow-up. The initial pricing hypothesis is one hundred and forty-nine dollars per month for one hundred care episodes. The pilot must show whether staff time saved justifies that price."
+    },
+    {
+      "number": 12,
+      "title": "11 / A small model with visible limits",
+      "start": 157.76666666666668,
+      "duration": 15.8,
+      "text": "This is a working MVP with synthetic evaluation, not a clinically validated product. The model's raw five-category accuracy was eighty-two percent on fifty separate synthetic challenge examples. It abstained on forty-four, so human review remains central."
+    },
+    {
+      "number": 13,
+      "title": "12 / A supervised pilot comes next",
+      "start": 173.56666666666666,
+      "duration": 16.4,
+      "text": "The next step is a supervised pilot that measures omissions and preparation time. I built Looplight with AI-assisted development. The goal is simple: every next step has a source, a person, and a recorded ending."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "format": "Silent screenshot walkthrough. Real app captures with fictional records. Title cards explicitly describe hypotheses or synthetic evidence.",
+  "scenes": [
+    {
+      "paragraph": 0,
+      "title": "The next step, accounted for",
+      "card": "A follow-up ledger\nfor the days after discharge.",
+      "card_note": "Anita and Maya are fictional.\nThe coordination problem is real."
+    },
+    {
+      "paragraph": 1,
+      "title": "01 / Anita is home. Care is still unfinished.",
+      "image": "walkthrough/desktop-board.png"
+    },
+    {
+      "paragraph": 2,
+      "title": "02 / Every action keeps its source",
+      "image": "walkthrough/source-review.png",
+      "layout": "portrait",
+      "crop": [
+        830,
+        0,
+        610,
+        1000
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "One task.\nIts exact source."
+    },
+    {
+      "paragraph": 3,
+      "title": "03 / The document starts the plan",
+      "image": "walkthrough/intake.png",
+      "layout": "portrait",
+      "crop": [
+        315,
+        24,
+        810,
+        952
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "The original notes\nstart the plan."
+    },
+    {
+      "paragraph": 4,
+      "title": "04 / Review the whole source",
+      "image": "walkthrough/sentence-review.png"
+    },
+    {
+      "paragraph": 5,
+      "title": "05 / Unclear details stay visible",
+      "image": "walkthrough/source-review.png",
+      "layout": "portrait",
+      "crop": [
+        830,
+        0,
+        610,
+        1000
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "No date in the source?\nKeep the question open."
+    },
+    {
+      "paragraph": 6,
+      "title": "06 / A named tracker for the next step",
+      "image": "walkthrough/confirmed-followup.png",
+      "layout": "portrait",
+      "crop": [
+        830,
+        0,
+        610,
+        1000
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "Maya tracks the task.\nThat does not assign\nclinical responsibility."
+    },
+    {
+      "paragraph": 7,
+      "start_sentence": 0,
+      "end_sentence": 4,
+      "title": "07 / Receipt and review stay separate",
+      "image": "walkthrough/result-received.png",
+      "layout": "portrait",
+      "crop": [
+        830,
+        0,
+        610,
+        1000
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "Result received.\nClinician review pending."
+    },
+    {
+      "paragraph": 7,
+      "start_sentence": 4,
+      "title": "08 / Record the reported ending",
+      "image": "walkthrough/reported-closure.png",
+      "layout": "portrait",
+      "crop": [
+        830,
+        0,
+        610,
+        1000
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "A recorded ending.\nA user report."
+    },
+    {
+      "paragraph": 8,
+      "title": "09 / A plan people can take with them",
+      "image": "walkthrough/visit-brief.png",
+      "layout": "portrait",
+      "crop": [
+        315,
+        24,
+        810,
+        952
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "Bring the next steps\nto the next visit."
+    },
+    {
+      "paragraph": 9,
+      "title": "10 / A business hypothesis to test",
+      "card": "$149 per month\nfor 100 care episodes",
+      "card_note": "First buyer: a primary-care or transitions coordinator.\nOne coordinator account. Pricing remains a hypothesis."
+    },
+    {
+      "paragraph": 10,
+      "title": "11 / A small model with visible limits",
+      "card": "82% raw accuracy\n44 of 50 abstentions",
+      "card_note": "50 separate synthetic challenge examples.\nClinical validation remains outstanding."
+    },
+    {
+      "paragraph": 11,
+      "title": "12 / A supervised pilot comes next",
+      "image": "walkthrough/reported-closure.png",
+      "layout": "portrait",
+      "crop": [
+        830,
+        0,
+        610,
+        1000
+      ],
+      "crop_reason": "native dialog bounds",
+      "keyline": "Every next step has\na source, a person,\nand a recorded ending."
+    }
+  ]
+}

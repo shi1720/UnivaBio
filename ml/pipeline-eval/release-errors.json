@@ -1,0 +1,400 @@
+{
+  "hybrid": [
+    {
+      "document_id": "paraphrase-01",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-01-a01",
+      "expected_category": "follow_up",
+      "snippet": "A fresh ferritin measurement should be obtained six weeks from discharge.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-01",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-01-a02",
+      "expected_category": "follow_up",
+      "snippet": "Your usual practice needs to reassess the tiredness before the end of this month.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-02",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-02-a01",
+      "expected_category": "follow_up",
+      "snippet": "The practice nurse needs to inspect the incision in 4 days.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-02",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-02-a02",
+      "expected_category": "pending_result",
+      "snippet": "The tissue findings have yet to reach the treating clinician.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-03",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-03-a02",
+      "expected_category": "pending_result",
+      "snippet": "The event-recorder trace still lacks its final sign-off.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-04",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-04-a01",
+      "expected_category": "follow_up",
+      "snippet": "Return for reassessment at the ambulatory unit on 29 September 2026.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-05",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-05-a01",
+      "expected_category": "follow_up",
+      "snippet": "A community rehabilitation assessment is still to be organized.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-05",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-05-a02",
+      "expected_category": "pending_result",
+      "snippet": "The report from the ambulatory pressure recording must be obtained and discussed with your clinician.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "mixed-02",
+      "type": "missed_typed_action",
+      "gold_id": "mixed-02-a01",
+      "expected_category": "follow_up",
+      "snippet": "book a podiatry appointment",
+      "manual_review_allowed": true,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s2",
+          "category": "unknown",
+          "reason": "Mixed instructions; review manually. Preserve each action and any condition before adding follow-ups."
+        }
+      ]
+    },
+    {
+      "document_id": "mixed-02",
+      "type": "missed_typed_action",
+      "gold_id": "mixed-02-a02",
+      "expected_category": "follow_up",
+      "snippet": "repeat the gait assessment.",
+      "manual_review_allowed": true,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s2",
+          "category": "unknown",
+          "reason": "Mixed instructions; review manually. Preserve each action and any condition before adding follow-ups."
+        }
+      ]
+    },
+    {
+      "document_id": "mixed-03",
+      "type": "missed_typed_action",
+      "gold_id": "mixed-03-a02",
+      "expected_category": "follow_up",
+      "snippet": "arrange a pharmacy medication review in 7 days.",
+      "manual_review_allowed": true,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s5",
+          "category": "unknown",
+          "reason": "Mixed instructions; review manually. Preserve each action and any condition before adding follow-ups."
+        }
+      ]
+    },
+    {
+      "document_id": "challenge-01",
+      "type": "false_positive_suggestion",
+      "prediction_id": "l4",
+      "quote": "These two lines describe the same follow-up and their timing requires clarification with the renal team.",
+      "predicted_category": "follow_up",
+      "expected_category": null,
+      "gold_id": null,
+      "overlapping_negative_spans": []
+    }
+  ],
+  "rules_only": [
+    {
+      "document_id": "paraphrase-01",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-01-a01",
+      "expected_category": "follow_up",
+      "snippet": "A fresh ferritin measurement should be obtained six weeks from discharge.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-01",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-01-a02",
+      "expected_category": "follow_up",
+      "snippet": "Your usual practice needs to reassess the tiredness before the end of this month.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-02",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-02-a01",
+      "expected_category": "follow_up",
+      "snippet": "The practice nurse needs to inspect the incision in 4 days.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-02",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-02-a02",
+      "expected_category": "pending_result",
+      "snippet": "The tissue findings have yet to reach the treating clinician.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-03",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-03-a02",
+      "expected_category": "pending_result",
+      "snippet": "The event-recorder trace still lacks its final sign-off.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-04",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-04-a01",
+      "expected_category": "follow_up",
+      "snippet": "Return for reassessment at the ambulatory unit on 29 September 2026.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-05",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-05-a01",
+      "expected_category": "follow_up",
+      "snippet": "A community rehabilitation assessment is still to be organized.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s3",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "paraphrase-05",
+      "type": "missed_typed_action",
+      "gold_id": "paraphrase-05-a02",
+      "expected_category": "pending_result",
+      "snippet": "The report from the ambulatory pressure recording must be obtained and discussed with your clinician.",
+      "manual_review_allowed": false,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s4",
+          "category": "unknown",
+          "reason": "No follow-up proposed. Review the original sentence for omissions."
+        }
+      ]
+    },
+    {
+      "document_id": "mixed-02",
+      "type": "missed_typed_action",
+      "gold_id": "mixed-02-a01",
+      "expected_category": "follow_up",
+      "snippet": "book a podiatry appointment",
+      "manual_review_allowed": true,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s2",
+          "category": "unknown",
+          "reason": "Mixed instructions; review manually. Preserve each action and any condition before adding follow-ups."
+        }
+      ]
+    },
+    {
+      "document_id": "mixed-02",
+      "type": "missed_typed_action",
+      "gold_id": "mixed-02-a02",
+      "expected_category": "follow_up",
+      "snippet": "repeat the gait assessment.",
+      "manual_review_allowed": true,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s2",
+          "category": "unknown",
+          "reason": "Mixed instructions; review manually. Preserve each action and any condition before adding follow-ups."
+        }
+      ]
+    },
+    {
+      "document_id": "mixed-03",
+      "type": "missed_typed_action",
+      "gold_id": "mixed-03-a02",
+      "expected_category": "follow_up",
+      "snippet": "arrange a pharmacy medication review in 7 days.",
+      "manual_review_allowed": true,
+      "source_visible": true,
+      "explicit_review_cue": true,
+      "review_sentences": [
+        {
+          "id": "s5",
+          "category": "unknown",
+          "reason": "Mixed instructions; review manually. Preserve each action and any condition before adding follow-ups."
+        }
+      ]
+    },
+    {
+      "document_id": "challenge-01",
+      "type": "false_positive_suggestion",
+      "prediction_id": "l4",
+      "quote": "These two lines describe the same follow-up and their timing requires clarification with the renal team.",
+      "predicted_category": "follow_up",
+      "expected_category": null,
+      "gold_id": null,
+      "overlapping_negative_spans": []
+    }
+  ]
+}

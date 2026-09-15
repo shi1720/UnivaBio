@@ -1,0 +1,13 @@
+{
+  "dataset_sha256": "76acc8b279981a6a3990f6076011ca10bda8e1deb1633b1908811061aeef272e",
+  "documents": 20,
+  "gold_actions": 44,
+  "document_groups": {
+    "conflict_ambiguity_security_bounds": 5,
+    "mixed_negation_history_conditions": 5,
+    "ordinary": 5,
+    "paraphrase_unfamiliar": 5
+  },
+  "frozen_before_inference": true,
+  "boundary_probe_chars": 40001
+}

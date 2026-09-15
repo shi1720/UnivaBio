@@ -1,0 +1,12 @@
+{
+  "phase": "initial_frozen_engineering_evaluation",
+  "policy": "Retain this first measured result unchanged; later runs are replay or release regression outputs.",
+  "files": {
+    "results.json": "7dcee1ea3e1392c8fa627b5e157853f9e3465581435a03c2e56919b6c324423a",
+    "errors.json": "66133052a3459b3ebbfcdcd8e0a073fcad750b98d1fd76eca0209546369b14ae",
+    "REPORT.md": "ccbe8d88f2b0cf7ae62a775c1b9f110dd0d1679dbf98e7d94ccf818483414481",
+    "evaluate.mts": "f0ba26285d967629896730d874be44eed18ddcc3ae88e9028c6035032e4625fb",
+    "dataset.json": "76acc8b279981a6a3990f6076011ca10bda8e1deb1633b1908811061aeef272e",
+    "dataset.lock.json": "7a44bfed8fee6582d91d2e744af9143eabe775ea1080db836d57b61fe133fbdc"
+  }
+}

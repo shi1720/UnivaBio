@@ -1,0 +1,14 @@
+{
+  "dataset_sha256": "20efb0b9d7aa87c9548134373c84d8fd431307967000f9a7d53d808ed0c1ce88",
+  "documents": 20,
+  "gold_actions": 44,
+  "document_groups": {
+    "conflict_ambiguity_security_bounds": 5,
+    "mixed_negation_history_conditions": 5,
+    "ordinary": 5,
+    "paraphrase_unfamiliar": 5
+  },
+  "frozen_before_inference": true,
+  "boundary_probe_chars": 40001,
+  "note": "Superseded before any current-engine read or inference: an annotation self-review corrected six weeks from discharge to the explicit date 2026-10-27. No engine output informed the correction."
+}
