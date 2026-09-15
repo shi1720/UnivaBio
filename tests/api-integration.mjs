@@ -72,7 +72,7 @@ function runSQL(sql) {
       "DB",
       "--local",
       "--config",
-      "dist/server/wrangler.json",
+      "wrangler.local.jsonc",
       "--persist-to",
       ".wrangler/state",
       "--file",
