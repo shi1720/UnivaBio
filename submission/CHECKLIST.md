@@ -33,9 +33,9 @@
 - [x] Use the clean Firebase app URL and distinguish saved demo copy from opening existing spaces in the main instructions.
 - [x] Describe client-side workflow validation accurately. Firestore rules enforce account/storage boundaries; status and history remain user-reported.
 - [x] Use a single-coordinator commercial hypothesis: $149/month for 100 episodes. Distinguish the 100-stored-space cap from a monthly allowance.
-- [ ] Complete source-PDF and inventory regeneration now underway, including Firebase code, rules/configuration, snapshot/draft code and new tests. Record final source identity and verify generated hashes while preserving the test reports' original source hashes.
+- [x] Regenerate the 535-page code PDF and reproducible source ZIP: 278 exact files, verified attachments and hashes. Include Firebase code, rules, tests, build helpers, dependencies and licenses. Preserve original test report hashes.
 - [x] Preserve original evaluation JSON and engine 1.1 results. Label engine 1.2's reused-fixture result as regression evidence.
-- [ ] Verify the direct MP4 with final artifact publication and insert the Devpost entry URL once created. No unexecuted QA placeholders remain in the final README and judge testing guide.
+- [x] Publish and verify the direct MP4 and all seven downloads against local hashes. No unexecuted QA placeholders remain in the final README and judge testing guide.
 
 ## Completed narrated video and publication
 
@@ -44,20 +44,20 @@
 - [x] Complete the narrated video: 2:38.6, 1920 × 1080, actual browser interaction footage, AI-generated Cedar voice, 32 burned-in caption cues and a separate SRT.
 - [x] Disclose synthetic narration. It is not a recording of Shivam's voice.
 - [ ] Obtain explicit YouTube terms confirmation required by the upload flow, then publish the completed video and verify hosted playback/embedding signed out.
-- [ ] Verify the [direct MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4) after final artifact deployment. This is the fallback video link while YouTube publication is pending.
+- [x] Verify the [direct MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4) plays publicly at 1080p with burned captions. This is the fallback while YouTube publication is pending.
 
 ## Participant and submission steps
 
 - [ ] Complete the Devpost CAPTCHA in the account. Human verification is pending and no project entry has been created.
 - [ ] Confirm age/student eligibility and all declarations truthfully. No eligibility claim is inferred from the repository.
 - [ ] Check the current submission form and event requirements before final submission.
-- [ ] Verify judges can access the final repository/code PDF and required artifacts without an owner account.
+- [x] Verify unauthenticated access to the public source ZIP, code PDF, one-page PDF, pitch PDF and video. The GitHub repository remains private.
 - [ ] Add the story, working app URL, viewable narrated video, one-page PDF and code deliverables; inspect the completed entry before submitting.
-- [ ] Record the final entry URL: **[FINAL_DEVPOST_PROJECT_URL]**.
+- [ ] Record the final entry URL: **not created while CAPTCHA is pending**.
 
 ## Verification boundaries
 
-Calendar-client import, notification delivery and physical printer output were not tested. Browser PDF generation and saved-file validation are the verified outputs. The remaining delivery work is source-package regeneration and external publication/submission, not additional feature development.
+Calendar-client import, notification delivery and physical printer output were not tested. Browser PDF generation and saved-file validation are the verified outputs. YouTube publication and Devpost submission remain pending the stated user confirmations.
 
 ## Claims to preserve
 

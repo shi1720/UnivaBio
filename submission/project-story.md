@@ -32,7 +32,7 @@ Document language also resists simple automation. “No further tests,” a comp
 
 We built the complete document-to-review-to-follow-through workflow, including persistent spaces, correction paths and portable outputs.
 
-Initial engine verification passed 31 domain tests and 64 Python/TypeScript model-parity cases. The Firebase migration has its own release checks; earlier database tests are not counted as Firebase evidence. The classifier reached 82% raw category accuracy on 50 synthetic examples and abstained on 44.
+Verification passed 31 domain tests, 16 saved-record and export tests, 64 Python/TypeScript model-parity cases, 57 live Firebase checks and 58 emulator checks. All three GitHub CI jobs passed. Earlier database tests are not counted as Firebase evidence. The classifier reached 82% raw category accuracy on 50 synthetic examples and abstained on 44.
 
 A separate 20-document challenge contained 44 gold actions. Initial extraction precision was 84.2%, with 72.7% recall. After repairs, the same known regression cases reached 97.1% precision and 75.0% recall. These are small synthetic engineering measurements, not clinical validation.
 

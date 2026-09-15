@@ -1,7 +1,7 @@
 # Test Looplight
 
-**App:** [looplight-care.web.app](https://looplight-care.web.app)  
-**Code:** [shi1720/UnivaBio](https://github.com/shi1720/UnivaBio)  
+**App:** [looplight-care.web.app](https://looplight-care.web.app)
+**Public code:** [source ZIP](https://looplight-care.web.app/submission/looplight-source.zip) and [code PDF](https://looplight-care.web.app/submission/looplight-code.pdf)
 **Use:** fictional examples only. Looplight organizes documented instructions and records user reports. It does not interpret results or recommend treatment.
 
 ## Short judge route

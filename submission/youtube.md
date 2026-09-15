@@ -37,4 +37,4 @@ Upload `looplight-narrated-demo.mp4`, use `looplight-thumbnail.png`, and attach 
 
 ## Upload status
 
-The upload is not yet confirmed. YouTube terms and CAPTCHA confirmations remain pending. Add the final public video URL only after the upload is complete and the link has been checked.
+The upload is not yet confirmed. YouTube terms confirmation remains pending. The separate Devpost flow is blocked by its CAPTCHA. Add the final public video URL only after the upload is complete and the link has been checked.

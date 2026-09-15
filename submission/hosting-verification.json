@@ -1,0 +1,61 @@
+{
+  "origin": "https://looplight-care.web.app",
+  "files": [
+    {
+      "file": "looplight-code.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 7528333,
+      "sha256": "0003aa1b53afb53c7840d1756e29fa3da1fc990ae326add1f572a7babdf36e8b",
+      "matches_local": true
+    },
+    {
+      "file": "looplight-source.zip",
+      "status": 200,
+      "content_type": "application/zip",
+      "bytes": 2110493,
+      "sha256": "457a1c8802b19eae430aaa87fadbe6a4d064d87c6244ab7949f49d2fddb677ca",
+      "matches_local": true
+    },
+    {
+      "file": "looplight-one-page.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 31944,
+      "sha256": "233a7c3877fcf34782b69c0ef2655dbb881f12fb6f8ed117265c44ed50344fc9",
+      "matches_local": true
+    },
+    {
+      "file": "looplight-pitch.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 459549,
+      "sha256": "e2d4412bd587d1153f6fb4195bf068b0946a163deae9d01c845c99088488ccd8",
+      "matches_local": true
+    },
+    {
+      "file": "looplight-narrated-demo.mp4",
+      "status": 200,
+      "content_type": "video/mp4",
+      "bytes": 7764842,
+      "sha256": "2e7efa03e5be8450468b974b68c2227d4872c49411db98ef38b8ba54dc8a4d43",
+      "matches_local": true
+    },
+    {
+      "file": "captions.srt",
+      "status": 200,
+      "content_type": "application/x-subrip",
+      "bytes": 3504,
+      "sha256": "af39b2879ed1813734c9979cfb91506b824da2fc7269ac043e0aae3e89d500c3",
+      "matches_local": true
+    },
+    {
+      "file": "looplight-thumbnail.png",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 288037,
+      "sha256": "58dee40ad2e85b18082d5ec4d714e8f606d89a155eece0e5d20015a0e28a7129",
+      "matches_local": true
+    }
+  ]
+}

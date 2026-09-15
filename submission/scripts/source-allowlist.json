@@ -36,7 +36,8 @@
     "scripts",
     "submission/scripts",
     "submission/builders",
-    "submission/video/builders"
+    "submission/video/builders",
+    "build"
   ],
   "printed_source_extensions": [
     ".ts",
@@ -86,7 +87,13 @@
     "submission/video/builders/**/requirements*.txt",
     "submission/video/builders/**/*.md",
     "submission/video/builders/assets/**/*",
-    "submission/video/README.md"
+    "submission/video/README.md",
+    "build/*.LICENSE",
+    "components/**/*.tsx",
+    "hooks/**/*.ts",
+    "vendor/*.css",
+    "vendor/*.LICENSE.md",
+    "docs/images/**/*"
   ],
   "excluded_path_parts": [
     "node_modules",
@@ -108,7 +115,7 @@
     "Amazon Developer Hackathon",
     "dayweave"
   ],
-  "exclusion_note": "No foreign projects, dependency trees, build outputs, real .env files, untouched components/ui, vendored PDF.js module/worker, credentials, or temporary runtime state. Firebase browser configuration is public application configuration, not a service-account credential. Current Firebase application/rules/configuration and tests are printed alongside retained historical implementation source. Generated model/data/evaluation JSON, sanitized Firebase test reports, the dependency lockfile, selected supporting prose, and binary assets are hash-listed rather than printed. All printed and hash-listed files are embedded in the PDF as byte-exact attachments and included in the companion source ZIP. Inclusion does not assert that inherited runtime helpers were authored from scratch.",
+  "exclusion_note": "No foreign projects, dependency trees, build outputs, real .env files, vendored PDF.js module/worker, credentials, or temporary runtime state. Firebase browser configuration is public application configuration, not a service-account credential. Current Firebase application/rules/configuration and tests are printed alongside retained historical implementation source. Inherited UI/hook scaffold, vendored CSS and upstream licenses are supplied as hash-listed exact attachments for complete builds; inclusion does not claim original authorship. Generated model/data/evaluation JSON, sanitized Firebase test reports, the dependency lockfile, selected supporting prose, and binary assets are hash-listed rather than printed. All printed and hash-listed files are embedded in the PDF as byte-exact attachments and included in the companion source ZIP. Inclusion does not assert that inherited runtime helpers were authored from scratch.",
   "required_printed_files": [
     "firebase.json",
     ".firebaserc",
@@ -129,6 +136,7 @@
     "scripts/sync-pdfjs.mjs",
     "submission/video/builders/build-thumbnail.py",
     "submission/video/builders/check_capture_timing.py",
-    "submission/video/builders/verify_final_video.py"
+    "submission/video/builders/verify_final_video.py",
+    "build/sites-vite-plugin.ts"
   ]
 }

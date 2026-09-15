@@ -50,8 +50,10 @@ assets are hash-listed rather than printed; their exact files are attached and
 included in the source snapshot/ZIP.
 Sanitized, retained Firebase reports are hash-listed. Transient live/emulator
 result files and runtime logs are not selected by the allowlist.
-Foreign projects, dependency trees, untouched UI/vendor bundles, real environment
-files, and temporary/runtime outputs are excluded.
+Inherited UI/hook scaffold, the historical Vite plugin and its license, and
+vendored CSS/license are included for a complete build. The scaffold and CSS are
+hash-listed exact attachments rather than printed pages. Foreign projects,
+dependency trees, real environment files and temporary/runtime outputs are excluded.
 
 Run final generation only after source freeze. The inventory timestamp records when source bytes were captured; it is not a
 commit time or a claim about when a feature was implemented. ZIP member times

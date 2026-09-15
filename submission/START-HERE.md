@@ -3,10 +3,11 @@
 **The idea:** a pending result should keep a visible place in the plan after discharge. Looplight connects original instructions to a tracking person and a user-reported ending.
 
 - **App:** [looplight-care.web.app](https://looplight-care.web.app)
-- **Code:** [shi1720/UnivaBio](https://github.com/shi1720/UnivaBio)
-- **Direct demo video:** [MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4), published with the final artifact deployment
+- **Public code:** [source ZIP](https://looplight-care.web.app/submission/looplight-source.zip) and [code PDF](https://looplight-care.web.app/submission/looplight-code.pdf)
+- **GitHub:** [shi1720/UnivaBio](https://github.com/shi1720/UnivaBio), private
+- **Direct demo video:** [MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4), publicly hosted and playback verified
 - **YouTube:** upload pending explicit platform-terms confirmation
-- **Project entry:** [FINAL_DEVPOST_PROJECT_URL]
+- **Project entry:** not created; Devpost CAPTCHA pending
 - **Participant:** Shivam Gupta, with AI-assisted research, development, testing and documentation disclosed.
 
 ## What is ready
@@ -29,13 +30,13 @@ Real PDF import created the expected three follow-ups. OS-saved JSON, text and c
 | [project-story.md](project-story.md) / [devpost-copy.md](devpost-copy.md) | Submission story with the requested headings |
 | [looplight-one-page.pdf](looplight-one-page.pdf) | Required one-page description |
 | [looplight-pitch.pptx](looplight-pitch.pptx) | Editable pitch; a PDF copy is also included |
-| [looplight-code.pdf](looplight-code.pdf) | Full source document; regenerate with its inventory after the final source freeze |
+| [looplight-code.pdf](looplight-code.pdf) | 535-page source document with 278 exact file attachments; a reproducible source ZIP is included |
 | [demo-script.md](demo-script.md) | Narration and interaction shot list |
 | [youtube.md](youtube.md) | Video title, description and upload checks |
 | [code-walkthrough-and-judge-qa.md](code-walkthrough-and-judge-qa.md) | Implementation explanation and rehearsal questions |
 | [CHECKLIST.md](CHECKLIST.md) | Remaining packaging, account and submission steps |
 
-The older screenshot walkthrough is a preparation asset. Use the completed narrated interaction video for submission; hosted playback and embedding will be checked after upload.
+The older screenshot walkthrough is a preparation asset. Use the completed narrated interaction video for submission. Direct hosted playback is verified; YouTube playback and embedding remain pending publication.
 
 ## The demonstration to understand
 
@@ -47,8 +48,9 @@ The proposed first customer is one care coordinator. The price hypothesis is **$
 
 ## Remaining steps
 
-1. **Final source package:** source-PDF, inventory and hash regeneration is underway after the final source freeze.
-2. **YouTube publication:** provide explicit confirmation of the YouTube terms required by the upload flow. Then upload the completed narrated video, check hosted playback/embedding signed out and insert its URL.
-3. **Devpost submission:** complete the CAPTCHA in the hackathon account. No project entry has been created. Confirm eligibility and declarations truthfully, add the final deliverables, inspect judge access and submit by **October 7, 2026, 9:15 a.m. IST**. Insert the project URL after the entry exists.
+The source PDF, source ZIP, one-page PDF, pitch PDF and narrated video are published. All public downloads match local hashes. The source archive compiled in an isolated directory, and [all three CI jobs passed](https://github.com/shi1720/UnivaBio/actions/runs/35004236628).
+
+1. **YouTube publication:** provide explicit confirmation of the YouTube terms required by the upload flow. Then upload the completed narrated video, check hosted playback/embedding signed out and insert its URL.
+2. **Devpost submission:** complete the CAPTCHA in the hackathon account. No project entry has been created. Confirm eligibility and declarations truthfully, add the final deliverables, inspect judge access and submit by **October 7, 2026, 9:15 a.m. IST**. Insert the project URL after the entry exists.
 
 A final hackathon submission has not been claimed. All demonstrated people and records are fictional. The product is an engineering MVP, not clinically validated software for identifiable patient records. Status and history are user reports; Firestore rules do not provide a trusted clinical audit.
