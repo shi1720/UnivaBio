@@ -49,3 +49,25 @@ The first proposed buyer is one primary-care or transitions coordinator already 
 Next come interviews, independently reviewed de-identified records and a supervised pilot measuring preparation time, omissions and correction burden. Shared team workflows and EHR integrations are future work. There are no customer, clinical-outcome or reduced-readmission claims today.
 
 The goal is simple: every next step has a source, a person and a recorded ending.
+
+## Testing instructions
+
+Open [Looplight](https://looplight-care.web.app). The fictional demo needs no account or API key.
+
+1. Choose **Try the pending-result walkthrough**. Read the exact discharge sentence and the unspecified timing.
+2. Enter **Maya (daughter)** as the tracking person, check the source-review box and choose **Confirm this follow-up**.
+3. Under **Record progress**, enter "The care team told us that the result is available." Choose **Record result received**. The follow-up stays open.
+4. Enter **Dr. Lee (fictional)** as reviewer, today's date, and "The care team discussed the result and confirmed the documented next step." Check the reporting confirmation and choose **Record completion**. Inspect the recorded history.
+5. Choose **Save this care space** and sign in with Google or email. Refresh to verify that the saved plan and edits return.
+6. Open **Visit brief** for print, text and calendar exports. For a fresh extraction, use **Add discharge notes**, **Anita's discharge**, then **Find the open loops**.
+7. Open **Evidence & AI**, then **Try a challenge** to inspect conflicting dates and recover an omitted action from **Source documents**.
+
+Use fictional examples only. No clinical interpretation or health outcome is being tested.
+
+## Submission files
+
+- [One-page project description PDF](https://looplight-care.web.app/submission/looplight-one-page.pdf)
+- [Complete source code PDF](https://looplight-care.web.app/submission/looplight-code.pdf)
+- [Runnable source ZIP](https://looplight-care.web.app/submission/looplight-source.zip)
+- [Pitch deck PDF](https://looplight-care.web.app/submission/looplight-pitch.pdf)
+- [Public narrated demo with captions](https://www.youtube.com/watch?v=XM_fwwBZ4es)

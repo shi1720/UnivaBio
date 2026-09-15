@@ -43,21 +43,22 @@
 - [x] Verify the account save/reload path separately in the live browser.
 - [x] Complete the narrated video: 2:38.6, 1920 × 1080, actual browser interaction footage, AI-generated Cedar voice, 32 burned-in caption cues and a separate SRT.
 - [x] Disclose synthetic narration. It is not a recording of Shivam's voice.
-- [ ] Obtain explicit YouTube terms confirmation required by the upload flow, then publish the completed video and verify hosted playback/embedding signed out.
-- [x] Verify the [direct MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4) plays publicly at 1080p with burned captions. This is the fallback while YouTube publication is pending.
+- [x] Publish the [YouTube demo](https://www.youtube.com/watch?v=XM_fwwBZ4es); verify signed-out playback and the uploaded English captions during playback.
+- [x] Verify the [direct MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4) plays publicly at 1080p with burned captions. The public YouTube demo is also available.
 
-## Participant and submission steps
+## Completed submission
 
-- [ ] Complete the Devpost CAPTCHA in the account. Human verification is pending and no project entry has been created.
-- [ ] Confirm age/student eligibility and all declarations truthfully. No eligibility claim is inferred from the repository.
-- [ ] Check the current submission form and event requirements before final submission.
-- [x] Verify unauthenticated access to the public source ZIP, code PDF, one-page PDF, pitch PDF and video. The GitHub repository remains private.
-- [ ] Add the story, working app URL, viewable narrated video, one-page PDF and code deliverables; inspect the completed entry before submitting.
-- [ ] Record the final entry URL: **not created while CAPTCHA is pending**.
+- [x] Complete the platform submission flow and receive the explicit “Project submitted!” success message.
+- [x] Record the public project: [Looplight](https://devpost.com/software/looplight), submission **1184846**.
+- [x] Submit the story, working app URL, viewable narrated video, one-page description and public code deliverables.
+- [x] Verify unauthenticated access to all seven public artifacts against local hashes. The GitHub repository remains private; the source ZIP and code PDF are public.
+- [x] Record submission completion on **September 16, 2026 IST** (September 15 UTC). The entry remains editable until **October 7, 2026, 9:15 a.m. IST**, matching the platform's October 6, 11:45 p.m. EDT deadline.
+
+Platform submission succeeded. No YouTube terms or Devpost CAPTCHA confirmation remains outstanding. This status records platform acceptance; it does not independently verify participant eligibility.
 
 ## Verification boundaries
 
-Calendar-client import, notification delivery and physical printer output were not tested. Browser PDF generation and saved-file validation are the verified outputs. YouTube publication and Devpost submission remain pending the stated user confirmations.
+Calendar-client import, notification delivery and physical printer output were not tested. Browser PDF generation and saved-file validation are the verified outputs. YouTube publication and Devpost submission are complete. Signed-out YouTube playback, the public Devpost page, and embedded YouTube playback with English captions were verified.
 
 ## Claims to preserve
 

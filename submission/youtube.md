@@ -11,6 +11,7 @@ Anita is home from hospital, but one result is still pending. Looplight turns th
 This narrated demo shows actual interactions with the hosted prototype: importing fictional discharge instructions, reviewing the exact source and missing details, recovering an omitted task, naming the person tracking it, distinguishing result receipt from reported clinician review, and recording the follow-up history. It also shows the visit brief, calendar export, and saved care space.
 
 Try the prototype: https://looplight-care.web.app
+Devpost project: https://devpost.com/software/looplight
 Public source code PDF: https://looplight-care.web.app/submission/looplight-code.pdf
 GitHub repository (currently private): https://github.com/shi1720/UnivaBio
 
@@ -33,8 +34,10 @@ Disclosure: AI-generated narration, not Shivam Gupta's voice. Anita, Maya, and t
 
 ## Assets
 
-Upload `looplight-narrated-demo.mp4`, use `looplight-thumbnail.png`, and attach the English `captions.srt` track. The same captions are already burned into the picture. Choose visibility according to the submission plan. This file does not claim that an upload has occurred.
+The published video uses `looplight-narrated-demo.mp4`. The English `captions.srt` track was uploaded and verified during playback; the same captions are also burned into the picture. The chosen public thumbnail is `devpost/youtube-thumbnail-safe.png` (editable SVG alongside it), with centered artwork sized to remain visible in the Devpost embedded-player crop. The replacement thumbnail and description backlink were saved successfully in YouTube Studio. Propagation of the replacement poster to cached public embeds has not been verified. The original video thumbnail remains a retained preparation asset.
 
 ## Upload status
 
-The upload is not yet confirmed. YouTube terms confirmation remains pending. The separate Devpost flow is blocked by its CAPTCHA. Add the final public video URL only after the upload is complete and the link has been checked.
+Published publicly: [watch the Looplight demo](https://www.youtube.com/watch?v=XM_fwwBZ4es). Signed-out playback was verified, and the uploaded English captions rendered during playback.
+
+Devpost submission is complete: [Looplight](https://devpost.com/software/looplight), submission **1184846**, confirmed by the platform success message on September 16, 2026 IST (September 15 UTC). No YouTube or Devpost confirmation remains outstanding.

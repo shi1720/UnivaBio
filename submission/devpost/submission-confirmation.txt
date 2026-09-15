@@ -1,0 +1,268 @@
+Browser tab: 2022725242, Title: "Looplight | Devpost", URL: "https://devpost.com/software/looplight".
+1 AXWebArea Looplight | Devpost, URL: devpost.com/software/looplight
+	2 container body-softwares
+		3 container
+			4 text Project submitted! Continue to edit your project until the hackathon deadline: October 06, 2026 at 11:45pm EDT.
+			5 link Description: ×, Help: Close, Value: devpost.com/software/looplight#
+		6 container
+			7 content list
+				8 link Description: Devpost, Value: devpost.com/
+			9 content list
+				10 link Description: Join a hackathon , Value: devpost.com/software/looplight#
+				11 link Description: Host a hackathon , Value: devpost.com/software/looplight#
+				12 link Description: Resources , Value: devpost.com/software/looplight#
+			13 container
+				14 content list
+					15 link Description: 🔔 2  , Value: devpost.com/notifications, ID: notification-button
+					16 link Description: Access your account menu, Value: devpost.com/shivam1720406?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav, ID: global-nav-screen-name
+		17 container notification-dd
+			18 heading Notifications, Value: 6
+				19 text Notifications
+			20 text Loading...
+		21 container container
+			22 container software-header
+				23 container
+					24 heading Looplight, Value: 1, ID: app-title
+						25 text Looplight
+					26 text Every follow-up, followed through. Looplight turns discharge notes into a reviewable plan with an exact source, a tracking person, and a recorded next step. A result arriving is only the beginning.
+				27 container
+					28 link Description: ♥ Like, Value: devpost.com/software/looplight/likes
+					29 link Description: “ Comment, Value: devpost.com/software/looplight#updates, ID: software-comment-button
+			30 content list
+				31 heading STORY, Value: 4
+					32 link Description: STORY, Value: devpost.com/software/looplight
+				33 heading UPDATES, Value: 4
+					34 link Description: UPDATES, Value: devpost.com/software/looplight#updates
+			35 container app-details
+				36 container app-details-left
+					37 content list
+						38 button
+						239 container Description: Looplight | Every follow-up, followed through | UnivaBio 2026, ID: 751806393
+							240 AXWebArea Looplight | Every follow-up, followed through | UnivaBio 2026 - YouTube, URL: youtube.com/embed/XM_fwwBZ4es?enablejsapi=1&hl=en_US&rel=0&start=&version=3&wmode=transparent
+								241 container
+									242 container Description: YouTube Video Player, ID: movie_player
+									243 container
+										244 button Play video
+										245 button AI
+											246 text AI
+										247 button Description: Hide player controls, ID: player-controls-a11y-toggle
+										248 container player-control-overlay
+											249 container
+												250 link Description: Looplight | Every follow-up, followed through | UnivaBio 2026, Value: youtube.com/watch?v=XM_fwwBZ4es
+												251 link Description: Shivam Gupta, Value: youtube.com/channel/UCLPUcp65Khk_8n_T1UjQiSQ
+												252 button thumbnail-image
+													253 image thumbnail-image
+												254 container
+													255 text Shivam Gupta No subscribers
+											256 container
+												257 button Share
+												258 button Watch later
+												259 link Description: Watch on YouTube, Value: youtube.com/watch?v=XM_fwwBZ4es
+						40 button
+						41 tab group
+							42 tab (selected, settable, boolean) Description: 1 of 4, ID: slick-slide-control00, Value: 1
+•
+1
+							43 tab (settable) Description: 2 of 4, ID: slick-slide-control01
+								44 text •
+								45 text 2
+							46 tab (settable) Description: 3 of 4, ID: slick-slide-control02
+								47 text •
+								48 text 3
+							49 tab (settable) Description: 4 of 4, ID: slick-slide-control03
+								50 text •
+								51 text 4
+					52 heading Inspiration, Value: 2
+						53 text Inspiration
+					54 text Anita is home from hospital. Her daughter Maya has the discharge notes, a pending blood culture, a repeat blood test and a follow-up visit to arrange. The document describes the next steps. Someone still has to follow them through.
+					55 container
+						56 text Anita and Maya are fictional. The coordination problem is documented: a 2005 study of 2,644 discharges at two academic hospitals found that 41% of patients had results return after discharge. That is a historical, setting-specific finding, not a current global rate. 
+						57 link Description: Original study, Value: pubmed.ncbi.nlm.nih.gov/16027454/
+					58 text Looplight focuses on one practical question: who is tracking each unfinished step, and what happened next?
+					59 heading What it does, Value: 2
+						60 text What it does
+					61 text Looplight turns discharge text or a text-based PDF into reviewable follow-up suggestions. Each suggestion keeps the exact source sentence. Missing owners, unclear timing and conflicting dates remain visible. Users can correct a suggestion, dismiss it or recover an action the system missed by reviewing the full note.
+					62 container
+						63 text The defining moment comes when a result arrives:  the follow-up stays open . Looplight records receipt separately from reported clinician review. A named tracking person, dated completion report and history show what the user recorded.
+					64 text The MVP includes Google/email sign-in, saved care spaces, a printable visit brief, calendar reminders and JSON export. Save the current demo and its edits to your account, then return to the saved plan later. The fictional example lets judges explore the workflow without entering patient data. Looplight organizes documented instructions; clinical decisions remain with the care team.
+					65 heading How we built it, Value: 2
+						66 text How we built it
+					67 text React, TypeScript and Vite power the Firebase-hosted interface. A small, reproducible logistic-regression model classifies sentences using word and word-pair features. Explicit rules preserve source spans, handle known action language and interpret supported date expressions. The model can abstain, and every suggestion requires human confirmation.
+					68 text PDF text is read locally. Original PDF files are not retained. Model inference uses bundled weights without an external AI service or paid model API. Firebase Auth identifies the account. Firestore rules enforce account paths, an immutable saved source and storage/version bounds. Detailed workflow checks run in the browser, so status and history remain user reports rather than a trusted clinical audit log.
+					69 text Looplight is Shivam Gupta's project, built with AI-assisted research, development, testing and documentation. The repository includes the source, synthetic data, training scripts, evaluation failures and setup instructions for a transparent code walkthrough.
+					70 heading Challenges we ran into, Value: 2
+						71 text Challenges we ran into
+					72 text Defining “done” was as important as extracting a task. A pending result needs both receipt and reported review, so the completion flow records them separately.
+					73 text Document language also resists simple automation. “No further tests,” a completed scan, a conditional instruction and contradictory appointment dates need different treatment. A separate document challenge exposed false additions and missed actions. Those failures informed repairs, and the original results remain published.
+					74 heading Accomplishments that we're proud of, Value: 2
+						75 text Accomplishments that we're proud of
+					76 text We built the complete document-to-review-to-follow-through workflow, including persistent spaces, correction paths and portable outputs.
+					77 text Verification passed 31 domain tests, 16 saved-record and export tests, 64 Python/TypeScript model-parity cases, 57 live Firebase checks and 58 emulator checks. All three GitHub CI jobs passed. Earlier database tests are not counted as Firebase evidence. The classifier reached 82% raw category accuracy on 50 synthetic examples and abstained on 44.
+					78 text A separate 20-document challenge contained 44 gold actions. Initial extraction precision was 84.2%, with 72.7% recall. After repairs, the same known regression cases reached 97.1% precision and 75.0% recall. These are small synthetic engineering measurements, not clinical validation.
+					79 heading What we learned, Value: 2
+						80 text What we learned
+					81 text Source visibility and recovery from mistakes belong in the main workflow. A polished task list can still omit an important instruction.
+					82 text We also tested the model's contribution. Disabling it produced the same task outputs on the 20-document challenge. No additional extraction benefit from ML was measured there. The current product is a rules-led workflow with local ML suggestions, and stronger claims need new evidence.
+					83 heading What's next for Looplight, Value: 2
+						84 text What's next for Looplight
+					85 text The first proposed buyer is one primary-care or transitions coordinator already reconstructing follow-ups from discharge notes. We would test $149 per month for 100 episodes. Saving five minutes per episode at an assumed $35 hourly staff cost represents about $292 in gross monthly time value, before review, onboarding and support. Neither savings nor willingness to pay has been validated.
+					86 text Next come interviews, independently reviewed de-identified records and a supervised pilot measuring preparation time, omissions and correction burden. Shared team workflows and EHR integrations are future work. There are no customer, clinical-outcome or reduced-readmission claims today.
+					87 text The goal is simple: every next step has a source, a person and a recorded ending.
+					88 heading Testing instructions, Value: 2
+						89 text Testing instructions
+					90 container
+						91 text Open 
+						92 link Description: Looplight, Value: looplight-care.web.app/
+						93 text . The fictional demo needs no account or API key.
+					94 content list
+						95 container
+							96 AXListMarker 1. 
+							97 text Choose  Try the pending-result walkthrough . Read the exact discharge sentence and the unspecified timing.
+						98 container
+							99 AXListMarker 2. 
+							100 text Enter  Maya (daughter)  as the tracking person, check the source-review box and choose  Confirm this follow-up .
+						101 container
+							102 AXListMarker 3. 
+							103 text Under  Record progress , enter "The care team told us that the result is available." Choose  Record result received . The follow-up stays open.
+						104 container
+							105 AXListMarker 4. 
+							106 text Enter  Dr. Lee (fictional)  as reviewer, today's date, and "The care team discussed the result and confirmed the documented next step." Check the reporting confirmation and choose  Record completion . Inspect the recorded history.
+						107 container
+							108 AXListMarker 5. 
+							109 text Choose  Save this care space  and sign in with Google or email. Refresh to verify that the saved plan and edits return.
+						110 container
+							111 AXListMarker 6. 
+							112 text Open  Visit brief  for print, text and calendar exports. For a fresh extraction, use  Add discharge notes ,  Anita's discharge , then  Find the open loops .
+						113 container
+							114 AXListMarker 7. 
+							115 text Open  Evidence & AI , then  Try a challenge  to inspect conflicting dates and recover an omitted action from  Source documents .
+					116 text Use fictional examples only. No clinical interpretation or health outcome is being tested.
+					117 heading Submission files, Value: 2
+						118 text Submission files
+					119 content list
+						120 container
+							121 AXListMarker • 
+							122 link Description: One-page project description PDF, Value: looplight-care.web.app/submission/looplight-one-page.pdf
+						123 container
+							124 AXListMarker • 
+							125 link Description: Complete source code PDF, Value: looplight-care.web.app/submission/looplight-code.pdf
+						126 container
+							127 AXListMarker • 
+							128 link Description: Runnable source ZIP, Value: looplight-care.web.app/submission/looplight-source.zip
+						129 container
+							130 AXListMarker • 
+							131 link Description: Pitch deck PDF, Value: looplight-care.web.app/submission/looplight-pitch.pdf
+						132 container
+							133 AXListMarker • 
+							134 link Description: Public narrated demo with captions, Value: youtube.com/watch?v=XM_fwwBZ4es
+					135 container built-with
+						136 heading Built With, Value: 2
+							137 text Built With
+						138 content list
+							139 link Description: firebase, Value: devpost.com/software/built-with/firebase
+							140 link Description: python, Value: devpost.com/software/built-with/python
+							141 link Description: react, Value: devpost.com/software/built-with/react
+							142 link Description: typescript, Value: devpost.com/software/built-with/typescript
+					143 container
+						144 heading Try it out, Value: 2
+							145 text Try it out
+						146 content list
+							147 link Description: 🔗 looplight-care.web.app, Help: https://looplight-care.web.app, Value: looplight-care.web.app/
+							148 link Description: 🔗 looplight-care.web.app, Help: https://looplight-care.web.app/submission/looplight-code.pdf, Value: looplight-care.web.app/submission/looplight-code.pdf
+							149 link Description: 🔗 looplight-care.web.app, Help: https://looplight-care.web.app/submission/looplight-one-page.pdf, Value: looplight-care.web.app/submission/looplight-one-page.pdf
+							150 link Description: 🔗 looplight-care.web.app, Help: https://looplight-care.web.app/submission/looplight-source.zip, Value: looplight-care.web.app/submission/looplight-source.zip
+							151 link Description: 🔗 looplight-care.web.app, Help: https://looplight-care.web.app/submission/looplight-pitch.pdf, Value: looplight-care.web.app/submission/looplight-pitch.pdf
+				152 container app-details-right
+					153 container submissions
+						154 heading SUBMITTED TO, Value: 4
+							155 text SUBMITTED TO
+						156 content list
+							157 container
+								158 link Description: image, Value: univabio.devpost.com/
+								159 link Description: UnivaBio, Value: univabio.devpost.com/
+								160 text ⏲
+								161 text 21 more days
+								162 text  to submit
+								163 link Description: Edit hackathon submission, Value: devpost.com/submit-to/30781-univabio/manage/submissions/1184846-looplight/edit
+					164 container app-team
+						165 heading CREATED BY, Value: 4
+							166 text CREATED BY
+						167 content list
+							168 container
+								169 container
+									170 text Project founder and builder. Set the product and quality goals and directed AI-assisted research, development, testing, and submission.
+									171 link Description: edit, Value: devpost.com/software/looplight/members/6043254/edit
+								172 link Description: Shivam Gupta, Value: devpost.com/shivam1720406
+								173 link Description: Shivam Gupta, Value: devpost.com/shivam1720406
+						174 link Description: + add team members, Value: devpost.com/software/looplight/edit#members
+					175 link Description: ⚑ Report inappropriate content, Value: devpost.com/software/looplight/flags/new, ID: flag
+					176 link Description: 👀 Hide project from my portfolio, Value: devpost.com/software/looplight/members/6043254/toggle_visibility
+			177 container
+				178 link Description: ♥ Like, Value: devpost.com/software/looplight/likes
+			179 container
+				180 heading Updates, Value: 2, ID: updates
+					181 text Updates
+				182 container
+					183 link Description: Shivam Gupta, Value: devpost.com/shivam1720406
+					184 container new_software_update
+						185 text Post an update about Looplight
+						186 text Keep a log of how Looplight has evolved. Post about new features, app store releases, screenshots, or even code snippets. Your followers will see your updates in their feeds and can comment on them.
+						187 text entry area (settable) Post an update about Looplight, ID: software_update_body
+						188 button Post update
+				189 container
+					260 link (collapsed) Description: ▾, Value: devpost.com/software/looplight#, Secondary Actions: Expand
+					190 link Description: Shivam Gupta, Value: devpost.com/shivam1720406
+					191 link Description: Shivam Gupta, Value: devpost.com/shivam1720406
+					192 text  started this project  — 
+					193 link Description: less than a minute ago, Value: devpost.com/software/looplight/updates/832326
+					194 text Leave feedback in the comments!
+					195 container
+						196 link Description: Shivam Gupta, Value: devpost.com/shivam1720406
+						197 text entry area (settable) comment_body
+						198 button Post comment
+		199 container devpost-footer
+			200 container
+				201 heading Devpost, Value: 4
+					202 text Devpost
+				203 content list
+					204 link Description: About, Value: info.devpost.com/about
+					205 link Description: Careers, Value: info.devpost.com/careers
+					206 link Description: Contact, Value: info.devpost.com/contact
+					207 link Description: Help, Value: help.devpost.com/
+			208 container
+				209 heading Hackathons, Value: 4
+					210 text Hackathons
+				211 content list
+					212 link Description: Browse hackathons, Value: devpost.com/hackathons
+					213 link Description: Explore projects, Value: devpost.com/software
+					214 link Description: Host a hackathon, Value: info.devpost.com/
+					215 link Description: Hackathon guides, Value: info.devpost.com/guides
+			216 container
+				217 heading Portfolio, Value: 4
+					218 text Portfolio
+				219 content list
+					220 link Description: Your projects, Value: devpost.com/portfolio/redirect?page=projects
+					221 link Description: Your hackathons, Value: devpost.com/portfolio/redirect?page=hackathons
+					222 link Description: Settings, Value: devpost.com/settings
+			223 container
+				224 heading Connect, Value: 4
+					225 text Connect
+				226 content list
+					227 link Description: Twitter, Value: twitter.com/devpost
+					228 link Description: Discord, Value: discord.com/invite/HP4BhW3hnp
+					229 link Description: Facebook, Value: facebook.com/devposthacks
+					230 link Description: LinkedIn, Value: linkedin.com/company/devpost/
+			231 container
+				232 text © 2026 Devpost, Inc. All rights reserved.
+				233 content list
+					234 link Description: Community guidelines, Value: info.devpost.com/legal/community-guidelines
+					235 link Description: Security, Value: info.devpost.com/legal/security
+					236 link Description: CA notice, Value: info.devpost.com/legal/california-consumer-privacy-act
+					237 link Description: Privacy policy, Value: info.devpost.com/legal/privacy-policy
+					238 link Description: Terms of service, Value: info.devpost.com/legal/terms-of-service
+		261 container Toggle Customer Support
+			262 AXWebArea devpost.com/software/looplight
+				263 button
+					264 image
+
+The focused UI element is 1 AXWebArea Looplight | Devpost, URL: devpost.com/software/looplight

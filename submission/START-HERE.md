@@ -6,8 +6,8 @@
 - **Public code:** [source ZIP](https://looplight-care.web.app/submission/looplight-source.zip) and [code PDF](https://looplight-care.web.app/submission/looplight-code.pdf)
 - **GitHub:** [shi1720/UnivaBio](https://github.com/shi1720/UnivaBio), private
 - **Direct demo video:** [MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4), publicly hosted and playback verified
-- **YouTube:** upload pending explicit platform-terms confirmation
-- **Project entry:** not created; Devpost CAPTCHA pending
+- **YouTube:** [public narrated demo](https://www.youtube.com/watch?v=XM_fwwBZ4es); signed-out playback and uploaded English captions verified
+- **Project entry:** [Looplight on Devpost](https://devpost.com/software/looplight), submitted successfully on September 16, 2026 IST (submission 1184846)
 - **Participant:** Shivam Gupta, with AI-assisted research, development, testing and documentation disclosed.
 
 ## What is ready
@@ -18,7 +18,7 @@ A fresh signed-out browser opens the public demo without an account. The final P
 
 Verification passed 31 domain tests, 16 snapshot/export tests, 64 model-parity cases, 57 deployed Firebase checks and 58 emulator checks including the actual 100-space cap. Browser QA passed Google sign-in, edited-demo save plus full reload, draft preservation, keyboard tabs and the inspected 390 × 844 mobile board/drawer. Actual source correction, receipt remaining open, reported review/closure and a calendar download click were recorded.
 
-The narrated video is complete: **2:38.6, 1920 × 1080**, with actual browser interaction footage, AI-generated Cedar narration, 32 burned-in caption cues and a separate SRT. The narration is not a recording of Shivam's voice. Upload awaits explicit YouTube terms confirmation.
+The narrated video is complete: **2:38.6, 1920 × 1080**, with actual browser interaction footage, AI-generated Cedar narration, 32 burned-in caption cues and a separate SRT. The narration is not a recording of Shivam's voice. [YouTube publication](https://www.youtube.com/watch?v=XM_fwwBZ4es) is complete; signed-out playback and uploaded English caption rendering were verified.
 
 Real PDF import created the expected three follow-ups. OS-saved JSON, text and calendar files were parsed and checked. The final two-page brief retained all three follow-ups, 18 unlinked source segments and the final source/footer, with no clipping or orphaned footer on visual inspection. The board also passed at 320 × 740. Calendar-app import and physical printing were not tested. See [testing instructions](testing-instructions.md) for exact scope and retained failed-run/retest evidence.
 
@@ -34,9 +34,9 @@ Real PDF import created the expected three follow-ups. OS-saved JSON, text and c
 | [demo-script.md](demo-script.md) | Narration and interaction shot list |
 | [youtube.md](youtube.md) | Video title, description and upload checks |
 | [code-walkthrough-and-judge-qa.md](code-walkthrough-and-judge-qa.md) | Implementation explanation and rehearsal questions |
-| [CHECKLIST.md](CHECKLIST.md) | Remaining packaging, account and submission steps |
+| [CHECKLIST.md](CHECKLIST.md) | Completed build, publication and submission checks |
 
-The older screenshot walkthrough is a preparation asset. Use the completed narrated interaction video for submission. Direct hosted playback is verified; YouTube playback and embedding remain pending publication.
+The older screenshot walkthrough is a preparation asset. Use the completed narrated interaction video for submission. Direct hosted playback and signed-out YouTube playback are verified. The uploaded English captions rendered during playback. The [Devpost project](https://devpost.com/software/looplight) was submitted successfully. Its signed-out public page and embedded YouTube playback with English captions were verified.
 
 ## The demonstration to understand
 
@@ -46,11 +46,11 @@ Open the pending culture, inspect its source, name a tracker and confirm it. Rec
 
 The proposed first customer is one care coordinator. The price hypothesis is **$149/month for 100 episodes**, with no validated time savings, paying customers or billing implementation. The current cap of 100 stored care spaces is distinct from that proposed monthly allowance.
 
-## Remaining steps
+## Submission complete
 
-The source PDF, source ZIP, one-page PDF, pitch PDF and narrated video are published. All public downloads match local hashes. The source archive compiled in an isolated directory, and [all three CI jobs passed](https://github.com/shi1720/UnivaBio/actions/runs/35004236628).
+The source PDF, source ZIP, one-page PDF, pitch PDF and narrated video are published. All public downloads match local hashes. The source archive compiled in an isolated directory, and [all three CI jobs passed](https://github.com/shi1720/UnivaBio/actions/runs/35005624284).
 
-1. **YouTube publication:** provide explicit confirmation of the YouTube terms required by the upload flow. Then upload the completed narrated video, check hosted playback/embedding signed out and insert its URL.
-2. **Devpost submission:** complete the CAPTCHA in the hackathon account. No project entry has been created. Confirm eligibility and declarations truthfully, add the final deliverables, inspect judge access and submit by **October 7, 2026, 9:15 a.m. IST**. Insert the project URL after the entry exists.
+1. **YouTube publication complete:** [public demo](https://www.youtube.com/watch?v=XM_fwwBZ4es). Signed-out playback and uploaded English caption rendering were verified.
+2. **Devpost submission complete:** [Looplight](https://devpost.com/software/looplight), submission **1184846**. The platform displayed “Project submitted!” The entry remains editable until **October 7, 2026, 9:15 a.m. IST**, equivalent to October 6 at 11:45 p.m. EDT.
 
-A final hackathon submission has not been claimed. All demonstrated people and records are fictional. The product is an engineering MVP, not clinically validated software for identifiable patient records. Status and history are user reports; Firestore rules do not provide a trusted clinical audit.
+The hackathon submission is complete. No YouTube or Devpost confirmation remains outstanding. All demonstrated people and records are fictional. The product is an engineering MVP, not clinically validated software for identifiable patient records. Status and history are user reports; Firestore rules do not provide a trusted clinical audit.

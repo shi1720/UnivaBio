@@ -5,20 +5,20 @@
   "engine_release": "hybrid-1.2",
   "app_url": "https://looplight-care.web.app",
   "video_url": "https://looplight-care.web.app/submission/looplight-narrated-demo.mp4",
-  "youtube_status": "Not uploaded; explicit terms confirmation pending.",
-  "devpost_status": "No project created; CAPTCHA pending.",
+  "youtube_status": "Published publicly; signed-out playback and uploaded English captions verified.",
+  "devpost_status": "Submitted successfully; signed-out project page and embedded YouTube playback with English captions verified.",
   "files": {
     "CHECKLIST.md": {
-      "sha256": "b04812eb6ba370c4b28a44bd83f146d4d3afb84dd7f342fdfef54fb186b1ec77",
-      "bytes": 6796
+      "sha256": "17517f0c43741da2cd2914a4be3b58c6fc5030834f9b86c8b4076e30289d50b1",
+      "bytes": 7073
     },
     "PDF-QA.md": {
       "sha256": "ab416dcd4a51a7a721c48f7f05130f7590475239ec365fd8786b655324da4b20",
       "bytes": 4054
     },
     "START-HERE.md": {
-      "sha256": "9e8e7bcb00bd2898dfbbfbe35863eb99f6fdb57c4a0a59f43d6e430c60c112fd",
-      "bytes": 5813
+      "sha256": "de32a2a79a65bf68dd6be0f69ad176a8d000db136eb748d6cb6cd6ea7d1fc91a",
+      "bytes": 6278
     },
     "assets/product.png": {
       "sha256": "1d212e117baafdfb50e5862bea45f9e5cd946c756675f33f02bdee20887a6f06",
@@ -124,9 +124,37 @@
       "sha256": "4c7be3d8e30ffbcc269085b41d8cea2390cc0d763dc651931d749eaa69cc26dc",
       "bytes": 7522
     },
+    "devpost/public-project.png": {
+      "sha256": "4966f91fc17dcb7845059a3734e331f1c5a0e4324d678183a29d6f4bd32d17fd",
+      "bytes": 79639
+    },
+    "devpost/public-project.txt": {
+      "sha256": "f0a817b576d03c1f1565cab63f7bc73f7e0e6ed5d64222a0f6a9e0a0690d24f0",
+      "bytes": 18450
+    },
+    "devpost/submission-confirmation.txt": {
+      "sha256": "ef9d4c0dd834402bd72ae4dcf2b389196f09770104899b2ef4d1e55a2b514cf0",
+      "bytes": 18997
+    },
+    "devpost/thumbnail.png": {
+      "sha256": "b596412a9ad41b47377b3eae564ddc7cc2ca206d320da11eb5f88b05ac0e3dc1",
+      "bytes": 342488
+    },
+    "devpost/thumbnail.svg": {
+      "sha256": "83d8dae4d6803549f90dc98ad63d50fd769eef2ffb3482f41101a8d13caa8066",
+      "bytes": 143070
+    },
+    "devpost/youtube-thumbnail-safe.png": {
+      "sha256": "c0f9279410a09f4c3cd362a133a4249030c2ec21f743092bf7980bc6bab03d55",
+      "bytes": 243717
+    },
+    "devpost/youtube-thumbnail-safe.svg": {
+      "sha256": "f3cb86d13cf29529843060dfdacfa443a68d836ff84f229f838f3464219689e0",
+      "bytes": 143088
+    },
     "devpost-copy.md": {
-      "sha256": "1c60c507c608ffaf8c29301450268a4571c3243d32488d2e026ce65568718a58",
-      "bytes": 5264
+      "sha256": "598b25bd47c827bfb86e4d4f019dbf0609fbfc4f98b075d53c60d3e02486e3d1",
+      "bytes": 7003
     },
     "hosting-verification.json": {
       "sha256": "ebae0624d4cac9d31036fd6058c66bcafe4e736ea3317f41d543360f662821c5",
@@ -169,12 +197,16 @@
       "bytes": 53833
     },
     "project-story.md": {
-      "sha256": "1c60c507c608ffaf8c29301450268a4571c3243d32488d2e026ce65568718a58",
-      "bytes": 5264
+      "sha256": "598b25bd47c827bfb86e4d4f019dbf0609fbfc4f98b075d53c60d3e02486e3d1",
+      "bytes": 7003
+    },
+    "publication-verification.json": {
+      "sha256": "8741c38bc8bfe3104e0fe062a04904d0c64b8095c20617c607726c41ab9770d4",
+      "bytes": 1424
     },
     "release-status.json": {
-      "sha256": "40b83fd1fec2092791c97abab3a8a8d508a2e98ae8e3b6ae79c9c2c273f87e4f",
-      "bytes": 2647
+      "sha256": "933c09fac476496fbeef0fc78e11e8b559d85f5ae1cf810815c3e3d5bc194047",
+      "bytes": 4116
     },
     "render-verification.json": {
       "sha256": "f5272c35296c953c3f4aa48dc55e7068fdf480e6f522bd9032790ab0f2b1b31e",
@@ -245,8 +277,8 @@
       "bytes": 26866
     },
     "testing-instructions.md": {
-      "sha256": "286fe38d1461514dc5cd357e479f8d65b58d2f7142c712bac412c70862e86fc9",
-      "bytes": 10708
+      "sha256": "08bd8ac9b877c429222e802b6694dd2d9bf3e306fa39a0a3768e584fd39c567a",
+      "bytes": 11122
     },
     "video/README.md": {
       "sha256": "b581208dd08302d6fae30bcdca1aa203c11fb34d793114524e663d06c4f24bf6",
@@ -661,9 +693,19 @@
       "bytes": 1667
     },
     "youtube.md": {
-      "sha256": "2ab890b7ff850ca92985c5c2ecf7046e822bc767d07844741637a3a180d06a2e",
-      "bytes": 2343
+      "sha256": "59f120556675fd5365d1f767c5eed159abd75a780534f60f6fc7cb189f8d9f22",
+      "bytes": 2949
     }
   },
-  "note": "This manifest covers all other files in the submission directory. Historical screenshot walkthrough files are retained as preparation assets; use video/looplight-narrated-demo.mp4 as the final demo."
+  "note": "This manifest covers all other delivery files in the submission directory, excluding filesystem caches. Historical screenshot walkthrough files remain preparation assets. Use the public YouTube demo or video/looplight-narrated-demo.mp4 as the final demo. Publication proof and the submitted story are included.",
+  "youtube_url": "https://www.youtube.com/watch?v=XM_fwwBZ4es",
+  "devpost_url": "https://devpost.com/software/looplight",
+  "devpost_submission_id": 1184846,
+  "submission_local_date": "2026-09-16",
+  "submission_timezone": "Asia/Kolkata",
+  "proof_file": "publication-verification.json",
+  "source_snapshot_sha256": "436698a6165a51f83ac52cb7fbc418e172c323cf71318ad089ec111f15633ffe",
+  "frozen_source_files_verified": 278,
+  "platform_user_blockers": [],
+  "file_count": 172
 }

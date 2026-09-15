@@ -1,6 +1,6 @@
 {
   "release": "Looplight Firebase MVP",
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "app": "https://looplight-care.web.app",
   "source_ci": {
     "commit": "cb7e07c5aabbbbd47d3837af5f845dbf6add8e57",
@@ -32,10 +32,7 @@
     "js_sha256": "331bddfb711ad6b35c9054a0070d31e404416d731cd1001230a17078a8e904f1",
     "css_sha256": "bd78651947db2a74d8535a172123f2ceb2a0d7f1bc8375e3e264bf92f5030a67"
   },
-  "pending": {
-    "youtube": "Explicit confirmation required for upload terms. No upload started.",
-    "devpost": "CAPTCHA pending. No project created or submitted."
-  },
+  "pending": {},
   "verification_limits": [
     "Synthetic engineering evaluation, no clinical validation.",
     "Calendar-client import, notification delivery and physical printing not tested.",
@@ -63,5 +60,45 @@
     },
     "preexisting_tab_pdf_import_after_deploy": "847 characters extracted without page refresh",
     "final_history_ui": "Readable source confirmation, receipt and reported completion; Shivam Gupta actor; no raw JSON shown."
+  },
+  "date_timezone": "Asia/Kolkata",
+  "publication_date_utc": "2026-09-15",
+  "publication": {
+    "youtube": {
+      "url": "https://www.youtube.com/watch?v=XM_fwwBZ4es",
+      "status": "public",
+      "signed_out_playback_verified": true,
+      "uploaded_english_captions_rendered_during_playback": true,
+      "thumbnail_file": "submission/devpost/youtube-thumbnail-safe.png",
+      "final_thumbnail_save_confirmed": true,
+      "devpost_backlink_in_description": true,
+      "final_description_save_confirmed": true,
+      "replacement_thumbnail_public_cache_propagation_verified": false
+    },
+    "devpost": {
+      "url": "https://devpost.com/software/looplight",
+      "status": "submitted",
+      "submission_id": 1184846,
+      "confirmation": "Project submitted!",
+      "submitted_local_date": "2026-09-16",
+      "submitted_utc_date": "2026-09-15",
+      "editable_until_ist": "2026-10-07T09:15:00+05:30",
+      "platform_deadline_text": "October 06, 2026 at 11:45pm EDT",
+      "signed_out_page_verified": true,
+      "embedded_video_playback_verified": true,
+      "embedded_english_captions_verified": true
+    },
+    "platform_user_blockers": []
+  },
+  "final_source_ci": {
+    "commit": "45194f8b0bcf306818f65d4aa56368f789641b70",
+    "url": "https://github.com/shi1720/UnivaBio/actions/runs/35005624284",
+    "conclusion": "success",
+    "jobs": {
+      "historical-d1": "success",
+      "firebase-emulators": "success",
+      "verify": "success"
+    },
+    "evidence": "Latest release CI verified by the build owner through gh. Earlier source_ci and ci-verification.json remain historical evidence."
   }
 }

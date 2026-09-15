@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-09-15T18:37:56.993Z",
+  "project": "Looplight",
+  "builder": "Shivam Gupta",
+  "devpost": {
+    "url": "https://devpost.com/software/looplight",
+    "submissionId": 1184846,
+    "softwareId": 1430966,
+    "status": "submitted",
+    "confirmation": "Project submitted! Continue to edit your project until the hackathon deadline: October 06, 2026 at 11:45pm EDT.",
+    "signedOutPageVerified": true,
+    "embeddedVideoPlaybackVerified": true,
+    "storyHeadings": 9,
+    "galleryImages": 3,
+    "thumbnail": "submission/devpost/thumbnail.png",
+    "generalPrizeCategories": [
+      "1st Place",
+      "2nd Place",
+      "3rd Place"
+    ]
+  },
+  "youtube": {
+    "url": "https://www.youtube.com/watch?v=XM_fwwBZ4es",
+    "videoId": "XM_fwwBZ4es",
+    "visibility": "public",
+    "title": "Looplight | Every follow-up, followed through | UnivaBio 2026",
+    "descriptionFile": "submission/youtube.md",
+    "englishSrtUploaded": true,
+    "captionsRenderedDuringSignedOutPlayback": true,
+    "aiNarrationDisclosed": true,
+    "customThumbnailUploaded": true,
+    "checks": "No issues found",
+    "thumbnailFile": "submission/devpost/youtube-thumbnail-safe.png",
+    "devpostBacklinkInDescription": true,
+    "finalEditsSaveConfirmed": true,
+    "thumbnailPurpose": "Center artwork inside safe margins for cropped embeds"
+  },
+  "appUrl": "https://looplight-care.web.app",
+  "pendingPlatformActions": []
+}

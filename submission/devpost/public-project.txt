@@ -1,0 +1,360 @@
+- banner:
+  - text:                   
+  - navigation:
+    - list:
+      - link "Devpost":
+        - /url: https://devpost.com
+        - img "Devpost"
+    - list:
+      - link "Join a hackathon":
+        - /url: "#"
+        - text: Join a hackathon
+        - generic: 
+        - text: 
+      - text:   
+      - link "Host a hackathon":
+        - /url: "#"
+        - text: Host a hackathon
+        - generic: 
+        - text: 
+      - text:      
+      - link "Resources":
+        - /url: "#"
+        - text: Resources
+        - generic: 
+        - text: 
+    - list:
+      - generic: 
+      - text:  
+    - list:
+      - link "Log in":
+        - /url: https://secure.devpost.com/users/login?ref=top-nav-login
+      - link "Sign up":
+        - /url: https://secure.devpost.com/users/register?ref_content=signup_global_nav&ref_feature=signup&ref_medium=button
+        - generic: Sign up
+- heading "Looplight" [level=1]
+- paragraph: Every follow-up, followed through. Looplight turns discharge notes into a reviewable plan with an exact source, a tracking person, and a recorded next step. A result arriving is only the beginning.
+- link "♥ Like":
+  - /url: https://secure.devpost.com/users/register?flow%5Bdata%5D%5Bsoftware_id%5D=1430966&flow%5Bname%5D=like_software&return_to=https%3A%2F%2Fdevpost.com%2Fsoftware%2Flooplight
+  - generic: ♥
+  - text: Like
+- link "“ Comment":
+  - /url: /software/looplight#updates
+  - generic: “
+  - text: Comment
+- navigation:
+  - list:
+    - heading "Story" [level=4]:
+      - link "Story":
+        - /url: /software/looplight
+    - heading "Updates" [level=4]:
+      - link "Updates":
+        - /url: /software/looplight#updates
+- article:
+  - list:
+    - button:
+      - generic: 
+    - link:
+      - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/041/datas/original.png
+    - generic: 
+    - paragraph: Review the exact source. Missing owners and uncertain dates remain visible before confirmation.
+    - tabpanel:
+      - iframe [active] [id="96562517"]:
+        - generic "YouTube Video Player":
+          - generic: A small trained text model and explicit rules suggest
+          - generic: follow-up items.
+        - button "AI":
+          - generic: AI
+        - button "Show player controls"
+    - tabpanel:
+      - link:
+        - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/039/datas/original.png
+      - generic: 
+      - paragraph: The same source review and follow-through workflow works on a phone. Fictional example.
+    - tabpanel:
+      - link:
+        - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/040/datas/original.png
+      - generic: 
+      - paragraph: One plan for every documented next step, with source evidence and a person tracking it.
+    - tabpanel:
+      - link:
+        - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/041/datas/original.png
+      - generic: 
+      - paragraph: Review the exact source. Missing owners and uncertain dates remain visible before confirmation.
+    - iframe:
+      - generic "YouTube Video Player"
+      - button "Play video":
+      - button "AI":
+        - generic: AI
+      - button "Hide player controls"
+      - link "Looplight | Every follow-up, followed through | UnivaBio 2026":
+        - /url: https://www.youtube.com/watch?v=XM_fwwBZ4es
+      - link "Shivam Gupta":
+        - /url: /channel/UCLPUcp65Khk_8n_T1UjQiSQ
+        - generic: Shivam Gupta
+      - button "thumbnail-image":
+        - img "thumbnail-image"
+      - generic: Shivam Gupta
+      - generic: No subscribers
+      - button "Share":
+      - link "Watch on YouTube":
+        - /url: https://www.youtube.com/watch?v=XM_fwwBZ4es
+        - text: Watch on
+    - link:
+      - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/039/datas/original.png
+    - generic: 
+    - paragraph: The same source review and follow-through workflow works on a phone. Fictional example.
+    - link:
+      - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/040/datas/original.png
+    - generic: 
+    - paragraph: One plan for every documented next step, with source evidence and a person tracking it.
+    - link:
+      - /url: https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/330/041/datas/original.png
+    - generic: 
+    - paragraph: Review the exact source. Missing owners and uncertain dates remain visible before confirmation.
+    - button:
+      - generic: 
+    - tablist:
+      - tab "1 of 4" [selected]: • 1
+      - tab "2 of 4": • 2
+      - tab "3 of 4": • 3
+      - tab "4 of 4": • 4
+  - heading "Inspiration" [level=2]
+  - paragraph: Anita is home from hospital. Her daughter Maya has the discharge notes, a pending blood culture, a repeat blood test and a follow-up visit to arrange. The document describes the next steps. Someone still has to follow them through.
+  - paragraph:
+    - text: "Anita and Maya are fictional. The coordination problem is documented: a 2005 study of 2,644 discharges at two academic hospitals found that 41% of patients had results return after discharge. That is a historical, setting-specific finding, not a current global rate."
+    - link "Original study":
+      - /url: https://pubmed.ncbi.nlm.nih.gov/16027454/
+  - paragraph: "Looplight focuses on one practical question: who is tracking each unfinished step, and what happened next?"
+  - heading "What it does" [level=2]
+  - paragraph: Looplight turns discharge text or a text-based PDF into reviewable follow-up suggestions. Each suggestion keeps the exact source sentence. Missing owners, unclear timing and conflicting dates remain visible. Users can correct a suggestion, dismiss it or recover an action the system missed by reviewing the full note.
+  - paragraph:
+    - text: "The defining moment comes when a result arrives:"
+    - strong: the follow-up stays open
+    - text: . Looplight records receipt separately from reported clinician review. A named tracking person, dated completion report and history show what the user recorded.
+  - paragraph: The MVP includes Google/email sign-in, saved care spaces, a printable visit brief, calendar reminders and JSON export. Save the current demo and its edits to your account, then return to the saved plan later. The fictional example lets judges explore the workflow without entering patient data. Looplight organizes documented instructions; clinical decisions remain with the care team.
+  - heading "How we built it" [level=2]
+  - paragraph: React, TypeScript and Vite power the Firebase-hosted interface. A small, reproducible logistic-regression model classifies sentences using word and word-pair features. Explicit rules preserve source spans, handle known action language and interpret supported date expressions. The model can abstain, and every suggestion requires human confirmation.
+  - paragraph: PDF text is read locally. Original PDF files are not retained. Model inference uses bundled weights without an external AI service or paid model API. Firebase Auth identifies the account. Firestore rules enforce account paths, an immutable saved source and storage/version bounds. Detailed workflow checks run in the browser, so status and history remain user reports rather than a trusted clinical audit log.
+  - paragraph: Looplight is Shivam Gupta's project, built with AI-assisted research, development, testing and documentation. The repository includes the source, synthetic data, training scripts, evaluation failures and setup instructions for a transparent code walkthrough.
+  - heading "Challenges we ran into" [level=2]
+  - paragraph: Defining “done” was as important as extracting a task. A pending result needs both receipt and reported review, so the completion flow records them separately.
+  - paragraph: Document language also resists simple automation. “No further tests,” a completed scan, a conditional instruction and contradictory appointment dates need different treatment. A separate document challenge exposed false additions and missed actions. Those failures informed repairs, and the original results remain published.
+  - heading "Accomplishments that we're proud of" [level=2]
+  - paragraph: We built the complete document-to-review-to-follow-through workflow, including persistent spaces, correction paths and portable outputs.
+  - paragraph: Verification passed 31 domain tests, 16 saved-record and export tests, 64 Python/TypeScript model-parity cases, 57 live Firebase checks and 58 emulator checks. All three GitHub CI jobs passed. Earlier database tests are not counted as Firebase evidence. The classifier reached 82% raw category accuracy on 50 synthetic examples and abstained on 44.
+  - paragraph: A separate 20-document challenge contained 44 gold actions. Initial extraction precision was 84.2%, with 72.7% recall. After repairs, the same known regression cases reached 97.1% precision and 75.0% recall. These are small synthetic engineering measurements, not clinical validation.
+  - heading "What we learned" [level=2]
+  - paragraph: Source visibility and recovery from mistakes belong in the main workflow. A polished task list can still omit an important instruction.
+  - paragraph: We also tested the model's contribution. Disabling it produced the same task outputs on the 20-document challenge. No additional extraction benefit from ML was measured there. The current product is a rules-led workflow with local ML suggestions, and stronger claims need new evidence.
+  - heading "What's next for Looplight" [level=2]
+  - paragraph: The first proposed buyer is one primary-care or transitions coordinator already reconstructing follow-ups from discharge notes. We would test $149 per month for 100 episodes. Saving five minutes per episode at an assumed $35 hourly staff cost represents about $292 in gross monthly time value, before review, onboarding and support. Neither savings nor willingness to pay has been validated.
+  - paragraph: Next come interviews, independently reviewed de-identified records and a supervised pilot measuring preparation time, omissions and correction burden. Shared team workflows and EHR integrations are future work. There are no customer, clinical-outcome or reduced-readmission claims today.
+  - paragraph: "The goal is simple: every next step has a source, a person and a recorded ending."
+  - heading "Testing instructions" [level=2]
+  - paragraph:
+    - text: Open
+    - link "Looplight":
+      - /url: https://looplight-care.web.app
+    - text: . The fictional demo needs no account or API key.
+  - list:
+    - text: Choose
+    - strong: Try the pending-result walkthrough
+    - text: . Read the exact discharge sentence and the unspecified timing.
+    - text: Enter
+    - strong: Maya (daughter)
+    - text: as the tracking person, check the source-review box and choose
+    - strong: Confirm this follow-up
+    - text: .
+    - text: Under
+    - strong: Record progress
+    - text: ", enter \"The care team told us that the result is available.\" Choose"
+    - strong: Record result received
+    - text: . The follow-up stays open.
+    - text: Enter
+    - strong: Dr. Lee (fictional)
+    - text: as reviewer, today's date, and "The care team discussed the result and confirmed the documented next step." Check the reporting confirmation and choose
+    - strong: Record completion
+    - text: . Inspect the recorded history.
+    - text: Choose
+    - strong: Save this care space
+    - text: and sign in with Google or email. Refresh to verify that the saved plan and edits return.
+    - text: Open
+    - strong: Visit brief
+    - text: for print, text and calendar exports. For a fresh extraction, use
+    - strong: Add discharge notes
+    - text: ","
+    - strong: Anita's discharge
+    - text: ", then"
+    - strong: Find the open loops
+    - text: .
+    - text: Open
+    - strong: Evidence & AI
+    - text: ", then"
+    - strong: Try a challenge
+    - text: to inspect conflicting dates and recover an omitted action from
+    - strong: Source documents
+    - text: .
+  - paragraph: Use fictional examples only. No clinical interpretation or health outcome is being tested.
+  - heading "Submission files" [level=2]
+  - list:
+    - link "One-page project description PDF":
+      - /url: https://looplight-care.web.app/submission/looplight-one-page.pdf
+    - link "Complete source code PDF":
+      - /url: https://looplight-care.web.app/submission/looplight-code.pdf
+    - link "Runnable source ZIP":
+      - /url: https://looplight-care.web.app/submission/looplight-source.zip
+    - link "Pitch deck PDF":
+      - /url: https://looplight-care.web.app/submission/looplight-pitch.pdf
+    - link "Public narrated demo with captions":
+      - /url: https://www.youtube.com/watch?v=XM_fwwBZ4es
+  - heading "Built With" [level=2]
+  - list:
+    - link "firebase":
+      - /url: https://devpost.com/software/built-with/firebase
+    - link "python":
+      - /url: https://devpost.com/software/built-with/python
+    - link "react":
+      - /url: https://devpost.com/software/built-with/react
+    - link "typescript":
+      - /url: https://devpost.com/software/built-with/typescript
+  - navigation:
+    - heading "Try it out" [level=2]
+    - list:
+      - link "🔗 looplight-care.web.app":
+        - /url: https://looplight-care.web.app
+        - generic: 🔗
+        - text: looplight-care.web.app
+      - link "🔗 looplight-care.web.app":
+        - /url: https://looplight-care.web.app/submission/looplight-code.pdf
+        - generic: 🔗
+        - text: looplight-care.web.app
+      - link "🔗 looplight-care.web.app":
+        - /url: https://looplight-care.web.app/submission/looplight-one-page.pdf
+        - generic: 🔗
+        - text: looplight-care.web.app
+      - link "🔗 looplight-care.web.app":
+        - /url: https://looplight-care.web.app/submission/looplight-source.zip
+        - generic: 🔗
+        - text: looplight-care.web.app
+      - link "🔗 looplight-care.web.app":
+        - /url: https://looplight-care.web.app/submission/looplight-pitch.pdf
+        - generic: 🔗
+        - text: looplight-care.web.app
+  - complementary:
+    - heading "Submitted to" [level=4]
+    - list:
+      - figure:
+        - link "image":
+          - /url: https://univabio.devpost.com/
+          - img "image"
+      - paragraph:
+        - link "UnivaBio":
+          - /url: https://univabio.devpost.com/
+    - heading "Created by" [level=4]
+    - list:
+      - paragraph: Project founder and builder. Set the product and quality goals and directed AI-assisted research, development, testing, and submission.
+      - figure:
+        - link "Shivam Gupta":
+          - /url: https://devpost.com/shivam1720406
+          - img "Shivam Gupta"
+      - link "Shivam Gupta":
+        - /url: https://devpost.com/shivam1720406
+      - button "+":
+        - generic: +
+- link "♥ Like":
+  - /url: https://secure.devpost.com/users/register?flow%5Bdata%5D%5Bsoftware_id%5D=1430966&flow%5Bname%5D=like_software&return_to=https%3A%2F%2Fdevpost.com%2Fsoftware%2Flooplight
+  - generic: ♥
+  - text: Like
+- list
+- article:
+  - heading "Updates" [level=2]
+  - article:
+    - link "Shivam Gupta":
+      - /url: https://devpost.com/shivam1720406
+      - img "Shivam Gupta"
+    - paragraph:
+      - link "Shivam Gupta":
+        - /url: https://devpost.com/shivam1720406
+      - text: started this project
+      - text: —
+      - link "1 minute ago":
+        - /url: /software/looplight/updates/832326
+        - time: 1 minute ago
+    - paragraph: Leave feedback in the comments!
+    - list
+    - paragraph:
+      - strong:
+        - link "Log in":
+          - /url: https://secure.devpost.com/users/login
+      - text: or
+      - strong:
+        - link "sign up for Devpost":
+          - /url: https://secure.devpost.com/users/register?flow%5Bdata%5D%5Bcommentable_id%5D=832326&flow%5Bname%5D=comment_on_software_update&return_to=https%3A%2F%2Fdevpost.com%2Fsoftware%2Flooplight
+      - text: to join the conversation.
+- contentinfo:
+  - navigation:
+    - heading "Devpost" [level=4]
+    - list:
+      - link "About":
+        - /url: https://info.devpost.com/about
+      - link "Careers":
+        - /url: https://info.devpost.com/careers
+      - link "Contact":
+        - /url: https://info.devpost.com/contact
+      - link "Help":
+        - /url: https://help.devpost.com/
+  - navigation:
+    - heading "Hackathons" [level=4]
+    - list:
+      - link "Browse hackathons":
+        - /url: https://devpost.com/hackathons
+      - link "Explore projects":
+        - /url: https://devpost.com/software
+      - link "Host a hackathon":
+        - /url: https://info.devpost.com
+      - link "Hackathon guides":
+        - /url: https://info.devpost.com/guides
+  - navigation:
+    - heading "Portfolio" [level=4]
+    - list:
+      - link "Your projects":
+        - /url: https://devpost.com/portfolio/redirect?page=projects
+      - link "Your hackathons":
+        - /url: https://devpost.com/portfolio/redirect?page=hackathons
+      - link "Settings":
+        - /url: https://devpost.com/settings
+  - navigation:
+    - heading "Connect" [level=4]
+    - list:
+      - link "Twitter":
+        - /url: https://twitter.com/devpost
+        - generic: 
+        - text: Twitter
+      - link "Discord":
+        - /url: https://discord.com/invite/HP4BhW3hnp
+        - generic: 
+        - text: Discord
+      - link "Facebook":
+        - /url: https://www.facebook.com/devposthacks
+        - generic: 
+        - text: Facebook
+      - link "LinkedIn":
+        - /url: https://www.linkedin.com/company/devpost/
+        - generic: 
+        - text: LinkedIn
+  - navigation:
+    - generic: © 2026 Devpost, Inc. All rights reserved.
+    - list:
+      - link "Community guidelines":
+        - /url: https://info.devpost.com/legal/community-guidelines
+      - link "Security":
+        - /url: https://info.devpost.com/legal/security
+      - link "CA notice":
+        - /url: https://info.devpost.com/legal/california-consumer-privacy-act
+      - link "Privacy policy":
+        - /url: https://info.devpost.com/legal/privacy-policy
+      - link "Terms of service":
+        - /url: https://info.devpost.com/legal/terms-of-service
+- iframe:
+  - button:
