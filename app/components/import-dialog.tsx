@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import { useDraft, clearDraft } from "../../lib/drafts";
 import {
   Upload,
   FileText,
@@ -17,6 +18,7 @@ export default function ImportDialog({
   onClose,
   onImport,
   saved,
+  initialSample,
 }: {
   onClose: () => void;
   onImport: (
@@ -29,17 +31,35 @@ export default function ImportDialog({
     requestId: string,
   ) => Promise<void>;
   saved: boolean;
+  initialSample?: "challenge";
 }) {
-  const [patientName, setName] = useState(""),
-    [documentTitle, setTitle] = useState("Discharge summary"),
-    [dischargeDate, setDate] = useState(today()),
-    [sourceText, setText] = useState(""),
+  const prefix = `import:${saved}:${initialSample ?? "notes"}:`;
+  const [patientName, setName] = useDraft(
+      prefix + "name",
+      initialSample ? "Jordan Lee" : "",
+    ),
+    [documentTitle, setTitle] = useDraft(
+      prefix + "title",
+      initialSample
+        ? "Conflicting instructions · fictional"
+        : "Discharge summary",
+    ),
+    [dischargeDate, setDate] = useDraft(
+      prefix + "date",
+      initialSample ? addDays(today(), -2) : today(),
+    ),
+    [sourceText, setText] = useDraft(
+      prefix + "text",
+      initialSample ? CHALLENGE_TEXT : "",
+    ),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false),
     [fileBusy, setFileBusy] = useState(false);
+  const editGeneration = useRef(0);
   const fileRef = useRef<HTMLInputElement>(null);
   const lastRequest = useRef<{ fingerprint: string; id: string } | null>(null);
   function sample(challenge = false) {
+    editGeneration.current++;
     setName(challenge ? "Jordan Lee" : "Anita Rao");
     setTitle(
       challenge
@@ -70,6 +90,8 @@ export default function ImportDialog({
         lastRequest.current = { fingerprint, id: crypto.randomUUID() };
       }
       await onImport(parsed.data, lastRequest.current.id);
+      for (const field of ["text", "name", "title", "date"])
+        clearDraft(prefix + field);
       onClose();
     } catch (e) {
       setError(
@@ -82,7 +104,13 @@ export default function ImportDialog({
     }
   }
   return (
-    <Modal title="Start with the instructions" onClose={onClose} wide>
+    <Modal
+      title="Start with the instructions"
+      onClose={onClose}
+      wide
+      busy={busy || fileBusy}
+      draftHint
+    >
       <form onSubmit={submit}>
         <div className="modal-body">
           <p className="lead">
@@ -152,7 +180,10 @@ export default function ImportDialog({
               required
               maxLength={160}
               value={documentTitle}
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={(e) => {
+                editGeneration.current++;
+                setTitle(e.target.value);
+              }}
             />
           </label>
           <div className="field-heading">
@@ -176,11 +207,19 @@ export default function ImportDialog({
             onChange={async (e) => {
               const file = e.target.files?.[0];
               if (!file) return;
+              const generation = ++editGeneration.current;
+              const input = e.currentTarget;
               setFileBusy(true);
               setError("");
               try {
-                setText(await readDocumentFile(file));
-                setTitle(file.name.replace(/\.(pdf|txt)$/i, ""));
+                const text = await readDocumentFile(file);
+                if (generation === editGeneration.current) {
+                  setText(text);
+                  setTitle(file.name.replace(/\.(pdf|txt)$/i, ""));
+                } else
+                  setError(
+                    "Your newer edits were kept. Import the file again if you want to replace them.",
+                  );
               } catch (e) {
                 setError(
                   e instanceof Error
@@ -189,7 +228,7 @@ export default function ImportDialog({
                 );
               } finally {
                 setFileBusy(false);
-                e.target.value = "";
+                input.value = "";
               }
             }}
           />
@@ -200,7 +239,10 @@ export default function ImportDialog({
             required
             value={sourceText}
             placeholder="Paste the discharge instructions exactly as written…"
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) => {
+              editGeneration.current++;
+              setText(e.target.value);
+            }}
           />
           <div className="field-meta">
             <span>

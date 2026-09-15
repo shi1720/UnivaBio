@@ -1,10 +1,12 @@
-# UnivaBio product research — 15 September 2026
+# UnivaBio product research: 15 September 2026
+
+**Current scope note:** the final implementation uses Firebase Hosting/Auth/Firestore, local analysis and one account per saved care space. All status/history is user-reported. Earlier research possibilities are not implemented-feature claims. Business assumptions are aligned below with the single-coordinator pilot. The sources were reviewed for the original September 15 research; no new competitor-product testing is claimed.
 
 ## Recommendation
 
-Build a **source-grounded unfinished-care ledger**: turn a patient's discharge document into a small set of explicit follow-up obligations, give each obligation an owner and due-date interpretation, and keep it open until there is recorded evidence of what happened. Start with pending tests, repeat labs, and referrals. The story is: **“Discharged does not mean done.”**
+Build a **source-linked follow-up ledger**: turn a patient's discharge document into a small set of explicit follow-up obligations, give each action a tracking person and a supported date interpretation, and keep it open until a person reports what happened. Start with pending tests, repeat labs, and referrals. The story is: **“Discharged does not mean done.”**
 
-This is an administrative coordination product. It carries forward documented clinician instructions; it does not invent new testing, interpret results, prescribe, or decide whether a patient is safe. The strongest visible innovation is a reviewable chain from **source sentence → confirmed action → accountable person → recorded resolution**, including the ability to say “the document does not specify this.”
+This is an administrative coordination product. It carries forward documented clinician instructions; it does not invent new testing, interpret results, prescribe, or decide whether a patient is safe. The strongest visible innovation is a reviewable chain from **source sentence → confirmed action → tracking person → reported resolution**, including the ability to say “the document does not specify this.”
 
 The broad market is crowded. Avoid claiming to be the first AI discharge companion. Distinguish the MVP through its deliberately small, portable, upload-first workflow and unusually inspectable extraction / closure process. That is a product positioning hypothesis, not a demonstrated unique moat.
 
@@ -12,17 +14,17 @@ The broad market is crowded. Avoid claiming to be the first AI discharge compani
 
 1. **A concrete historical measurement:** Roy et al.'s 2005 study covered 2,644 patients discharged from hospitalist services at two academic hospitals in 2004. Of these patients, 41% had test results return after discharge; 9.4% of the returned results were potentially actionable. The authors could not determine whether clinician unawareness caused adverse outcomes. Use the year and study context whenever quoting the percentage. It is not a current global prevalence estimate. [Original research abstract, Annals of Internal Medicine / PubMed](https://pubmed.ncbi.nlm.nih.gov/16027454/).
 2. **Current relevance without stale headline statistics:** the 2025 ASTP/ONC SAFER Guides include a dedicated Test Results Reporting and Follow-Up guide. Their purpose is safer electronic communication and management of results. This verifies that follow-up remains an active patient-safety design concern. It does not certify this product or guarantee legal compliance. [Official SAFER Guides](https://healthit.gov/clinical-quality-and-safety/safer-guides), [guide resource, updated April 2026](https://healthit.gov/resources/2025-safer-guide-test-results-reporting-and-follow-up/).
-3. **Operational model:** AHRQ's RED toolkit describes postdischarge contact that reviews appointments, laboratory tests, patient misunderstandings, and caregiver concerns. It recommends a clinical staff follow-up call 2–3 days after discharge within that program. This supports the proposed staff workflow; our app cannot replace that clinical contact. [AHRQ RED Tool 5](https://www.ahrq.gov/patient-safety/settings/hospital/red/toolkit/redtool5.html).
+3. **Operational model:** AHRQ's RED toolkit describes postdischarge contact that reviews appointments, laboratory tests, patient misunderstandings, and caregiver concerns. It recommends a clinical staff follow-up call 2-3 days after discharge within that program. This supports the proposed staff workflow; our app cannot replace that clinical contact. [AHRQ RED Tool 5](https://www.ahrq.gov/patient-safety/settings/hospital/red/toolkit/redtool5.html).
 4. **Evidence limitation:** a 2018 systematic review found that some electronic and educational interventions can improve documentation and awareness of pending results, while additional research is needed on effects on processes and outcomes. We can claim to support a workflow worth testing, not to reduce readmissions already. [AHRQ review summary](https://psnet.ahrq.gov/issue/interventions-improve-follow-laboratory-test-results-pending-discharge-systematic-review).
 5. **Buyer context:** CMS Transitional Care Management includes patient/caregiver contact within two business days and a face-to-face encounter within 7 or 14 days depending on the service. This confirms an existing funded coordination workflow in the US. Software use alone does not satisfy billing requirements; do not imply guaranteed reimbursement. [CMS TCM booklet](https://www.cms.gov/files/document/mln908628-transitional-care-management-services.pdf), [current CMS care-management page](https://www.cms.gov/medicare/payment/fee-schedules/physician/care-management).
 
-Recommended pitch wording: “A classic two-hospital study found that 41% of discharged patients still had results pending. And the 2025 federal SAFER guidance still treats test-result follow-up as a dedicated safety problem. We built an accountable handoff from the document to the person taking the next step.”
+Recommended pitch wording: “A 2005 study of 2,644 discharges at two academic hospitals found that 41% of patients had results return after discharge. Federal SAFER guidance also addresses test-result follow-up. Looplight connects documented instructions to a tracking person and a reported outcome.”
 
 ## Competition: real overlap, honest positioning
 
 | Product | Verified overlap | Proposed MVP position |
 |---|---|---|
-| SeamlessMD | Digital care plans, reminders, to-do lists, symptom monitoring; caregiver access; 2026 conversational AI grounded in approved care-team content. | Do not use caregiver access or grounded AI as a “nobody else does this” claim. Focus on uploaded-document obligations, missing/contradictory details, source spans, and evidence-backed resolution across care settings. |
+| SeamlessMD | Digital care plans, reminders, to-do lists, symptom monitoring; caregiver access; 2026 conversational AI grounded in approved care-team content. | Do not use caregiver access or grounded AI as a “nobody else does this” claim. Focus on uploaded-document obligations, missing/contradictory details, source spans, and user-reported resolution across care settings. |
 | Memora Health, now part of Commure | AI care navigation, patient check-ins, care coordination, education, follow-up automation. | A narrow artifact-centered workflow that can be piloted from discharge PDFs without enterprise integration is the accessibility wedge; enterprise features and outcomes are not claimed. |
 | Eon | AI identifies incidental radiology findings, generates guideline-based follow-up, and tracks patients longitudinally with EHR integrations. | Include only instructions explicitly in a discharge document; support mixed pending labs/referrals/repeat tests instead of autonomous incidental-finding clinical management. |
 | Welkin Health | Care-management CRM, tasks, handoffs, communications, configurable plans and automation. | Ship one sharply defined workflow quickly, with provenance and review at the center, rather than requiring care program configuration. |
@@ -41,35 +43,41 @@ Neither is clearly stronger for this hackathon than the document-to-closure work
 
 ## Commercial viability: explicit hypotheses to validate
 
-**Initial buyer:** an independent primary-care group or community transition-of-care team handling 100–500 discharges per month. Staff already reconstruct next steps and contact families; sell reduced preparation/chasing time and a dependable worklist. Patients and caregivers use the plan free. Hospital-wide procurement is a later step, not an assumed first sale.
+**Initial buyer:** one primary-care or transitions coordinator handling roughly 100 discharges per month. They already reconstruct next steps and contact families. Test whether the source-linked plan reduces preparation and follow-up work. Patients and caregivers are beneficiaries through the plan and brief. Shared-team collaboration and hospital-wide procurement are future work.
 
 **Pilot:** 30 days of retrospective synthetic/de-identified document review with staff; then a supervised pilot subject to data handling and clinical governance. Record minutes to prepare a plan, extraction omissions, corrections, actions with owner/due date, follow-up completion, and time to resolution. Treat readmissions as exploratory and unsuitable for a tiny pilot's main causal claim.
 
-**Pricing assumption:** $149/month per small team including 100 active care episodes, with $1 per extra episode. This is an experiment, not researched willingness to pay. At an assumed loaded staff cost of $35/hour, saving five minutes across 100 episodes corresponds to $292/month in staff time before implementation and review costs. Software does not automatically produce those savings; measure them.
+**Pricing assumption:** $149/month per coordinator account for 100 episodes. A possible $1 extra-episode price is a later experiment, not implemented billing. This is unvalidated willingness to pay. The MVP allows at most 100 stored spaces per account, which is different from a monthly pricing allowance. At an assumed loaded staff cost of $35/hour, saving five minutes across 100 episodes corresponds to $292/month in staff time before implementation and review costs. Software does not automatically produce those savings; measure them.
 
-**Delivery economics:** deterministic local extraction can have zero per-request API fee. If using a model API, record actual token usage and vendor prices at deployment rather than asserting a cost today. Early costs include hosting, database, secure file storage, monitoring, support, security work, model validation, and integrations. Free tiers are fine for a synthetic demo; they are not a complete production-health-data budget.
+**Delivery economics:** the Firebase release runs its model and rules locally without an external model API. Hosting, Auth and Firestore currently use the project's free tier; database region is asia-south1. Provider quotas still apply. Secure operations, storage, monitoring, support, validation, agreements and integrations are real costs. Free-tier deployment is not a complete production-health-data budget.
 
 **Defensibility hypothesis:** a consented, clinician-reviewed correction dataset; interoperable source/action/closure records; operational embedding with measurable saved time. The model alone is not a moat. Avoid claiming a proprietary clinical dataset, clinical validation, paying customers, or insurer partnerships before they exist.
 
-## Demo story: 2–3 minutes
+## Demo story: 2-3 minutes
 
-Use a visibly labeled synthetic family. “Meera is home. Her daughter sees six pages. The appointment is obvious. The culture result, repeat lab, and unassigned referral are not.”
+Use a visibly labeled synthetic family. “Anita is home. Her daughter Maya has the discharge notes. A culture result is pending, a blood count needs repeating and a primary-care visit needs follow-up.”
 
-1. Open a synthetic discharge document. Extract its three or four follow-up obligations.
-2. Click one action: its exact supporting sentence highlights in the source. Show the raw date language and derived date. Document says “review in 1–2 weeks”? Display a window; document says “soon”? Ask for confirmation, do not invent a date.
-3. Reveal a task lacking an owner / phone number. The app flags the missing information and generates a question the family can ask the care team. It must not claim it knows which provider accepted responsibility.
-4. User confirms/edit actions; confirmed actions enter a simple timeline. Assign one to the caregiver and retain a log.
-5. Advance through a prepared demo result / completion flow. Upload or type an outcome receipt, record who reported it, and close the task. A received lab result alone does not mean clinically reviewed. Record separate states when needed.
-6. Show the staff view: open, waiting for information, overdue, and resolved obligations. End with measured extraction test results and a candid “synthetic-data prototype; clinical pilot next.”
+1. Open a synthetic discharge document. Extract the three follow-up suggestions in the Anita example.
+2. Click one action: its exact supporting sentence highlights in the source. Show the raw date language and derived date. Document says “review in 1-2 weeks”? Display a window; document says “soon”? Ask for confirmation, do not invent a date.
+3. Reveal a task lacking a tracking person or clear timing. The app flags the missing information and generates a question the family can ask the care team. It must not claim it knows which provider accepted responsibility.
+4. The user corrects and confirms an action, names a tracking person and retains the user-reported history.
+5. Advance through a prepared demo result / completion flow. Type a progress report, record who was involved and complete the task through the visible review flow. A received lab result alone does not mean clinically reviewed. Record separate states when needed.
+6. Show the single-account care board: open, waiting, dates passed and reported-complete items. End with measured extraction test results and a candid “synthetic-data prototype; clinical pilot next.”
 
 Closing line: “Our goal is simple: every next step has a source, a person, and a recorded ending.”
 
 ## Implementation / safety details that strengthen rigor
 
 - The extraction system cannot recover pending tests never documented in supplied records. State this as a material limitation.
-- Maintain original text, source span/page, extraction engine/version, raw date phrase, and any user correction. Distinguish model suggestions from human-confirmed data.
+- Maintain original text, source span, extraction engine/version, raw date phrase, and any user correction. Distinguish model suggestions from human-confirmed data.
 - “No follow-up required,” completed/past tests, conditional tests, conflicting dates, absent discharge date, relative deadlines, duplicated instructions, malicious instructions inside a document, large/unsupported/empty files, and timezone boundaries make meaningful tests.
 - Do not label a raw heuristic/model probability “clinical confidence.” Prefer “Needs review: date unspecified” and concrete reasons.
 - User-entered reports and self-marked completion are not verified clinical outcomes. A lab result needs a separate clinician-review status where relevant.
 - Surface deadlines as administrative reminders, without clinically prioritizing based on unvalidated diagnoses or lab values.
 - Store no real patient data in public fixtures, screenshots, telemetry, AI prompts, or repo history. A functional authenticated prototype still needs security and clinical deployment review before production patient use.
+
+## Engineering evidence and trust boundary
+
+The sentence classifier and document extractor have separate synthetic evaluations. The initial 20-document run reached 84.2% precision and 72.7% recall. The repaired 1.2 engine reaches 97.1% precision and 75.0% recall on those same known regression cases. A rules-only comparator produces identical task outputs; no additional ML extraction benefit was measured on this set. Neither experiment establishes clinical benefit.
+
+The current Firebase rules protect account paths and outer storage invariants. Workflow transitions and detailed snapshot checks run in the client. Mutable state and event history are user reports, not backend-attested or tamper-proof clinical audit. See ARCHITECTURE.md and SECURITY.md.

@@ -1,0 +1,186 @@
+{
+  "project": "Looplight",
+  "creator": "Shivam Gupta",
+  "credit": "Founder & builder / Built with AI-assisted development",
+  "tagline": "The next step,\naccounted for.",
+  "subtitle": "A follow-up ledger for the days after discharge.",
+  "app_url": "https://looplight-care.web.app",
+  "app_label": "looplight-care.web.app",
+  "repo_url": "https://github.com/shi1720/UnivaBio",
+  "repo_label": "github.com/shi1720/UnivaBio",
+  "release": {
+    "status": "ready",
+    "qa_status": "reported",
+    "qa_summary": "The build owner reports 57 live Firebase checks passed on synthetic records, with owner isolation and persistence verified. Google sign-in and an edited demo surviving account save and refresh passed GUI checks. Additional UI review continues. These checks are not clinical validation or a guarantee that all defects have been found.",
+    "source_note": "Final screenshots and test results supplied by the build owner on 2026-09-15. Only performed checks are described."
+  },
+  "assets": {
+    "desktop": {
+      "path": "assets/firebase-desktop.png",
+      "status": "verified",
+      "description": "Actual Firebase care board focused on the source-review prompt and follow-up cards. Anita and Maya are fictional. Original capture bytes retained.",
+      "crop_px": [
+        260,
+        450,
+        1160,
+        550
+      ]
+    },
+    "mobile": {
+      "path": "assets/firebase-mobile.png",
+      "status": "verified",
+      "description": "Actual mobile Firebase care board with fictional Anita/Maya data. Original capture bytes retained."
+    },
+    "source": {
+      "path": "assets/firebase-source.png",
+      "status": "verified",
+      "description": "Actual Firebase result-detail panel showing its source sentence and unresolved details. Fictional data. Original capture bytes retained.",
+      "crop_px": [
+        830,
+        132,
+        610,
+        570
+      ]
+    }
+  },
+  "architecture": {
+    "browser": "The trained classifier, extraction rules, and follow-up transitions run in the browser.",
+    "firebase": "Firebase Hosting serves the app. Firebase Authentication signs users in. Cloud Firestore stores account care spaces.",
+    "rules": "Firestore rules validate ownership, immutable source fields, versions, and quotas. They do not independently validate the full clinical follow-up transition workflow.",
+    "save": "Saving the current demo to an account preserves its edits.",
+    "limitations": "A user-entered clinician name or completion is a report, not verified clinical attestation. The MVP has no EHR integration or proven health benefit."
+  },
+  "one_page": {
+    "left": [
+      {
+        "title": "Why this matters",
+        "body": "Leaving hospital can leave unfinished work: a pending result, a repeat test, or a referral. In a 2005 study of 2,644 discharges at two academic hospitals, 41% of patients had results return after discharge.<super>1</super>"
+      },
+      {
+        "title": "What the MVP does",
+        "body": "<b>Review the source.</b> Paste text or import a text PDF. Model and rules suggest tasks. Inspect every sentence, including omissions.<br/><br/><b>Name the tracker.</b> Confirm each follow-up, the person tracking it, and any date. Unclear source details remain visible.<br/><br/><b>Record the ending.</b> Result receipt stays separate from user-reported clinician review. The history retains the reported outcome."
+      },
+      {
+        "title": "A plan people can use",
+        "body": "Save the edited demo to an account. Briefs include unconverted source text. Calendar/JSON exports keep the record portable. Anita and Maya are fictional."
+      }
+    ],
+    "right": [
+      {
+        "title": "Historical evaluation",
+        "body": "On <b>20 known synthetic documents</b>, <b>33 of 34 proposals</b> matched annotations (97.1% precision), and <b>33 of 44 expected actions</b> were found (75% recall).<br/><br/>Known fixtures reused during fixes, not held-out or clinical validation. No measured model improvement over rules alone."
+      },
+      {
+        "title": "A business to test",
+        "body": "First buyer hypothesis: a primary-care or transitions coordinator already chasing discharge follow-up.<br/><br/><b>$149/month for 100 care episodes</b> is a pricing hypothesis. Measure preparation time, corrections, and willingness to pay."
+      },
+      {
+        "title": "Built for a narrow workflow",
+        "body": "Model and workflow run in the browser. Firebase provides hosting, sign-in, and saved plans. <b>57 live Firebase checks passed.</b> Owner isolation and persistence were verified. No paid inference API or proven health benefit."
+      }
+    ],
+    "footer": "Prototype tested with synthetic data. Patient deployment requires clinical and security review."
+  },
+  "slides": [
+    {
+      "id": 1,
+      "layout": "cover",
+      "notes": "Looplight is Shivam Gupta's UnivaBio project, built with AI-assisted development. This is a prototype tested with synthetic data. Demonstration records are fictional. The final Firebase deployment URL and screenshots were supplied by the build owner. Do not claim clinical validation or proven health benefit."
+    },
+    {
+      "id": 2,
+      "layout": "problem",
+      "title": "Care continues after discharge",
+      "story": "Anita is home.\nMaya has the document.\nA result is still pending.",
+      "story_note": "Fictional family.\nA real coordination problem.",
+      "stat": "41%",
+      "stat_label": "had results return\nafter discharge",
+      "stat_note": "2005 study of 2,644 discharges\nat two academic hospitals.\nA historical finding, not a current\nglobal prevalence estimate.",
+      "notes": "Roy CL et al. Patient safety concerns arising from test results that return after hospital discharge. Ann Intern Med. 2005. https://pubmed.ncbi.nlm.nih.gov/16027454/ . The discharges were in 2004 at two academic hospitals. This is historical workflow context, not today's global prevalence. The 2025 SAFER Test Results Reporting and Follow-Up guide provides additional workflow context: https://healthit.gov/resources/2025-safer-guide-test-results-reporting-and-follow-up/ . Neither source endorses Looplight or establishes its benefit."
+    },
+    {
+      "id": 3,
+      "layout": "product",
+      "title": "A plan with the source still attached",
+      "labels": [
+        "Inspect the original words.",
+        "On a smaller screen."
+      ],
+      "footer": "Review suggestions. Recover omissions. Name the tracker.",
+      "notes": "The desktop and mobile captures show the real Firebase application using fictional Anita/Maya data. Original screenshot bytes are retained with editable native crops. The app accepts pasted text and text-based PDFs, exposes all source sentences, and requires task confirmation before tracking. The current demo can be saved to an account with its edits preserved. Imported PDF bytes are not retained; extracted text forms the source record. Final capture controls include Add discharge notes, Review the whole note, and the source-linked follow-up cards."
+    },
+    {
+      "id": 4,
+      "layout": "result",
+      "title": "A result can arrive\nbefore anyone reviews it",
+      "states": [
+        [
+          "01  RESULT RECEIVED",
+          "The family has the result."
+        ],
+        [
+          "02  CLINICIAN REVIEW REPORTED",
+          "A user records who reviewed it."
+        ],
+        [
+          "03  OUTCOME RECORDED",
+          "The history keeps the reported ending."
+        ]
+      ],
+      "caveat": "User reports. No independent clinical verification.",
+      "notes": "Follow-up transition logic runs in the browser. Firestore rules validate ownership, immutable source fields, versions, and quotas; they do not independently validate the full follow-up transition workflow. The user records clinician review and outcome. A clinician name is not verified identity or signed attestation. A tracker is the person following up, not an assignment of clinical responsibility. The actual Firebase result-detail capture shows source evidence and unresolved details, not clinician-verified evidence."
+    },
+    {
+      "id": 5,
+      "layout": "evidence",
+      "title": "Measured on known synthetic fixtures",
+      "metrics": [
+        [
+          "33/34",
+          "proposals matched\n97.1% precision"
+        ],
+        [
+          "33/44",
+          "expected actions found\n75% recall"
+        ]
+      ],
+      "context": "Historical evaluation on 20 known synthetic documents.",
+      "caveat": "Reused during fixes. Not held-out or clinical validation.",
+      "next": "The next evaluation needs independently annotated documents.",
+      "notes": "Historical development report, not a new Firebase deployment benchmark: 20 synthetic document fixtures, 44 expected actions, 34 proposals, 33 matches. Precision 33/34 = 97.1%; recall 33/44 = 75%. The initial development result was 84.2% precision and 72.7% recall; fixes were evaluated on the same known fixtures. This is not an untouched holdout, clinician-annotated real-world evaluation, or evidence of health benefit. No model uplift over rules alone has been demonstrated. Separate classifier evidence, if judges ask: 225 original synthetic training examples, 50 separately authored synthetic challenge examples, 82% raw five-category accuracy, macro F1 about 0.816, 44/50 abstentions. Do not conflate sentence classification with document-level extraction or clinical safety. Firebase deployment checks are separate from this historical extraction evaluation."
+    },
+    {
+      "id": 6,
+      "layout": "business",
+      "title": "A narrow first customer",
+      "buyer": "A primary-care or transitions coordinator\nalready chasing discharge follow-up.",
+      "price": "$149",
+      "price_note": "per month / 100 care episodes\nSingle-coordinator pricing hypothesis",
+      "value_title": "The value to measure",
+      "value": "Preparation time and correction burden.\nFive minutes saved x 100 episodes\nat $35/hour = about $292/month.",
+      "caveat": "Illustrative inputs, before review and implementation costs. No observed ROI.",
+      "notes": "The price and savings inputs are hypotheses, not customer research. $149 per coordinator account/month for 100 episodes is a proposed experiment. No revenue, willingness-to-pay evidence, customer validation, or observed time saving is claimed. Five minutes x 100 / 60 x $35 = $291.67 before review and implementation costs. Inference runs in the browser without a paid model API; hosting, storage, support, security review, clinical governance, and bandwidth remain costs. Shared team workflows are future work. Related products include SeamlessMD, Memora/Commure, Eon, and care-management platforms. Source grounding alone is not a demonstrated moat."
+    },
+    {
+      "id": 7,
+      "layout": "next",
+      "title": "Built to inspect. The next proof is a pilot.",
+      "left_title": "A complete browser workflow",
+      "left": "Browser: model, rules, and transitions.\nFirebase: hosting, sign-in, and storage.\n57 live Firebase checks passed.\nOwner isolation and persistence verified.",
+      "right_title": "What the pilot must measure",
+      "right": "Missed actions and corrections.\nPreparation time and review burden.\nReported follow-up resolution.",
+      "caveat": "Prototype tested with synthetic data. No clinical validation or proven health benefit.",
+      "notes": "Firebase Hosting, Firebase Authentication, and Cloud Firestore replace the previous hosting/account stack. Model inference, task extraction, and workflow transitions execute in the browser. Firestore security rules enforce ownership, immutable source fields, versions, and quotas. They do not provide independent server-side clinical transition validation. The current demo-save flow preserves edits in the account. The build owner supplied 57 passed live Firebase checks and verified owner isolation and persistence. Google sign-in and edited-demo account-save persistence were verified in the GUI. Additional UI review continues. No flawless-operation claim is made. Proposed next work is a governed retrospective review with clinician annotation, followed by a supervised pilot. A small pilot cannot prove a causal reduction in readmissions."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Roy et al., Annals of Internal Medicine (2005)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16027454/"
+    },
+    {
+      "title": "2025 SAFER Test Results Reporting and Follow-Up Guide",
+      "url": "https://healthit.gov/resources/2025-safer-guide-test-results-reporting-and-follow-up/"
+    }
+  ]
+}

@@ -14,7 +14,7 @@ The [official schedule](https://univabio.devpost.com/details/dates) gives these 
 | Judging ends | October 14, 2026, 11:45 pm | October 15, 2026, 9:15 am |
 | Winners announced | October 15, 2026, 9:00 am | October 15, 2026, 6:30 pm |
 
-**Published discrepancy:** the [rules page](https://univabio.devpost.com/rules) instead says August 7 at 12 am CST through October 7 at 12 am CST. That does not match the timezone/times on the submission schedule and deadline header. Operational recommendation: use the earlier, explicit Devpost submission deadline—October 7 at 9:15 am IST—and finish well before it. Do not present the prose CST time as a reliable extension.
+**Published discrepancy:** the [rules page](https://univabio.devpost.com/rules) instead says August 7 at 12 am CST through October 7 at 12 am CST. That does not match the timezone/times on the submission schedule and deadline header. Operational recommendation: use the earlier, explicit Devpost submission deadline: October 7 at 9:15 am IST: and finish well before it. Do not present the prose CST time as a reliable extension.
 
 ## Verified requirements and unknowns
 

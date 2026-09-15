@@ -1,0 +1,10 @@
+{
+  "id": "03-03",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Nothing becomes a confirmed task until someone checks it.",
+  "fingerprint": "9ab6bf9f2e261ca1677ba1c9024d8e7e4f2ac306b903741a0031a47b1215189d",
+  "sha256": "5612d14543cb5b2bac167085b91e0b79a3588733e7971c5236803954d366d26f",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 3.75
+}

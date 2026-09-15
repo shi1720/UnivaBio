@@ -1,0 +1,89 @@
+{
+  "disclosure": "AI-generated narration. Not an imitation of Shivam Gupta.",
+  "requests": [
+    {
+      "id": "01",
+      "text": "Anita is home from hospital. Her daughter, Maya, has the discharge notes. But one result is still pending. Who will make sure somebody follows it through?",
+      "audio_path": "audio/scene-01.wav",
+      "words_path": "audio/scene-01-words.json",
+      "alignment_path": "audio/scene-01-captions.json"
+    },
+    {
+      "id": "02",
+      "text": "This is Looplight, a follow-up ledger by Shivam Gupta. It turns the next steps already written in discharge notes into a plan people can inspect and track.",
+      "audio_path": "audio/scene-02.wav",
+      "words_path": "audio/scene-02-words.json",
+      "alignment_path": "audio/scene-02-captions.json"
+    },
+    {
+      "id": "03",
+      "text": "Start with Anita's fictional example. Open the source, then find the open loops. A small trained text model and explicit rules suggest follow-up items. Nothing becomes a confirmed task until someone checks it.",
+      "audio_path": "audio/scene-03.wav",
+      "words_path": "audio/scene-03-words.json",
+      "alignment_path": "audio/scene-03-captions.json"
+    },
+    {
+      "id": "04",
+      "text": "Open the pending blood culture result. Its exact source sentence stays attached. Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved.",
+      "audio_path": "audio/scene-04.wav",
+      "words_path": "audio/scene-04-words.json",
+      "alignment_path": "audio/scene-04-captions.json"
+    },
+    {
+      "id": "05",
+      "text": "A convincing task list can still miss something. The original document remains reviewable sentence by sentence, including text the system did not turn into tasks. Add a missed follow-up from its original sentence.",
+      "audio_path": "audio/scene-05.wav",
+      "words_path": "audio/scene-05-words.json",
+      "alignment_path": "audio/scene-05-captions.json"
+    },
+    {
+      "id": "06",
+      "text": "Now name Maya as the person tracking the result, review the details, and confirm the follow-up. Maya is tracking the next step. The app does not assign her clinical responsibility.",
+      "audio_path": "audio/scene-06.wav",
+      "words_path": "audio/scene-06-words.json",
+      "alignment_path": "audio/scene-06-captions.json"
+    },
+    {
+      "id": "07",
+      "text": "Here is the important distinction. Record that the result has arrived. The task stays open because receipt and clinician review are separate steps. A file arriving does not tell the family what happens next.",
+      "audio_path": "audio/scene-07.wav",
+      "words_path": "audio/scene-07-words.json",
+      "alignment_path": "audio/scene-07-captions.json"
+    },
+    {
+      "id": "08",
+      "text": "After a conversation with the clinician, record who reviewed the result and what they said. Confirm that this is your report, then record completion. The history preserves a user-reported ending, not independent proof of clinical review.",
+      "audio_path": "audio/scene-08.wav",
+      "words_path": "audio/scene-08-words.json",
+      "alignment_path": "audio/scene-08-captions.json"
+    },
+    {
+      "id": "09",
+      "text": "Take the plan to the next conversation. The visit brief keeps follow-ups and source text together. Calendar reminders use confirmed dates. In a signed-in care space, create a plan and refresh: the saved plan returns.",
+      "audio_path": "audio/scene-09.wav",
+      "words_path": "audio/scene-09-words.json",
+      "alignment_path": "audio/scene-09-captions.json"
+    },
+    {
+      "id": "10",
+      "text": "The first customer to test is a primary-care or transitions coordinator already chasing discharge follow-up. The starting price hypothesis is one hundred and forty-nine dollars a month, for one hundred episodes. A supervised pilot must test preparation time and correction burden.",
+      "audio_path": "audio/scene-10.wav",
+      "words_path": "audio/scene-10-words.json",
+      "alignment_path": "audio/scene-10-captions.json"
+    },
+    {
+      "id": "11",
+      "text": "Looplight is a working prototype evaluated on synthetic examples. It can miss instructions and needs human review. It does not diagnose, interpret a result, or demonstrate a proven health benefit.",
+      "audio_path": "audio/scene-11.wav",
+      "words_path": "audio/scene-11-words.json",
+      "alignment_path": "audio/scene-11-captions.json"
+    },
+    {
+      "id": "12",
+      "text": "Shivam Gupta built Looplight with AI-assisted development. Every next step has a source, a person tracking it, and a recorded ending. That is the work Looplight helps make visible.",
+      "audio_path": "audio/scene-12.wav",
+      "words_path": "audio/scene-12-words.json",
+      "alignment_path": "audio/scene-12-captions.json"
+    }
+  ]
+}

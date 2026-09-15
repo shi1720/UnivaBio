@@ -1,0 +1,60 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) { return request.auth != null && request.auth.uid == uid; }
+    function metaPath(uid) { return /databases/$(database)/documents/users/$(uid); }
+    function episodePath(uid, id) { return /databases/$(database)/documents/users/$(uid)/episodes/$(id); }
+    function validMeta(d) {
+      return d.keys().hasAll(['count', 'updatedAt', 'mutationId', 'mutationKind'])
+        && d.keys().hasOnly(['count', 'updatedAt', 'mutationId', 'mutationKind'])
+        && d.count is int && d.count >= 0 && d.count <= 100
+        && d.updatedAt == request.time && d.mutationId is string && d.mutationId.size() <= 160
+        && d.mutationKind in ['create', 'delete'];
+    }
+    function validRecord(d) {
+      return d.keys().hasAll(['source', 'state', 'version', 'patientName', 'documentTitle', 'createdAt', 'updatedAt', 'lastMutationId'])
+        && d.keys().hasOnly(['source', 'state', 'version', 'patientName', 'documentTitle', 'createdAt', 'updatedAt', 'lastMutationId'])
+        && d.source is string && d.state is string && d.source.size() + d.state.size() <= 900000
+        && d.source.size() >= 20 && d.state.size() >= 20
+        && d.version is int && d.version > 0 && d.version <= 1001
+        && d.patientName is string && d.patientName.size() > 0 && d.patientName.size() <= 80
+        && d.documentTitle is string && d.documentTitle.size() > 0 && d.documentTitle.size() <= 160
+        && d.createdAt is string && d.createdAt.size() <= 40 && d.updatedAt == request.time
+        && d.lastMutationId is string && d.lastMutationId.size() > 0 && d.lastMutationId.size() <= 160;
+    }
+    match /users/{uid} {
+      allow get: if owner(uid);
+      allow create: if owner(uid) && validMeta(request.resource.data)
+        && request.resource.data.count == 1 && request.resource.data.mutationKind == 'create'
+        && !exists(episodePath(uid, request.resource.data.mutationId))
+        && existsAfter(episodePath(uid, request.resource.data.mutationId));
+      allow update: if owner(uid) && validMeta(request.resource.data)
+        && ((request.resource.data.mutationKind == 'create'
+          && request.resource.data.count == resource.data.count + 1
+          && !exists(episodePath(uid, request.resource.data.mutationId))
+          && existsAfter(episodePath(uid, request.resource.data.mutationId)))
+          || (request.resource.data.mutationKind == 'delete'
+          && request.resource.data.count == resource.data.count - 1
+          && exists(episodePath(uid, request.resource.data.mutationId))
+          && !existsAfter(episodePath(uid, request.resource.data.mutationId))));
+      match /episodes/{id} {
+        allow get, list: if owner(uid);
+        allow create: if owner(uid) && validRecord(request.resource.data) && request.resource.data.version == 1
+          && getAfter(metaPath(uid)).data.mutationKind == 'create'
+          && getAfter(metaPath(uid)).data.mutationId == id
+          && getAfter(metaPath(uid)).data.count == (exists(metaPath(uid)) ? get(metaPath(uid)).data.count + 1 : 1);
+        allow update: if owner(uid) && validRecord(request.resource.data)
+          && request.resource.data.source == resource.data.source
+          && request.resource.data.patientName == resource.data.patientName
+          && request.resource.data.documentTitle == resource.data.documentTitle
+          && request.resource.data.createdAt == resource.data.createdAt
+          && request.resource.data.version == resource.data.version + 1;
+        allow delete: if owner(uid) && getAfter(metaPath(uid)).data.mutationKind == 'delete'
+          && getAfter(metaPath(uid)).data.mutationId == id
+          && getAfter(metaPath(uid)).data.count == get(metaPath(uid)).data.count - 1;
+      }
+    }
+    // No other collection, query, or unauthenticated access is permitted.
+    match /{document=**} { allow read, write: if false; }
+  }
+}

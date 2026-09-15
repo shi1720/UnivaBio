@@ -1,0 +1,10 @@
+{
+  "id": "08-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "After a conversation with the clinician, record who reviewed the result and what they said.",
+  "fingerprint": "0a337cd1aedac33f7b21604437c65e91e4642c200e7b2db11203688eb4c19240",
+  "sha256": "e457deb1b3b522c46575bafb58669a767ec03731446eb545008f4a0dbb3b7001",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 4.8
+}

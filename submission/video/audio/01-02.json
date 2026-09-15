@@ -1,0 +1,10 @@
+{
+  "id": "01-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "But one result is still pending. Who will make sure somebody follows it through?",
+  "fingerprint": "648d36c1c14650a5aa048e33a6404c16b8f777e3207185a5622099a3b8dcc419",
+  "sha256": "eee6ff1d7e1326218bc9ebc3c13e7dfe9de6ac0711b59f42ff4e116df104a7c3",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.3
+}

@@ -1,0 +1,10 @@
+{
+  "id": "03-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Start with Anita's fictional example. Open the source, then find the open loops.",
+  "fingerprint": "a7edd582e1238f71e9ae7159b028034105dbf11dbe6b86b5bacc547783752879",
+  "sha256": "51e6968621cb353cf71f3dbb4480e83887d2605459f85c76b85cb431bf5bc74d",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.5
+}

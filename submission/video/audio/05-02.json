@@ -1,0 +1,10 @@
+{
+  "id": "05-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "The original document remains reviewable sentence by sentence, including text the system did not turn into tasks.",
+  "fingerprint": "73286c8b784e255d9bd5721bb6dd0da2176e2ac0086f66823d08ccf3f1c67d55",
+  "sha256": "7c04285078d4819c5f012e704bcc7a881d216fdfd1b83d12c3821eb26537ebdc",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 6.85
+}

@@ -1,0 +1,17 @@
+{
+  "video_sha256": "2e7efa03e5be8450468b974b68c2227d4872c49411db98ef38b8ba54dc8a4d43",
+  "duration_seconds": 158.6,
+  "decoded_frame_count": 4758,
+  "expected_frame_count": 4758,
+  "full_stream_decode": "pass",
+  "encoded_audio_integrated_lufs": -16.5,
+  "encoded_audio_true_peak_dbtp": -1.3,
+  "caption_count": 32,
+  "caption_boundaries": "32 ordered non-overlapping cues, all within real audio-derived duration",
+  "visual_frames": 36,
+  "contact_sheets": 3,
+  "visual_inspection": "All 36 start, middle and end frames inspected across all 12 scenes. Caption layout, fictional-data and AI-narration disclosures, source panel, result receipt, reported completion, pricing card, and final history checked. Three detailed full-resolution scene frames also inspected. Thumbnail inspected.",
+  "listening_review": "Unavailable to this agent. Source WAVs independently checked through local ASR and objective analysis.",
+  "capture_timing_samples": 33,
+  "capture_timing_sample_minimum_psnr_db": 44.74
+}

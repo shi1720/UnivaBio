@@ -1,0 +1,64 @@
+{
+  "duration_seconds": 158.6,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "clinical_validation_claimed": false,
+  "ai_narration_disclosed": true,
+  "fictional_data_disclosed": true,
+  "files": {
+    "looplight-narrated-demo.mp4": {
+      "bytes": 7764842,
+      "sha256": "2e7efa03e5be8450468b974b68c2227d4872c49411db98ef38b8ba54dc8a4d43"
+    },
+    "captions.srt": {
+      "bytes": 3504,
+      "sha256": "af39b2879ed1813734c9979cfb91506b824da2fc7269ac043e0aae3e89d500c3"
+    },
+    "looplight-thumbnail.png": {
+      "bytes": 288037,
+      "sha256": "58dee40ad2e85b18082d5ec4d714e8f606d89a155eece0e5d20015a0e28a7129"
+    },
+    "looplight-thumbnail.svg": {
+      "bytes": 142985,
+      "sha256": "1b09e2b6c8c1b0e8a4194acdf5855d665c155d06071dcd77055db273b299154c"
+    },
+    "thumbnail-provenance.json": {
+      "bytes": 386,
+      "sha256": "9225d4f8ef2b0bb144ce9e599d40ea5aa70a3592c5cfe181fac1d8ee302d2b43"
+    },
+    "timeline.json": {
+      "bytes": 12231,
+      "sha256": "72fc9981edb7dcbe40a7703cec51aa27efdeeea5a1aa77454b2eb61fc6e3caea"
+    },
+    "verification.json": {
+      "bytes": 8398,
+      "sha256": "60508eb264075955f7c6275ce395649f461e5772ae804a5523fe3b21112bd0db"
+    },
+    "qa/final-video-checks.json": {
+      "bytes": 1001,
+      "sha256": "340366c928210158965501d8bd0faa5822eac608b519c71d912c3473d4e177de"
+    },
+    "qa/capture-timing-checks.json": {
+      "bytes": 4337,
+      "sha256": "3051d916b61fe5617bf176e2d72220a3aac9d8e73820ae83bc9199c94cf9fa0d"
+    },
+    "qa/contact-sheet-1.png": {
+      "bytes": 709412,
+      "sha256": "0cac9e935c46754807a443e857e7213a71feaed4e6717c51e528934868fedd53"
+    },
+    "qa/contact-sheet-2.png": {
+      "bytes": 744506,
+      "sha256": "d8d9948a9327e378b80c814613de0a2c152730ac186eab99897cf84acb6434b0"
+    },
+    "qa/contact-sheet-3.png": {
+      "bytes": 519826,
+      "sha256": "627a838ab0f05de83f9507c6c0f309f2465b92f14435975740b1809e29a2fa2a"
+    }
+  },
+  "public_app": "https://looplight-care.web.app",
+  "public_code_pdf": "https://looplight-care.web.app/submission/looplight-code.pdf",
+  "source_narration_and_media": "The scene-plan paths resolve to copied audio WAVs and converted actual-capture MP4 clips."
+}

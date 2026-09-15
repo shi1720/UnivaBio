@@ -1,0 +1,10 @@
+{
+  "id": "05-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "A convincing task list can still miss something.",
+  "fingerprint": "98af5564636368fc71bc3b905da1041469d25d08dfeab8983a436a894f5d36d4",
+  "sha256": "02477f5a7eb5177a3b1bbba3a9f1e374908b28935dd519dc6c6b0f585116abf2",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 2.7
+}

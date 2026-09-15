@@ -1,0 +1,10 @@
+{
+  "id": "10-03",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "A supervised pilot must test preparation time and correction burden.",
+  "fingerprint": "b727a61d46200e837832ed85ab9529e39ff8f52a1d65ef47c35e22a8f6875288",
+  "sha256": "9602cfebfc6cb838606bb1542756484e4edc79c4eb9dc5ddd798b85fbbc199d8",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 4.75
+}

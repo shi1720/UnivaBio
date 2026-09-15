@@ -1,0 +1,10 @@
+{
+  "id": "04-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved.",
+  "fingerprint": "9617638d82fc963127465ecce5d41394a873da3770b4d9d9d903d32d78595326",
+  "sha256": "a25e828a4def7aace055556f91c5a5921f958ec2703a1e3cf02ff6fc9f32aa77",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 6.75
+}

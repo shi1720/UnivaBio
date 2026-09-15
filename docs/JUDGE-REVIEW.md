@@ -1,71 +1,72 @@
-# Looplight: final simulated rubric and startup review
+# Looplight: final simulated judge review
 
-**Review date:** September 15, 2026  
-**Reviewer role:** independent AI-agent critique within the build team  
-**Scope:** release candidate hybrid engine 1.2, repository source and reports, application screenshots, and prepared submission artifacts. This is a simulated critique, not an official judge assessment, independent clinical evaluation, or prediction of a competition result.
+**Date:** September 15, 2026
+**Reviewer:** a separate AI agent within the build team
+**Scope:** current Firebase MVP, repository evidence, final UI source and the browser results reported by the parent agent. This is a simulated critique, not external judge feedback, clinical evaluation or a prediction of the competition result. The reviewer did not run a separate browser session for this final review.
 
-## Overall assessment
+## Assessment
 
-Looplight now presents a coherent, working research MVP: extract suggestions from a discharge document, inspect their exact source, assign a tracking person, record receipt, then separately record reported clinician review and completion. The strongest demonstration is that receiving a result does not close the follow-up. The best differentiator is this inspectable workflow and its handling of missing information; neither the category nor the small classifier is a demonstrated moat.
+Looplight delivers a coherent research MVP around a clear question: after a result arrives, who makes sure someone reviews it? A person can inspect the discharge sentence, correct a suggestion, name a tracker, record receipt, then record reported review and completion. An edited demo can be saved through Google sign-in and restored after a full reload. The working product supports the story.
 
-The project is materially stronger than the first review. The starter README has been replaced; setup, architecture, security boundaries, business assumptions and verification are documented. The pitch contains an actual product screenshot. A malformed title was repaired. Document-level extraction failures are published, fixes have regression evidence, and the absence of measured ML extraction lift is disclosed. The buyer is now one coordinator, consistent with the single-account MVP.
+The strongest contribution is the source-linked workflow and its explicit uncertainty. The small classifier is technically reproducible, but the current document evaluation establishes no additional extraction benefit from ML. Care coordination has substantial competition. The current differentiation is a narrow, inspectable experience rather than proven feature exclusivity or defensible data.
 
-## Rubric scores
+## Official five-criterion scale
 
-Scores use the requested 0–10 scale. The event describes five criteria worth five points each, so the equivalent total is half this total. Scores assess the prepared product and materials; unresolved submission access is recorded once as a readiness gate below.
+Each criterion is scored out of five. Scores reflect the inspected MVP and evidence, with video hosting and final submission recorded once as a readiness item below.
 
-| Criterion | Score | Evidence and remaining constraint |
+| Criterion | Score | Concrete basis and remaining limit |
 |---|---:|---|
-| Idea & Innovation | **6.5 / 10** | The pending-result story is specific and understandable. Source, uncertainty, tracker and reported resolution form a credible narrow workflow. SeamlessMD, Memora/Commure, Eon and Welkin overlap with care navigation and follow-up. No verified competitor feature absence, proprietary data asset or customer preference establishes uniqueness. |
-| Implementation | **8.5 / 10** | Real local PDF/text import, exact spans, conservative date handling, human confirmation, receipt/review gates, persistence, owner-scoped D1 APIs, idempotent imports and versioned writes are implemented. QA records 31 domain tests, 32 actual local D1/API checks, 64 model-parity cases, lint/type/build passes and repeatable migrations. Hosted authentication and OS-level download/print completion are not yet verified. |
-| Health Impact & Rigor | **8 / 10** | Historical research is qualified correctly; real-world benefit is not claimed. Initial extraction failures and a rules-only comparison are retained, and regression improvement is labeled honestly. There are no clinical records, clinician annotations, prospective users or outcome measurements. Source visibility helps review but does not prove that people will catch omissions. |
-| Design & Usability | **8.5 / 10** | Actual desktop and mobile captures show readable hierarchy, focused source review, visible unknowns and a clear distinction between receipt and completion. Mobile layouts and recovery from an unreadable PDF were exercised. Accessibility and low-literacy task success have no user-study evidence. Two small labels can still better match the product's actual saved-space and reported-review semantics. |
-| Presentation | **8.5 / 10** | The fictional Anita/Maya narrative, one-page PDF, seven-slide deck, verbatim script, code walkthrough and candid judge Q&A tell a consistent story. Actual UI appears in the deck. The silent screenshot walkthrough is accurately described as a recording aid. A few final version/copy details need reconciliation before the narrated submission is assembled. |
-| **Total** | **40 / 50** | **Equivalent: 20 / 25. An informed simulated review, not a likely official score.** |
+| Idea & Innovation | **3.5 / 5** | Pending results make the problem relatable. Exact source, missing details, tracking person and receipt/review separation form a focused solution. Existing care-navigation vendors overlap; there is no validated competitor gap, proprietary dataset or buyer preference. |
+| Implementation | **4.5 / 5** | Working import, local inference, exact spans, client workflow validation, Google/email Auth and Firestore persistence are integrated. Tests passed 31 domain cases, 16 snapshot/export cases, 64 parity cases, 57 live Firebase checks and 58 emulator checks including the actual cap. Real Google sign-in and edited-demo reload passed. Real EHR integration and multi-user coordination are outside the MVP. |
+| Health Impact & Rigor | **3.5 / 5** | Historical motivation is qualified, source omissions remain visible, initial failures are retained and regression improvement is identified accurately. The app distinguishes receipt from reported review. Evidence is synthetic, with no clinician-labeled held-back notes, patient study, measured correction burden or outcomes. |
+| Design & Usability | **4.5 / 5** | The main task has a clear sequence. Saved-space navigation and error recovery exist, unrelated drafts survive progress/details saves, and linked tabs support keyboard navigation. GUI checks cover draft preservation, Arrow Right/End and a 390 × 844 board/full-width drawer without overflow. Broader accessibility and low-literacy task success remain unmeasured. |
+| Presentation | **4.0 / 5** | The fictional Anita/Maya story, project documents, code walkthrough and actual recorded source/receipt/closure interactions show a concrete product. The completed 2:38.6 video uses actual interaction footage, disclosed AI narration and captions. Hosted video/Devpost publication and final source-PDF regeneration are pending. |
+| **Total** | **20.0 / 25** | **An internal simulated assessment, not an expected official score.** |
 
-## What the measurements actually support
+## What has been verified
 
-- The sentence classifier was trained on 225 synthetic examples and evaluated on 50 separately worded synthetic examples: 82% raw five-category accuracy, 0.816 macro F1, 44 abstentions and six accepted predictions. Six correct accepted predictions do not establish robust real-world performance.
-- The original 20-document, 44-action challenge measured engine 1.1 at 32 correct of 38 suggestions: **84.2% precision and 72.7% recall**. The author froze current outputs before inference but had prior knowledge of an earlier engine; this was not blinded external validation.
-- Engine 1.2 reaches 33 correct of 34 suggestions: **97.1% precision and 75.0% recall on the same now-seen regression fixtures**. Eleven gold actions still require manual source review. This is evidence of repairs to known cases, not a new generalization result.
-- All returned source spans and the 16 assigned dates match this annotation set. That does not mean every dated action was found or every future date is safe.
-- Disabling ML leaves task outputs unchanged on the 20 documents. **There is no measured incremental ML extraction benefit on this set.** The honest description is a rules-led workflow with local ML suggestions.
+The [Firebase reports](../tests/firebase/reports/) retain an initial live run at 56/58, a repaired live rerun at 57/57, and a full emulator run at 58/58. The initial run included the actual 100-space cap and exposed two recovery problems. The smaller live rerun did not repeat saturation; the emulator run did. Source hashes and cleanup outcomes are retained. Failures have not been rewritten as first-pass success.
+
+A fresh signed-out browser loaded the public demo without an account. The final versioned PDF reader passed a real file-picker check, and two consecutive challenge runs each produced four suggestions with correct sample repopulation.
+
+Returning to existing saved work through Try the demo → About this demo → Open my saved spaces was verified without creating a copy.
+
+Parent-reported current GUI checks passed Google sign-in, saving an edited demo, full-page reload, detail/progress draft preservation and Arrow Right/End tab behavior. The inspected mobile board and drawer fit 390 × 844; the board also fit 320 × 740 with a measured 320-pixel document width. Actual source-linked manual addition, receipt that leaves a result open, reported clinician closure and a calendar-file download click were recorded. Subsequent browser checks selected the bundled PDF through the real file chooser, extracted 847 characters and saved three expected follow-ups. OS-saved text and calendar files were inspected. The text brief retained all tasks and final original-source text; the calendar parsed with one eligible event, omitted patient names and excluded the closed result. It contains no explicit notification alarm. The OS-saved JSON parsed and passed `validateEpisode` with 21 source segments, three follow-ups and preserved source text. The text brief contained 2,314 characters. After the print-spacing fix, browser `Page.printToPDF` produced two pages retaining all three follow-ups, 18 unlinked segments, final source text and footer. Both pages were visually inspected without clipping or an orphaned footer. Calendar-app import and physical printer output remain unverified.
+
+Firebase rules enforce owner paths, immutable saved source, outer record shape/size, version increments and quota coupling. They do not parse the state JSON or attest that clinical transitions occurred. The owner can supply user-reported state within those boundaries. This is an appropriate documented trust boundary for the prototype, not a verified clinical audit.
+
+The prior 32 D1/API checks are historical. They are not counted as Firebase evidence, and the old private-hosting/authentication concerns do not describe the clean public Firebase application.
+
+## What the AI measurements support
+
+- The classifier uses 225 synthetic training examples and 50 separately worded synthetic challenge examples. Raw topic accuracy is 82% and macro F1 is 0.816. It abstains on 44/50 examples; six predictions are accepted and all six are correct. This is small synthetic sentence-classification evidence.
+- The 20-document challenge contains 44 annotated actions. Its author froze the documents before running the then-current engine, but had prior knowledge of an earlier engine. It is not blinded external or clinician-labeled validation.
+- Initial engine 1.1 produced 32 correct of 38 suggestions, finding 32/44 gold actions: 84.2% precision and 72.7% recall.
+- Engine 1.2 produced 33 correct of 34 suggestions and found 33/44 gold actions: 97.1% precision and 75.0% recall on the same now-known regression cases. Eleven actions remain for manual source review. This is repair evidence, not fresh generalization.
+- All 44 gold snippets remain visible, and all 16 assigned dates and returned spans match the annotation set. Visibility does not show that a person will notice a missing task.
+- Disabling ML leaves task outputs unchanged on these 20 documents. No incremental ML extraction benefit is established. A stronger AI claim needs a fresh held-back comparison.
 
 ## Commercial assessment
 
-The single-coordinator starting customer fits the current product better than a team-care platform promise. A coordinator already doing this work is a plausible buyer to interview, while patients and caregivers benefit through the plan and brief. The document-first entry point avoids making an EHR integration a prerequisite for a synthetic or governed retrospective pilot.
+One coordinator at a primary-care practice or transitions service is a plausible initial buyer. The proposed offer is **$149/month for 100 episodes**, not implemented billing or validated pricing. The current 100-stored-space limit is a separate storage constraint.
 
-The proposed $149/month for 100 episodes is a testable offer, not validated pricing. At an assumed $35/hour loaded labor cost, five minutes saved per episode produces $291.67/month in gross time value; breakeven against the subscription alone is 2.55 minutes per episode. Review, onboarding, secure operations and support can erase that margin. Zero external model API fees are useful but do not establish attractive total unit economics.
+At an assumed $35/hour staff cost, five minutes saved per episode is $291.67/month of gross time value at 100 episodes. Review, onboarding, support and secure operation can absorb that value. There are no measured savings, paying customers or demonstrated unit economics. Local inference avoids external model fees, but does not make the entire service free to operate at scale.
 
-No customer interviews, paid commitments, measured time savings or demonstrated defensibility exist yet. The strongest next commercial experiment is the already documented paired workflow study and supervised single-coordinator pilot. Do not add features to obscure those uncertainties.
+SeamlessMD, Memora/Commure, Eon and Welkin address overlapping workflows. A useful next test is paired workflow research with coordinators, including correction time and missed actions, followed by a governed pilot and a real willingness-to-pay test. Additional features do not resolve the current evidence gap.
 
-## Prioritized final actions
+## Remaining release work
 
-### Submission readiness gates
+1. Publish the completed 2:38.6, 1920 × 1080 narrated video after explicit YouTube terms confirmation, then check signed-out hosted playback and embedding. It uses actual browser interaction footage, AI-generated Cedar narration, 32 burned-in cues and a separate SRT. The voice is not a recording of Shivam.
+2. Complete final source-PDF, inventory and hash regeneration, which is underway. Preserve the original hashes in the test evidence.
+3. Complete the Devpost CAPTCHA, truthful eligibility/account declarations and final submission/access checks. No project entry has been created.
 
-1. **Make judge access work and test it signed out.** The hosted deployment remains owner-private pending approval. Verify the fictional demo is reachable by a judge, and verify the hosted saved-account path with the intended authentication. An inaccessible URL must not be submitted as a usable prototype. This unresolved gate is not separately deducted in every rubric category.
-2. **Finish the narrated interaction video and its viewable link.** The supplied 1920 × 1080 silent screenshot walkthrough is a useful 188.7-second recording aid, not a continuous live interaction capture. Use the verbatim script with real click footage for import, confirmation and receipt/review/closure; verify final playback and embedding while signed out. Check print/save and calendar-file import in the recording browser because the build environment could not observe OS save completion.
-3. **Finish packaging the frozen code and artifacts.** Include the code PDF plus repository, check final hashes, and deliver one final deck/video version. Confirm student eligibility and account declarations truthfully; these cannot be inferred from the repository.
+These are packaging and access checks for the shipped engineering MVP. Real patient use separately requires governed data handling, independent clinical and security review, and usability evidence. The project has no real-world clinical effectiveness, broad accessibility, customer traction or regulatory-compliance validation.
 
-### Small, concrete consistency fixes
+## Evidence used
 
-- `submission/devpost-copy.md` still names **hybrid-1.1** in its build section. Match the final release name, **1.2**, while retaining 1.1 as the initial experiment version.
-- The script says “Signing in saves the plan to the account.” The current demo and saved space are separate. Prefer “In a signed-in care space, plans are saved to the account,” and show an actually saved plan. Clarify the same boundary beside “Sign in & save” if the UI copy is changed later.
-- `ml/pipeline-eval/REPORT.md` and its report template still give an external absolute-path placeholder. The root `npm run evaluate:pipeline` command is easier to reproduce; align documentation to the checked-in path without changing retained measurement JSON.
-- `app/components/loop-detail.tsx` uses “Clinician reviewed” for a user-entered report. Nearby caveats are clear, but “Review reported” would carry the limitation directly into the compact state label.
+- [README](../README.md), [testing guide](../submission/testing-instructions.md), [Firebase test instructions](../tests/firebase/README.md), retained integration reports and the current QA record.
+- Firebase adapter/rules; source, import, follow-up, account and saved-space UI; snapshot and draft code.
+- [Model card](../ml/README.md), [classifier evaluation](../ml/EVALUATION.md), [initial pipeline report](../ml/pipeline-eval/REPORT.md) and [release results](../ml/pipeline-eval/release-results.json).
+- [Business plan](BUSINESS.md), [research](RESEARCH.md), [security boundaries](SECURITY.md), prepared submission documents and parent-reported current browser checks.
 
-These are review findings at the time of inspection. Subsequent fixes should be listed in the release checklist rather than silently changing this review into a claim that they were already verified.
-
-## Claims to preserve through the demo
-
-Say “suggestion,” “source review,” “user-reported completion,” “synthetic evaluation,” and “pricing hypothesis.” Keep classifier metrics separate from pipeline extraction metrics; keep the original experiment separate from regression repair. Do not claim clinical validation, reduced readmissions, an accepted clinician handoff, multi-user sharing, customer traction, or a proven AI advantage. Accurate limits strengthen the actual engineering story.
-
-## Evidence inspected
-
-- `README.md`; `docs/QA.md`; `docs/BUSINESS.md`; `docs/SECURITY.md`; `docs/RESEARCH.md`.
-- Application and library source, local API/domain tests, and source-review/closure flows.
-- `ml/README.md`; `ml/EVALUATION.md`; `ml/pipeline-eval/README.md`; retained initial and release reports/results; rules-only snapshots.
-- Actual UI captures under `docs/images/` and `/tmp/looplight-qa/`.
-- One-page PDF, pitch PDF/deck, script, Devpost copy, judge Q&A, screenshot-walkthrough manifest and recording guide under `/tmp/univabio-submission/output/` and their checked-in submission copies.
-
-Automated-check counts in this review are attributed to the final QA record and retained reports; this review did not rerun every suite. It independently inspected source and artifacts and spot-checked the repaired title behavior. No patient, customer or real judge participated in this simulated review.
+No patient, customer, clinician reviewer or official judge supplied feedback for this simulated assessment. Credit remains Shivam Gupta as project creator and submitting participant, with AI-assisted development disclosed.

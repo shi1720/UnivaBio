@@ -1,0 +1,207 @@
+{
+  "sample_count": 33,
+  "minimum_psnr_db": 44.74,
+  "tolerance_seconds": 0.03333333333333333,
+  "all_pass": true,
+  "comparison": "Decoded converted video vs original JPEG at the corresponding capture timestamp, allowing one 30-fps sampling interval. No image rescaling.",
+  "samples": [
+    {
+      "scene": "01",
+      "seconds": 1.0,
+      "best_source_frame": "000023.jpg",
+      "psnr_db": 47.27
+    },
+    {
+      "scene": "01",
+      "seconds": 5.5565,
+      "best_source_frame": "000023.jpg",
+      "psnr_db": 47.27
+    },
+    {
+      "scene": "01",
+      "seconds": 10.963,
+      "best_source_frame": "000023.jpg",
+      "psnr_db": 48.18
+    },
+    {
+      "scene": "02",
+      "seconds": 1.0,
+      "best_source_frame": "000004.jpg",
+      "psnr_db": 49.08
+    },
+    {
+      "scene": "02",
+      "seconds": 5.3125,
+      "best_source_frame": "000004.jpg",
+      "psnr_db": 49.07
+    },
+    {
+      "scene": "02",
+      "seconds": 10.475,
+      "best_source_frame": "000004.jpg",
+      "psnr_db": 49.5
+    },
+    {
+      "scene": "03",
+      "seconds": 1.0,
+      "best_source_frame": "000072.jpg",
+      "psnr_db": 45.7
+    },
+    {
+      "scene": "03",
+      "seconds": 7.3185,
+      "best_source_frame": "000081.jpg",
+      "psnr_db": 45.97
+    },
+    {
+      "scene": "03",
+      "seconds": 14.487,
+      "best_source_frame": "000082.jpg",
+      "psnr_db": 46.2
+    },
+    {
+      "scene": "04",
+      "seconds": 1.0,
+      "best_source_frame": "000021.jpg",
+      "psnr_db": 49.05
+    },
+    {
+      "scene": "04",
+      "seconds": 6.342,
+      "best_source_frame": "000023.jpg",
+      "psnr_db": 49.12
+    },
+    {
+      "scene": "04",
+      "seconds": 12.533999999999999,
+      "best_source_frame": "000023.jpg",
+      "psnr_db": 49.92
+    },
+    {
+      "scene": "05",
+      "seconds": 1.0,
+      "best_source_frame": "000057.jpg",
+      "psnr_db": 47.7
+    },
+    {
+      "scene": "05",
+      "seconds": 6.781,
+      "best_source_frame": "000061.jpg",
+      "psnr_db": 47.85
+    },
+    {
+      "scene": "05",
+      "seconds": 13.411999999999999,
+      "best_source_frame": "000062.jpg",
+      "psnr_db": 49.06
+    },
+    {
+      "scene": "06",
+      "seconds": 1.0,
+      "best_source_frame": "000026.jpg",
+      "psnr_db": 47.88
+    },
+    {
+      "scene": "06",
+      "seconds": 6.0655,
+      "best_source_frame": "000054.jpg",
+      "psnr_db": 48.53
+    },
+    {
+      "scene": "06",
+      "seconds": 11.981,
+      "best_source_frame": "000055.jpg",
+      "psnr_db": 49.39
+    },
+    {
+      "scene": "07",
+      "seconds": 1.0,
+      "best_source_frame": "000025.jpg",
+      "psnr_db": 46.75
+    },
+    {
+      "scene": "07",
+      "seconds": 6.402,
+      "best_source_frame": "000102.jpg",
+      "psnr_db": 49.27
+    },
+    {
+      "scene": "07",
+      "seconds": 12.654,
+      "best_source_frame": "000103.jpg",
+      "psnr_db": 50.07
+    },
+    {
+      "scene": "08",
+      "seconds": 1.0,
+      "best_source_frame": "000009.jpg",
+      "psnr_db": 46.92
+    },
+    {
+      "scene": "08",
+      "seconds": 7.7905,
+      "best_source_frame": "000039.jpg",
+      "psnr_db": 50.28
+    },
+    {
+      "scene": "08",
+      "seconds": 15.431,
+      "best_source_frame": "000040.jpg",
+      "psnr_db": 50.36
+    },
+    {
+      "scene": "09",
+      "seconds": 1.0,
+      "best_source_frame": "000000.jpg",
+      "psnr_db": 48.96
+    },
+    {
+      "scene": "09",
+      "seconds": 7.598,
+      "best_source_frame": "000071.jpg",
+      "psnr_db": 46.15
+    },
+    {
+      "scene": "09",
+      "seconds": 15.046,
+      "best_source_frame": "000071.jpg",
+      "psnr_db": 46.19
+    },
+    {
+      "scene": "11",
+      "seconds": 1.0,
+      "best_source_frame": "000035.jpg",
+      "psnr_db": 44.74
+    },
+    {
+      "scene": "11",
+      "seconds": 6.9485,
+      "best_source_frame": "000048.jpg",
+      "psnr_db": 44.76
+    },
+    {
+      "scene": "11",
+      "seconds": 13.747,
+      "best_source_frame": "000061.jpg",
+      "psnr_db": 45.03
+    },
+    {
+      "scene": "12",
+      "seconds": 1.0,
+      "best_source_frame": "000003.jpg",
+      "psnr_db": 49.65
+    },
+    {
+      "scene": "12",
+      "seconds": 7.5585,
+      "best_source_frame": "000003.jpg",
+      "psnr_db": 49.65
+    },
+    {
+      "scene": "12",
+      "seconds": 14.967,
+      "best_source_frame": "000003.jpg",
+      "psnr_db": 50.52
+    }
+  ]
+}

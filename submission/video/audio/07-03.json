@@ -1,0 +1,10 @@
+{
+  "id": "07-03",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "A file arriving does not tell the family what happens next.",
+  "fingerprint": "e9bebc8c35c78afed8b5ea26c94f855753d36d55d9644c1467aa7e249da0f4ac",
+  "sha256": "cd575deb52e12a1ac1d93bcb7e4ab7e921ea474c7ec87b576c9966b03536ebdc",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 3.05
+}

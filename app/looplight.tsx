@@ -24,6 +24,7 @@ import {
   ListChecks,
 } from "lucide-react";
 import { makeDemo } from "../lib/demo";
+import { clearDrafts } from "../lib/drafts";
 import { analyzeDocument } from "../lib/engine";
 import { applyCommand } from "../lib/commands";
 import { formatDate, today } from "../lib/dates";
@@ -39,7 +40,8 @@ import {
   AccountDialog,
   type SpaceSummary,
 } from "./components/space-dialog";
-async function api<T>(url: string, options?: RequestInit): Promise<T> {
+export type ApiClient = <T>(url: string, options?: RequestInit) => Promise<T>;
+async function defaultApi<T>(url: string, options?: RequestInit): Promise<T> {
   let response: Response;
   try {
     response = await fetch(url, {
@@ -68,10 +70,22 @@ async function api<T>(url: string, options?: RequestInit): Promise<T> {
 export default function Looplight({
   mode = "demo",
   user = null,
+  apiClient = defaultApi,
+  onSignIn,
+  onSignOut,
+  localInference = false,
+  initialEpisodeId,
 }: {
   mode?: "demo" | "saved";
   user?: UserInfo;
+  apiClient?: ApiClient;
+  onSignIn?: (episode?: Episode) => void;
+  onSignOut?: () => Promise<void>;
+  localInference?: boolean;
+  initialEpisodeId?: string;
 }) {
+  const api = apiClient;
+  const requestGeneration = useRef(0);
   const saved = mode === "saved";
   const [episode, setEpisode] = useState<Episode | null>(() =>
     saved ? null : makeDemo(),
@@ -84,6 +98,7 @@ export default function Looplight({
     [view, setView] = useState<"board" | "sources" | "evidence">("board"),
     [selectedId, setSelectedId] = useState<string | null>(null),
     [showImport, setImport] = useState(false),
+    [importPreset, setImportPreset] = useState<"challenge" | undefined>(),
     [showBrief, setBrief] = useState(false),
     [showSpaces, setShowSpaces] = useState(false),
     [showAccount, setAccount] = useState(false),
@@ -93,22 +108,28 @@ export default function Looplight({
     [toast, setToast] = useState(""),
     [error, setError] = useState(""),
     [loading, setLoading] = useState(saved);
-  const loadSpace = useCallback(async (id: string) => {
-    const result = await api<{ episode: Episode }>(
-      `/api/episodes/${encodeURIComponent(id)}`,
-    );
-    setEpisode(result.episode);
-    setView("board");
-    setFilter("all");
-    setQuery("");
-    setSelectedId(null);
-    setError("");
-  }, []);
+  const loadSpace = useCallback(
+    async (id: string) => {
+      const generation = ++requestGeneration.current;
+      const result = await api<{ episode: Episode }>(
+        `/api/episodes/${encodeURIComponent(id)}`,
+      );
+      if (generation !== requestGeneration.current) return;
+      episodeRef.current = result.episode;
+      setEpisode(result.episode);
+      setView("board");
+      setFilter("all");
+      setQuery("");
+      setSelectedId(null);
+      setError("");
+    },
+    [api],
+  );
   const refreshList = useCallback(async () => {
     const result = await api<{ episodes: SpaceSummary[] }>("/api/episodes");
     setSpaces(result.episodes);
     return result.episodes;
-  }, []);
+  }, [api]);
   useEffect(() => {
     if (!saved) return;
     let cancelled = false;
@@ -117,11 +138,17 @@ export default function Looplight({
         const items = await api<{ episodes: SpaceSummary[] }>("/api/episodes");
         if (cancelled) return;
         setSpaces(items.episodes);
-        if (items.episodes[0]) {
+        const first =
+          items.episodes.find((item) => item.id === initialEpisodeId) ??
+          items.episodes[0];
+        if (first) {
           const result = await api<{ episode: Episode }>(
-            `/api/episodes/${encodeURIComponent(items.episodes[0].id)}`,
+            `/api/episodes/${encodeURIComponent(first.id)}`,
           );
-          if (!cancelled) setEpisode(result.episode);
+          if (!cancelled) {
+            episodeRef.current = result.episode;
+            setEpisode(result.episode);
+          }
         }
       } catch (e) {
         if (!cancelled)
@@ -135,7 +162,7 @@ export default function Looplight({
     return () => {
       cancelled = true;
     };
-  }, [saved]);
+  }, [saved, api, initialEpisodeId]);
   useEffect(() => {
     if (!toast) return;
     const timer = setTimeout(() => setToast(""), 6500);
@@ -158,6 +185,7 @@ export default function Looplight({
     },
     requestId: string,
   ) {
+    const generation = ++requestGeneration.current;
     const next = saved
       ? (
           await api<{ episode: Episode }>("/api/episodes", {
@@ -167,6 +195,8 @@ export default function Looplight({
           })
         ).episode
       : analyzeDocument(input, "demo-" + Date.now());
+    if (generation !== requestGeneration.current) return;
+    episodeRef.current = next;
     setEpisode(next);
     setView("board");
     setFilter("all");
@@ -184,20 +214,68 @@ export default function Looplight({
         );
       }
   }
+  async function deleteSpace(space: SpaceSummary, openNext = false) {
+    if (!Number.isSafeInteger(space.version) || space.version! < 1)
+      throw Error("Refresh your saved spaces before deleting this record.");
+    await api(`/api/episodes/${encodeURIComponent(space.id)}`, {
+      method: "DELETE",
+      body: JSON.stringify({ confirmation: "DELETE", version: space.version }),
+    });
+    const wasActive = episodeRef.current?.id === space.id;
+    if (wasActive) {
+      requestGeneration.current++;
+      episodeRef.current = null;
+      setEpisode(null);
+      setSelectedId(null);
+    }
+    setSpaces((previous) => previous.filter((item) => item.id !== space.id));
+    setError("");
+    setToast("Care space removed from the app database.");
+    try {
+      const list = await refreshList();
+      if (openNext && wasActive && list[0]) await loadSpace(list[0].id);
+    } catch {
+      setError(
+        "The care space was deleted. Retry to refresh your remaining spaces.",
+      );
+    }
+  }
   async function onCommand(command: ActionCommand) {
     const current = episodeRef.current;
     if (!current) throw Error("Choose a care space first.");
-    const updated = saved
-      ? (
-          await api<{ episode: Episode }>(
-            `/api/episodes/${encodeURIComponent(current.id)}`,
-            {
-              method: "PATCH",
-              body: JSON.stringify({ version: current.version, command }),
-            },
-          )
-        ).episode
-      : applyCommand(current, command, "Maya · fictional demo");
+    const generation = requestGeneration.current;
+    let updated: Episode;
+    try {
+      updated = saved
+        ? (
+            await api<{ episode: Episode }>(
+              `/api/episodes/${encodeURIComponent(current.id)}`,
+              {
+                method: "PATCH",
+                body: JSON.stringify({ version: current.version, command }),
+              },
+            )
+          ).episode
+        : applyCommand(current, command, "Maya · fictional demo");
+    } catch (e) {
+      if (
+        e &&
+        typeof e === "object" &&
+        "latest" in e &&
+        generation === requestGeneration.current &&
+        episodeRef.current?.id === current.id
+      ) {
+        const latest = e.latest as Episode;
+        episodeRef.current = latest;
+        setEpisode(latest);
+      }
+      throw e;
+    }
+    if (
+      generation !== requestGeneration.current ||
+      episodeRef.current?.id !== current.id
+    )
+      return;
     setEpisode(updated);
     episodeRef.current = updated;
     setToast(
@@ -319,9 +397,21 @@ export default function Looplight({
             {!saved ? (
               <>
                 <span className="demo-badge">FICTIONAL DEMO</span>
-                <a className="text-button" href="/space" target="_top">
-                  Sign in for saved spaces <ArrowUpRight size={15} />
-                </a>
+                {onSignIn ? (
+                  <button
+                    className="text-button"
+                    onClick={() =>
+                      onSignIn(user ? undefined : (episode ?? undefined))
+                    }
+                  >
+                    {user ? "Open my saved spaces" : "Save this care space"}{" "}
+                    <ArrowUpRight size={15} />
+                  </button>
+                ) : (
+                  <a className="text-button" href="/space" target="_top">
+                    Sign in for saved spaces <ArrowUpRight size={15} />
+                  </a>
+                )}
               </>
             ) : (
               <>
@@ -371,7 +461,12 @@ export default function Looplight({
               <p>Loading your saved source and follow-ups.</p>
             </div>
           ) : view === "evidence" ? (
-            <EvidenceView onChallenge={() => setImport(true)} />
+            <EvidenceView
+              onChallenge={() => {
+                setImportPreset("challenge");
+                setImport(true);
+              }}
+            />
           ) : !episode ? (
             <div className="welcome-state">
               <span className="type-icon blue">
@@ -404,7 +499,7 @@ export default function Looplight({
             </div>
           ) : view === "sources" ? (
             <SourceView
-              key={`${episode.id}:${highlight ?? "all"}`}
+              key={episode.id}
               episode={episode}
               highlight={highlight}
               onCommand={onCommand}
@@ -416,7 +511,10 @@ export default function Looplight({
                 <div>
                   <div className="eyebrow">THE NEXT CHAPTER OF CARE</div>
                   <h1>Every follow-up. Followed through.</h1>
-                  <p>A clear place for the things that still need to happen.</p>
+                  <p>
+                    Keep hospital discharge follow-ups connected to their
+                    source, a tracking person, and a recorded next step.
+                  </p>
                 </div>
                 <button
                   className="primary-button"
@@ -433,9 +531,9 @@ export default function Looplight({
                   </span>
                   <h2>
                     {active.length
-                      ? "Home is the start of the next steps."
+                      ? "Home, with a plan to follow."
                       : closed.length
-                        ? "A recorded ending for every next step."
+                        ? "Your tracked follow-ups have a recorded ending."
                         : "Start by checking the original notes."}
                   </h2>
                   <p>
@@ -445,9 +543,27 @@ export default function Looplight({
                       ? `${needsReview.length} ${needsReview.length === 1 ? "suggestion needs" : "suggestions need"} your review.`
                       : "Every follow-up stays connected to its source."}
                   </p>
-                  <button className="journey-link" onClick={() => source()}>
-                    View the original notes <ArrowRight size={17} />
-                  </button>
+                  {!saved && (
+                    <button
+                      className="journey-link demo-start"
+                      onClick={() =>
+                        setSelectedId(
+                          loops.find((l) => l.category === "pending_result")
+                            ?.id ??
+                            loops[0]?.id ??
+                            null,
+                        )
+                      }
+                    >
+                      Try the pending-result walkthrough{" "}
+                      <ArrowRight size={17} />
+                    </button>
+                  )}
+                  {saved && (
+                    <button className="journey-link" onClick={() => source()}>
+                      View the original notes <ArrowRight size={17} />
+                    </button>
+                  )}
                 </div>
                 <div
                   className="journey-graphic"
@@ -480,6 +596,24 @@ export default function Looplight({
                   </div>
                 </div>
               </section>
+              <button
+                className="coverage-note coverage-priority"
+                onClick={() => source()}
+              >
+                <span>
+                  <FileText size={19} />
+                  <span>
+                    <strong>
+                      Review the whole note, including what AI missed.
+                    </strong>
+                    <small>
+                      {unproposed} source segments have no linked follow-up.
+                      Keep every original instruction in view.
+                    </small>
+                  </span>
+                </span>
+                <ArrowRight size={18} />
+              </button>
               <div className="section-heading">
                 <div>
                   <h2>
@@ -600,21 +734,19 @@ export default function Looplight({
                   Read source <ChevronRight size={17} />
                 </button>
               </section>
-              <button className="coverage-note" onClick={() => source()}>
-                <span>
-                  <FileText size={17} />
-                  <strong>Check what wasn’t turned into a task.</strong>{" "}
-                  {unproposed} source segments remain for review.
-                </span>
-                <ArrowRight size={17} />
-              </button>
+
               {!saved && (
                 <div className="demo-footer">
                   <span>Fictional demo · changes reset on refresh</span>
                   <button
                     className="text-button"
                     onClick={() => {
-                      setEpisode(makeDemo());
+                      const fresh = makeDemo();
+                      requestGeneration.current++;
+                      episodeRef.current = fresh;
+                      clearDrafts();
+                      setSelectedId(null);
+                      setEpisode(fresh);
                       setFilter("all");
                       setQuery("");
                       setToast("Anita’s fictional example has been reset.");
@@ -639,7 +771,11 @@ export default function Looplight({
       {showImport && (
         <ImportDialog
           saved={saved}
-          onClose={() => setImport(false)}
+          initialSample={importPreset}
+          onClose={() => {
+            setImport(false);
+            setImportPreset(undefined);
+          }}
           onImport={onImport}
         />
       )}{" "}
@@ -662,6 +798,8 @@ export default function Looplight({
           active={episode?.id}
           onClose={() => setShowSpaces(false)}
           onSelect={loadSpace}
+          onDelete={deleteSpace}
+          onRefresh={refreshList}
           onNew={() => {
             setShowSpaces(false);
             setImport(true);
@@ -674,19 +812,19 @@ export default function Looplight({
           user={user}
           episode={episode}
           onClose={() => setAccount(false)}
+          onSignIn={onSignIn ? () => onSignIn(episode ?? undefined) : undefined}
+          onOpenSpaces={
+            onSignIn
+              ? () => {
+                  setAccount(false);
+                  onSignIn();
+                }
+              : undefined
+          }
+          onSignOut={onSignOut}
+          localInference={localInference}
           onDelete={async () => {
-            if (!episode) return;
-            await api(`/api/episodes/${encodeURIComponent(episode.id)}`, {
-              method: "DELETE",
-              body: JSON.stringify({
-                confirmation: "DELETE",
-                version: episode.version,
-              }),
-            });
-            const list = await refreshList();
-            if (list[0]) await loadSpace(list[0].id);
-            else setEpisode(null);
-            setToast("Care space removed from the app database.");
+            if (episode) await deleteSpace(episode, true);
           }}
         />
       )}{" "}

@@ -1,0 +1,10 @@
+{
+  "id": "11-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "It can miss instructions and needs human review.",
+  "fingerprint": "7ad3332b9038ee566a51d9fc231d434c31a5b1badc3e155357d1363326f1cb8f",
+  "sha256": "ee075f95a47dc46dde3adad276587316804629bc3b53f630d640144877e74879",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 3.35
+}

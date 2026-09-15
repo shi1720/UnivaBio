@@ -1,0 +1,10 @@
+{
+  "id": "10-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "The starting price hypothesis is one hundred and forty-nine dollars a month, for one hundred episodes.",
+  "fingerprint": "6589ef28c940e6b43750592eb48a56b4e084e0af5db3a824ab134710aa027abc",
+  "sha256": "83ee358d8d3c146fea9bdff4da4216134f8c4cc8fea6509a1e51c0e53167867d",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.5
+}

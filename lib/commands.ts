@@ -146,7 +146,7 @@ export function applyCommand(
         dueEnd: command.dueEnd,
       });
       if (command.type === "confirm") loop.status = "open";
-      detail = `${command.type === "confirm" ? "Confirmed against source" : "Updated"}; tracking person: ${loop.owner}; date: ${loop.dueDate ?? "unresolved"}${loop.dueEnd && loop.dueEnd !== loop.dueDate ? " to " + loop.dueEnd : ""}. Previous details: ${JSON.stringify(previous)}`;
+      detail = `${command.type === "confirm" ? "Confirmed against source" : "Updated"}; tracking person: ${loop.owner}; date: ${loop.dueDate ?? "unresolved"}${loop.dueEnd && loop.dueEnd !== loop.dueDate ? " to " + loop.dueEnd : ""}. Previous details: ${previous.title}; tracking person: ${previous.owner || "unassigned"}; date: ${previous.dueDate ?? "unresolved"}${previous.dueEnd && previous.dueEnd !== previous.dueDate ? " to " + previous.dueEnd : ""}.`;
     } else if (command.type === "status") {
       if (["suggested", "closed", "dismissed"].includes(loop.status))
         throw Error("Confirm or reopen this follow-up first.");

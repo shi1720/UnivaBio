@@ -1,0 +1,10 @@
+{
+  "id": "06-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Now name Maya as the person tracking the result, review the details, and confirm the follow-up.",
+  "fingerprint": "0f60d238c8345aafb5181b7ede725fa441686fb25b18c6857450b50c570e48d8",
+  "sha256": "e02e3ef74a7308bc7ebdd72d41046cdc0482d5b389f662e28c3cbab60252bebd",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 6.25
+}

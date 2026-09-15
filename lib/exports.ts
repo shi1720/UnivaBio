@@ -31,7 +31,9 @@ export function calendarText(episode: Episode): {
       `UID:${icsEscape(episode.id + "-" + loop.id)}@looplight.local`,
       `DTSTAMP:${stamp}`,
       `DTSTART;VALUE=DATE:${date.replace(/-/g, "")}`,
-      `DTEND;VALUE=DATE:${addDays(date, 1).replace(/-/g, "")}`,
+      ...(date === "9999-12-31"
+        ? ["DURATION:P1D"]
+        : [`DTEND;VALUE=DATE:${addDays(date, 1).replace(/-/g, "")}`]),
       "SUMMARY:Follow-up reminder",
       `DESCRIPTION:${icsEscape("Open Looplight to check the follow-up details. This reminder uses the confirmed final day of the source window; it is not a booked appointment.")}`,
       "STATUS:TENTATIVE",
@@ -68,6 +70,12 @@ export function briefText(e: Episode): string {
           : []),
         "",
       ]),
+    "SOURCE CONTENT WITHOUT A LINKED FOLLOW-UP",
+    "These original instructions were not converted into tracked tasks. They may still contain important next steps. Review them with the care team.",
+    ...e.sentences
+      .filter((s) => !e.loops.some((l) => l.sourceId === s.id))
+      .map((s) => `[${s.id.toUpperCase()}] ${s.text}`),
+    "",
     "LIMITS",
     "Only the supplied document is analyzed. Missing instructions cannot be recovered. Confirm medical decisions and uncertain instructions with the care team.",
   ].join("\n");

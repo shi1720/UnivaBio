@@ -19,16 +19,24 @@
     "public/examples/anita-discharge.txt",
     "submission/scripts/source-allowlist.json",
     "wrangler.local.jsonc",
-    ".github/workflows/ci.yml"
+    ".github/workflows/ci.yml",
+    "firebase.json",
+    ".firebaserc",
+    "firebase/config.json",
+    "firebase/firestore.indexes.json",
+    "tests/firebase/emulators.json",
+    "tests/firebase/.gitignore"
   ],
   "printed_source_directories": [
     "app",
+    "firebase",
     "lib",
     "tests",
     "db",
     "scripts",
     "submission/scripts",
-    "submission/builders"
+    "submission/builders",
+    "submission/video/builders"
   ],
   "printed_source_extensions": [
     ".ts",
@@ -42,7 +50,8 @@
     ".sh",
     ".css",
     ".sql",
-    ".html"
+    ".html",
+    ".rules"
   ],
   "printed_globs": [
     "ml/**/*.py",
@@ -66,7 +75,18 @@
     "submission/scripts/*.json",
     "submission/scripts/requirements*.txt",
     "submission/scripts/*.md",
-    "submission/builders/*.json"
+    "tests/firebase/reports/*.json",
+    "tests/firebase/*.md",
+    "submission/code-walkthrough-and-judge-qa.md",
+    "submission/builders/**/*.json",
+    "submission/builders/assets/**/*",
+    "submission/builders/**/requirements*.txt",
+    "submission/builders/**/*.md",
+    "submission/video/builders/**/*.json",
+    "submission/video/builders/**/requirements*.txt",
+    "submission/video/builders/**/*.md",
+    "submission/video/builders/assets/**/*",
+    "submission/video/README.md"
   ],
   "excluded_path_parts": [
     "node_modules",
@@ -77,11 +97,38 @@
     ".wrangler",
     ".sites-runtime",
     ".vinext",
-    "__pycache__"
+    "__pycache__",
+    ".firebase",
+    ".venv",
+    "venv",
+    ".agents",
+    ".codex"
   ],
   "excluded_root_prefixes": [
     "Amazon Developer Hackathon",
     "dayweave"
   ],
-  "exclusion_note": "No foreign projects, dependency trees, build outputs, real .env files, untouched components/ui, vendored PDF.js worker, or temporary runtime state. Generated model/data/evaluation JSON, the dependency lockfile, supporting prose, and binary assets are hash-listed rather than printed. All printed files are also embedded in the PDF as byte-exact source attachments. Inclusion does not assert that inherited runtime helpers were authored from scratch."
+  "exclusion_note": "No foreign projects, dependency trees, build outputs, real .env files, untouched components/ui, vendored PDF.js module/worker, credentials, or temporary runtime state. Firebase browser configuration is public application configuration, not a service-account credential. Current Firebase application/rules/configuration and tests are printed alongside retained historical implementation source. Generated model/data/evaluation JSON, sanitized Firebase test reports, the dependency lockfile, selected supporting prose, and binary assets are hash-listed rather than printed. All printed and hash-listed files are embedded in the PDF as byte-exact attachments and included in the companion source ZIP. Inclusion does not assert that inherited runtime helpers were authored from scratch.",
+  "required_printed_files": [
+    "firebase.json",
+    ".firebaserc",
+    "firebase/config.json",
+    "firebase/client.ts",
+    "firebase/store.ts",
+    "firebase/main.tsx",
+    "firebase/vite.config.ts",
+    "firebase/firestore.rules",
+    "firebase/firestore.indexes.json",
+    "lib/history.ts",
+    "lib/snapshot.ts",
+    "lib/drafts.ts",
+    "tests/firebase/unit.test.mts",
+    "tests/firebase/integration.mts",
+    "tests/firebase/run-emulators.mjs",
+    "tests/firebase/emulators.json",
+    "scripts/sync-pdfjs.mjs",
+    "submission/video/builders/build-thumbnail.py",
+    "submission/video/builders/check_capture_timing.py",
+    "submission/video/builders/verify_final_video.py"
+  ]
 }

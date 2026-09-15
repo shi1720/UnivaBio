@@ -40,7 +40,7 @@ export default function BriefDialog({
               const result = calendarText(episode);
               if (!result.count) {
                 setMessage(
-                  "Confirm a follow-up and its date before exporting reminders.",
+                  "Confirm a follow-up and its date before exporting calendar entries.",
                 );
                 return;
               }
@@ -50,7 +50,7 @@ export default function BriefDialog({
                 "text/calendar;charset=utf-8",
               );
               setMessage(
-                `Prepared ${result.count} reminder${result.count === 1 ? "" : "s"}. Import the file into your calendar. These are reminders, not booked appointments.`,
+                `Prepared ${result.count} calendar entr${result.count === 1 ? "y" : "ies"}. Import the file into your calendar. Notifications depend on your calendar settings. No appointment has been booked.`,
               );
             }}
           >
@@ -58,7 +58,7 @@ export default function BriefDialog({
           </button>
         </div>
         <p className="field-help no-print">
-          Calendar reminders use the last day of each confirmed date window.
+          Calendar entries use the last day of each confirmed date window.
           Titles omit patient and medical details.
         </p>
         {message && (
@@ -102,7 +102,9 @@ export default function BriefDialog({
                 Date:{" "}
                 {l.dueDate
                   ? formatDate(l.dueDate) +
-                    (l.dueEnd !== l.dueDate ? " – " + formatDate(l.dueEnd) : "")
+                    (l.dueEnd !== l.dueDate
+                      ? " to " + formatDate(l.dueEnd)
+                      : "")
                   : "Needs confirmation"}
               </p>
               <blockquote>{l.sourceQuote}</blockquote>
@@ -130,6 +132,21 @@ export default function BriefDialog({
               omissions.
             </p>
           )}
+          <section className="brief-untracked">
+            <h3>Source content without a linked follow-up</h3>
+            <p>
+              These original instructions were not converted into tracked tasks.
+              They may still contain important next steps. Review them with the
+              care team.
+            </p>
+            {episode.sentences
+              .filter((s) => !episode.loops.some((l) => l.sourceId === s.id))
+              .map((s) => (
+                <blockquote key={s.id}>
+                  <strong>{s.id.toUpperCase()}</strong> {s.text}
+                </blockquote>
+              ))}
+          </section>
           <footer>
             Generated {formatDate(new Date().toISOString().slice(0, 10))}. This
             brief only reflects the supplied source and user updates. Keep the

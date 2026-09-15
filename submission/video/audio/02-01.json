@@ -1,0 +1,10 @@
+{
+  "id": "02-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "This is Looplight, a follow-up ledger by Shivam Gupta.",
+  "fingerprint": "47f3320d4264c033a6af17147f6abf0f6931f87897ef54077d1951519e579507",
+  "sha256": "9f81a444d7c1fce094203f56c45182d4dd9001a06e51bcb505c423bbfc36638c",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 4.0
+}

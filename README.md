@@ -1,168 +1,172 @@
 # Looplight
 
-### Give every next step a source, a person, and a recorded ending.
+### Give every next step a source, a person and a recorded ending.
 
 **An AI-assisted UnivaBio 2026 project by Shivam Gupta.**
 
-Looplight helps patients, caregivers, and care coordinators keep track of unfinished care after discharge: a result that is still pending, a repeat test, or a follow-up visit. It extracts **suggestions**, shows the original words, flags missing or conflicting details, and keeps the record open until a person reports what happened.
+Looplight helps patients, caregivers and care coordinators track unfinished care after hospital discharge: a pending result, a repeat test or a follow-up visit. It suggests actions from the document, preserves the exact source and keeps missing details visible. A result arriving is one step; reported clinician review is recorded separately.
 
-[Hosted app](https://looplight-shivam.sg127977958.chatgpt.site) · [One-page description](submission/looplight-one-page.pdf) · [Demo script](submission/demo-script.md) · [Pitch deck](submission/looplight-pitch.pptx)
+[Open Looplight](https://looplight-care.web.app) · [One-page description](submission/looplight-one-page.pdf) · [Project story](submission/project-story.md) · [Judge testing guide](submission/testing-instructions.md)
 
-> **Release scope:** working research MVP using fictional or de-identified text. It is not clinically validated, is not a medical decision tool, and is not cleared for production use with identifiable patient records. The hosted Site currently has owner-private access; judge access must be configured before submission. A silent screenshot walkthrough is included as a recording aid; a spoken live demo, user study, patient outcome, or paying customer is not claimed.
+> **Scope:** a research MVP for fictional or de-identified notes. It is not clinically validated or ready for identifiable patient records. Status, review and history entries are user-reported. Firebase rules protect account boundaries and storage invariants; they do not provide trusted clinical audit or server-side validation of workflow transitions.
 
 ![Looplight care board with fictional data](docs/images/desktop-board.png)
 
-## The moment we are building for
+## Try the working demo
 
-Anita is home from hospital. Her daughter Maya has a discharge summary and three unfinished tasks. The obvious one is the next appointment. The quieter ones are the pending culture and the repeat blood count. The document does not say who owns every step or when the pending result should be checked.
+1. Open the app without signing in. The fictional Anita/Maya example is ready to explore.
+2. Choose **Try the pending-result walkthrough**. Inspect the exact sentence, missing timing and questions for the care team.
+3. Enter a tracking person, check the source-review confirmation and choose **Confirm this follow-up**. Leave uncertain timing blank.
+4. In **Record progress**, enter a note and choose **Record result received**. The follow-up stays open.
+5. Record the fictional clinician who reviewed it, what happened, a completion date and your confirmation. Choose **Record completion**. History labels the result as user-reported.
+6. Choose **Save this care space**. Continue with Google or use email/password. This saves a copy of the current source, follow-ups and edits into your account. Refresh the saved space to return to it.
 
-Looplight makes that uncertainty visible. It does not interpret the culture or choose treatment. It gives Maya a source-linked record and the questions she needs to ask.
+Already signed in and exploring the demo? **Open my saved spaces** returns to existing records without creating a copy. The care-space/account panel offers both **Open my saved spaces** and **Save this care space**.
 
-**Why this problem:** a 2005 study of 2,644 patients at two academic hospitals found that 41% had results return after discharge. This is a historical, setting-specific measurement, not a current global rate. Current federal SAFER guidance still addresses test-result reporting and follow-up. [Original study](https://pubmed.ncbi.nlm.nih.gov/16027454/) · [SAFER guides](https://healthit.gov/clinical-quality-and-safety/safer-guides)
+Use **Add discharge notes → Anita's discharge → Find the open loops** for a fresh import with three suggestions. **Evidence & AI → Try a challenge** fills the conflicting-instructions example for you to inspect before analysis. **Source documents** includes every retained sentence and lets you add a missed follow-up.
 
-## Try it in three minutes
+Anonymous demo changes and unfinished form drafts live in the current tab's memory. Closing and reopening a form retains its draft. Refreshing or closing the tab loses unsaved work. Use **Save this care space** before leaving if you want to preserve the current plan. Sign-in persistence is handled separately by Firebase Auth.
 
-1. Open the demo. All people and records are fictional; demo changes reset on refresh.
-2. Choose **Add discharge notes → Anita’s discharge → Find the open loops**. Or import the [text-based sample PDF](public/examples/anita-discharge.pdf).
-3. Open the pending blood-culture suggestion. Check the exact source, missing timing/owner flags, and questions for the care team.
-4. Name the tracking person, tick the source-review confirmation, and choose **Confirm this follow-up**. Leave uncertain timing blank.
-5. In **Record progress**, record receipt of the result. The item remains open.
-6. Add the clinician who reviewed it, a note, completion date, and confirmation. Choose **Record completion**. The outcome is visibly **user-reported**.
-7. Explore **Source documents** (including omitted/uncertain sentences), **Evidence & AI**, and **Visit brief**.
-8. Choose **Sign in for saved spaces** to create an account-scoped, persistent care space.
+## Why this problem
 
-The **Challenge the AI** example includes conflicting dates, a conditional scan, a negated test, a completed scan, and document text that tries to issue instructions. Nothing in a document can execute code, change a record, or bypass human review.
+Anita is home from hospital. Her daughter Maya has a discharge summary and three unfinished steps. The appointment is easy to notice. The pending culture and repeat blood count also need someone to track them.
 
-## What works
+A 2005 study of 2,644 patients at two academic hospitals found that 41% had results return after discharge. This is a historical, setting-specific measurement, not a current global rate. Federal SAFER guidance also addresses test-result reporting and follow-up. These sources motivate the workflow; they do not establish Looplight's clinical effectiveness. [Original study](https://pubmed.ncbi.nlm.nih.gov/16027454/) · [SAFER guides](https://healthit.gov/clinical-quality-and-safety/safer-guides)
+
+## What works in the implementation
 
 | Capability | Behavior |
 |---|---|
-| Text and PDF import | Paste English text or read embedded-text PDF / `.txt` locally. 5 MB, 20 pages, 40,000 characters. No OCR. Original PDF bytes are not uploaded or retained. |
-| Actual trained ML | A reproducible five-category logistic-regression classifier; bundled weights; no model API key or external inference calls. |
-| Source provenance | Exact UTF-16 offsets and verbatim text accompany each proposal. All original text stays available. |
-| Conservative timing | Date-only arithmetic, supported relative windows, original timing language. Ambiguous formats, multiple timing expressions, unsupported/event-relative dates and likely conflicts require clarification. |
-| Human control | Suggestions require confirmation. Add missed actions from source, dismiss incorrect suggestions, edit details, and reopen records. |
-| Accountable follow-through | Named tracking person; waiting/received states; a separate named clinical-review requirement for pending results; dated user-reported completion. |
-| Persistent care spaces | ChatGPT sign-in, server-side owner checks, Cloudflare D1, immutable source text, append-only event history within a versioned record. |
-| Safe updates | Validated commands, same-origin writes, idempotent imports, optimistic concurrency, bounded input/history/record size. |
-| Portable outputs | Printable visit brief / save as PDF, text brief, privacy-minimized `.ics` reminders, complete JSON export. |
-| Data control | Export and explicitly delete the current care space. No analytics or third-party model transmission. |
-| Agent interface | Feature-detected WebMCP tools to read the visible plan and open the import form. No silent confirmation/completion tool. |
+| Text/PDF import | Paste English text or read embedded-text PDF/`.txt` locally. Limits: 5 MB, 20 PDF pages, 40,000 characters. No OCR. Original PDF bytes are not uploaded or retained. |
+| Local ML and rules | A reproducible five-category classifier with bundled weights, plus explicit extraction/date rules. Both demo and signed-in analysis run on the device. No paid model API or application AI key. |
+| Source review | Exact source spans and original text accompany suggestions. Correct, dismiss or add a missed action. |
+| Conservative timing | Supported relative dates use the entered discharge day. Missing, unsupported or conflicting timing remains unresolved. |
+| Follow-through | Tracking person, waiting/received states, reported clinical review, dated completion and a user-reported history. |
+| Saved spaces | Firebase Auth with Google or email/password; account-scoped Firestore records. Save the current demo copy or import a new plan while signed in. |
+| Storage controls | Owner-path rules, immutable saved source blob, version increments, bounded outer records and transaction-linked care-space counts. |
+| Outputs | Printable visit brief, text brief, privacy-minimized calendar reminder file and complete JSON export. |
+| Data controls | Export or explicitly delete a care space. If a saved record fails to open, refresh its list or use the version-checked, typed DELETE recovery path. Form drafts and the Firestore record cache use memory. |
+| Form and keyboard behavior | Closing a form keeps its tab-memory draft. Saving progress preserves unfinished detail edits. Follow-up tabs support Arrow, Home and End keys. |
+| Agent interface | Feature-detected WebMCP can read the visible plan and open the import form. It cannot silently confirm or complete a follow-up. |
 
-## AI: inspectable, bounded, and reproducible
+The app validates source spans, command inputs, completion fields and snapshots in client code. An authenticated owner using a custom client can bypass the app's workflow checks within the outer Firestore rules. Saved status/history must therefore be treated as user assertions. See [Architecture](docs/ARCHITECTURE.md) and [Security](docs/SECURITY.md).
 
-```mermaid
-flowchart LR
-  A[Original document text] --> B[Source segments and exact spans]
-  B --> C[Trained sentence classifier]
-  B --> D[Independent rules and date parser]
-  C --> E[Reviewable suggestions and uncertainty]
-  D --> E
-  E --> F[Human confirmation]
-  F --> G[Owner-scoped care ledger]
-  G --> H[Receipt and reported clinical review]
-  H --> I[User-reported completion and history]
-```
+## AI and evaluation
 
-The model classifies sentence topics: follow-up, pending result, medication, safety, or context. It can abstain. Deterministic guards independently handle known wording, exclusions, explicit timing and possible conflicts. This hybrid is intentionally modest; the model does not validate medicine, establish urgency, or replace a clinician.
+The model is multinomial logistic regression using normalized word and word-pair features. It classifies sentence topics and can abstain. Rules independently handle familiar wording, exclusions, source spans and supported timing. Neither component validates medical correctness or establishes urgency.
 
-**Fixed synthetic challenge evaluation:**
-
-| Metric | Result |
+| Sentence classifier measurement | Result |
 |---|---:|
-| Original synthetic training sentences | 225 |
-| Separately worded held-out synthetic sentences | 50 |
+| Original synthetic training examples | 225 |
+| Separately worded synthetic challenge examples | 50 |
 | Raw five-category accuracy | 82% (41/50) |
 | Macro F1 | 0.816 |
-| Conservative abstentions | 44/50 |
-| Accepted predictions | 6/50, all correct; **12% coverage** |
+| Abstentions | 44/50 |
+| Accepted predictions | 6/50, all correct; 12% coverage |
 
-These are **classifier engineering metrics**, not end-to-end extraction recall, real-world accuracy, or clinical outcomes. The same AI-assisted authoring process can introduce shared style across training and challenge data. Thresholds were fixed before evaluation and were not tuned to these challenge examples. Every prediction, including failures, is published in [evaluation.json](ml/evaluation.json). See the [model card](ml/README.md) and [failure analysis](ml/EVALUATION.md).
+These are small synthetic classifier measurements, not extraction recall or clinical outcomes. The same AI-assisted authoring process may introduce shared language between training and challenge data. Thresholds were fixed before evaluation. See [model card](ml/README.md), [failure analysis](ml/EVALUATION.md) and [complete predictions](ml/evaluation.json).
 
-**Separate document-pipeline evaluation:** an independent author froze 20 original synthetic mini-discharge documents with 44 gold actions before running the then-current engine. Initial version 1.1 proposed 38 actions, 32 correctly typed: **84.2% precision / 72.7% recall**. Its failures informed fixes. Version 1.2 achieves **97.1% precision / 75.0% recall on those same, now-seen regression fixtures** (33 correct of 34 suggestions; 44 gold actions). The improvement is regression evidence, not a fresh generalization claim. Eleven actions still require source review. All 44 gold snippets remain visible; all 16 assigned dates and returned source spans match the annotations.
+### Whole-document extraction is measured separately
 
-**No measured ML extraction lift on those 20 documents:** disabling the classifier leaves task outputs unchanged. The trained model can propose sentence categories and some model-only candidates, but this document set does not establish added extraction benefit. The prototype is a rules-led workflow with local ML suggestions. See [initial results, errors and matching rules](ml/pipeline-eval/REPORT.md) and [release regression results](ml/pipeline-eval/release-results.json). Neither evaluation uses clinical records or clinician annotations.
+A separate author froze 20 synthetic mini-discharge documents with 44 gold actions before running the then-current engine, while having prior knowledge of an earlier engine. This was not blinded external or clinician-labeled validation.
 
-The full document-review experience exists because the model will miss or misclassify instructions. Instructions omitted from the uploaded document cannot be recovered.
+| Experiment | Correct / suggested | Correct / gold | Precision | Recall |
+|---|---:|---:|---:|---:|
+| Initial engine 1.1 | 32/38 | 32/44 | 84.2% | 72.7% |
+| Engine 1.2 on the same known regression cases | 33/34 | 33/44 | 97.1% | 75.0% |
+
+Failures from the first run informed repairs. The improvement is regression evidence, not a new generalization result. Eleven annotated actions still require manual source review. All 44 gold snippets remain visible, and all 16 assigned dates and returned spans match the annotations. Visibility does not guarantee that people notice omissions.
+
+**No measured ML extraction lift on these 20 documents:** disabling the classifier leaves task outputs unchanged. The current product is a rules-led workflow with local ML suggestions. A stronger added-value claim needs a new held-back evaluation. [Retained initial report](ml/pipeline-eval/REPORT.md) · [Release regression results](ml/pipeline-eval/release-results.json)
 
 ## Run locally
 
-Requirements: **Node.js 22.13+**, npm, and Python 3.9+ only if retraining the model. No application API keys are needed.
+Requirements: Node.js 22.13+ and npm. Python 3.9+ is needed for model training/report generation. The code-PDF builder uses Python 3.10+, ReportLab and pypdf.
 
 ```sh
 npm ci
-npm run db:generate
-npm run build
-npm run db:local
 npm run dev
 ```
 
-Open the Local URL printed by the server (normally `http://localhost:5173`). **Local sign-in is an explicitly local development simulation**, restricted to loopback; it strips caller-supplied identity headers. Hosted sign-in is owned by the Sites dispatcher. Never expose the local development server to the internet.
+Open `http://localhost:5173`. The default target is now the Firebase/Vite application. `npm run build` writes `dist/firebase`; `npm run start` previews that build on loopback.
 
-The bundled migration command applies recorded D1 migrations locally and can safely be rerun. For an existing database, do not delete migration history or run the SQL files blindly.
+The checked-in Firebase web configuration identifies the deployed project. It is public client configuration, not a service-account credential. The local application uses that configured Firebase project for authentication and saved spaces; there is no automatic emulator isolation. Use fictional test records, or replace the configuration with your own Firebase web project before independent development.
 
-### Useful commands
+For your own deployment, configure Google and/or email/password sign-in, authorized domains, a Firestore database and the checked-in rules/indexes. Set your Firebase web configuration and project/site identifiers, then deploy through an authorized Firebase CLI account. The supplied `deploy:firebase` command targets `looplight-care`; do not use it for an unrelated project.
+
+### Engineering commands
 
 ```sh
-npm run lint               # Source lint checks
-npm run typecheck          # Strict TypeScript checks
-npm test                   # Extraction, dates, state transitions, exports
-npm run test:api            # Running local server + real local D1 integration
-npm run test:model          # 64 Python/TypeScript parity and boundary cases
-npm run evaluate           # Reproduce runtime classifier counts and local timing
-npm run evaluate:pipeline  # Replay the frozen document-level experiment
-npm run train:model        # Deterministic Python-standard-library training
-npm run build              # Cloudflare-compatible production Worker and client
-npm audit --omit=dev        # Runtime dependency audit
+npm run lint
+npm run typecheck
+npm test
+npm run test:firebase:unit
+npm run test:firebase:emulator
+npm run test:model
+npm run evaluate
+npm run evaluate:pipeline
+npm run build
+npm audit --omit=dev
 ```
 
-`npm run test:api` rejects non-local URLs and creates/removes only its own synthetic fixtures. It covers authentication, owner isolation, persistence, idempotency, conflicting edits, input limits, source retention, review/closure gates, same-origin protection, injection, and explicit deletion. It uses the actual local database, not an in-memory mock.
+`npm run evaluate:pipeline` replays the frozen initial experiment without overwriting its retained measurements. See its README for explicitly labeled release runs.
 
-### Stack and repository map
+### Verification status
 
-- **UI:** React 19, TypeScript, Vinext/Vite, Lucide icons, native accessible dialogs, responsive CSS.
-- **Runtime:** Cloudflare-compatible Worker; logical D1 binding `DB`; Drizzle-generated migrations.
-- **Authentication:** bundled dispatch-owned ChatGPT sign-in; no app-stored passwords.
-- **ML:** normalized unigram/bigram features, multinomial logistic regression; Python training, TypeScript inference.
-- **PDF:** Mozilla PDF.js, dynamically loaded only when needed; disabled `eval` support.
+Verified on September 15, 2026, with synthetic fixtures:
+
+| Check | Result | Scope |
+|---|---:|---|
+| Domain regression tests | 31 passed | Extraction, dates, source spans, commands, receipt/review gates and exports |
+| Snapshot/export regressions | 16 passed | Saved-record validation, bounds, source partitions, history references and export edge cases |
+| Python/TypeScript model parity | 64 passed | Matching model scores, abstention and inference safeguards |
+| Deployed Firebase integration | 57/57 passed | Real Auth/Firestore owner isolation, storage rules, CRUD, replay, conflicts and cleanup |
+| Local Firebase emulator integration | 58/58 passed | Full suite including the actual 100-space cap and cleanup |
+| Typecheck and full lint | Passed | Current source, including the final draft, navigation and keyboard fixes |
+
+The retained initial live Firebase run passed 56/58 checks and exposed two recovery issues. The adapter was repaired before the 57-check live rerun. The smaller rerun did not repeat quota saturation; the subsequent 58-check emulator run did. The [sanitized reports](tests/firebase/reports/) preserve both failures and retests with source hashes. See [test setup](tests/firebase/README.md).
+
+A fresh signed-out browser loads the public demo without an account. The final versioned PDF reader passed a fresh hosted file-picker check. Two consecutive challenge runs correctly repopulated and produced four suggestions each.
+
+Returning-user navigation was also exercised: from a signed-in saved space, Try the demo → About this demo → Open my saved spaces returned to the existing three-loop Anita PDF test space without creating a copy.
+
+Current browser checks exercised Google sign-in, saving an edited demo and a full-page reload returning the saved plan. At 390 × 844, the inspected board and full-width drawer had no horizontal overflow. The board also fit a 320 × 740 viewport with a measured document width of 320 pixels. Draft preservation between Check details and Record progress and Arrow Right/End navigation passed GUI checks. Actual source-linked manual addition, result receipt, reported clinician review/completion and a calendar-file download click were recorded.
+
+The bundled PDF was selected through the real file picker, yielded 847 characters and created a saved plan with three expected follow-ups. Actual JSON, text and calendar files were saved to the OS and inspected. The JSON passed `validateEpisode` with 21 source segments, three follow-ups and preserved source text. The 2,314-character text brief retained all tasks and the final original-source text. The calendar contained one eligible event, omitted patient names and excluded the closed result; it has no explicit notification alarm.
+
+The actual open brief was generated with the browser's `Page.printToPDF` and visually checked on both pages. It retained all three follow-ups, 18 unlinked source segments, the final source text and footer, without clipping or an orphaned footer. This verifies browser PDF output, not physical printing. Calendar-app import and notification delivery were not tested. These checks do not establish task success for every user, clinical effectiveness or production readiness for patient data.
+
+The completed narrated demo is **2:38.6 at 1920 × 1080**, using actual browser interaction footage, an AI-generated Cedar voice, 32 caption cues burned into the video and a separate SRT. The narration is not a recording of Shivam's voice. The [direct MP4](https://looplight-care.web.app/submission/looplight-narrated-demo.mp4) is published with the final artifact deployment. YouTube upload awaits explicit terms confirmation; no YouTube upload or Devpost submission is claimed. Final source-PDF and inventory regeneration is underway. [Submission status](submission/START-HERE.md)
+
+The earlier 32 D1/API checks are retained as historical backend evidence and are not included in the Firebase totals. [QA record](docs/QA.md) · [Current judge testing guide](submission/testing-instructions.md)
+
+## Repository map
 
 ```text
-app/                    Pages, API routes, client UI
-lib/engine.ts           Segmentation, source spans, rules, proposal generation
-lib/dates.ts            Conservative calendar interpretation
-lib/commands.ts         Validated state transitions and completion gates
-lib/server.ts           Identity, request limits, D1 access, response boundaries
-lib/exports.ts          Plain-text brief and calendar file
-ml/                     Training data, model weights, inference and evaluation
-db/ + drizzle/          Schema and immutable migrations
-tests/                  Domain and real local API verification
-docs/                   Research, architecture, security, business and QA
-submission/             One-page PDF, slides, code PDF, script and submission copy
-public/examples/        Fictional PDF/text demo record
+firebase/               Firebase entry point, Auth UI and Firestore adapter
+firestore.rules         Owner paths, immutable source, versions and quota rules
+firebase.json           Hosting rewrites, headers and deployment configuration
+app/                    Shared interface; legacy Sites routes retained
+lib/engine.ts           Source segmentation and suggestion generation
+lib/commands.ts         Client workflow validation and state changes
+lib/snapshot.ts         Client validation and encoding of saved records
+lib/drafts.ts           Form drafts in tab memory
+ml/                     Training data, model weights and retained evaluation
+lib/server.ts, db/       Historical Sites/D1 implementation
+scripts/                Build and verification helpers
+submission/             Story, PDF/deck/video assets and judge instructions
 ```
+
+The earlier Sites entry points are available as `dev:sites`, `build:sites` and `start:sites` for historical reproduction. `test:api` and `db:*` belong to that implementation. They are not the Firebase production path.
 
 ## Commercial hypothesis
 
-The initial buyer is **one primary-care or transitions coordinator** who currently reconstructs follow-up work from discharge documents. Patients and caregivers are the beneficiaries. A narrow document-first pilot can begin without an EHR integration. Multi-user team collaboration, automated reminders and EHR integrations are future work.
+The proposed first buyer is one primary-care or transitions coordinator who already reconstructs discharge follow-ups. Test $149/month for 100 episodes. This proposed monthly allowance is distinct from the current cap of 100 stored care spaces per account; billing is not implemented. At an assumed $35/hour loaded staff cost, five minutes saved per episode represents about $292/month of gross staff time before review, onboarding and support. Pricing, savings and willingness to pay are unvalidated.
 
-Test a price of **$149/month for 100 episodes**. At an assumed $35/hour loaded staff cost, saving five minutes per episode across 100 episodes represents about $292/month of staff time before review, support, deployment and implementation costs. These are hypotheses, not validated savings or willingness to pay. [Business and pilot plan](docs/BUSINESS.md)
+SeamlessMD, Memora/Commure, Eon and Welkin address overlapping workflows. Looplight's narrow document-first workflow is a positioning hypothesis. No proprietary clinical dataset, feature exclusivity or demonstrated moat is claimed. [Business/pilot plan](docs/BUSINESS.md) · [Research](docs/RESEARCH.md)
 
-SeamlessMD, Memora/Commure, Eon and Welkin already address overlapping workflows. We do not claim to be the first discharge assistant. Our proposed wedge is the small, source-to-owner-to-reported-resolution record with visible missing details. A reviewed correction dataset and workflow adoption could become defensible assets; neither exists yet. [Research and competitor sources](docs/RESEARCH.md)
+## Limits and credits
 
-## Limits and deployment scope
+The MVP is English-only, single-account and incomplete on unfamiliar text. It has no EHR integration, automated clinical monitoring, verified clinician signatures, team invitations, patient outcome evidence or paying customers. Naming a tracker does not assign clinical responsibility. Identifiable patient deployment needs appropriate governance, agreements, independent evaluation and security/privacy review.
 
-- **Not for diagnosis, prescribing, result interpretation, triage, or emergency monitoring.** Existing medical instructions remain in the source.
-- The extraction system is English-only, incomplete, and not tested on clinical records. Mixed, conditional, negated and unfamiliar language can require manual review.
-- “Reported complete” means a person entered a report; it is not EHR-confirmed or independently verified.
-- A named tracker is not proof that a clinician accepted responsibility. This MVP has one account per saved care space and no caregiver invitation system.
-- The local-only model has zero external inference fees. Hosting, database, support, security, validation and compliance remain real production costs.
-- The hosted deployment is currently owner-private. **Judge access is an outstanding submission step.** Do not submit an inaccessible URL.
-- Real patient deployment would require an appropriate data-processing arrangement, security/privacy review, clinical governance, external validation, accessible user research, retention and incident-response policies. No regulatory certification or HIPAA compliance is claimed.
-
-See [Security and data handling](docs/SECURITY.md), [Verification record](docs/QA.md), and [Submission checklist](submission/CHECKLIST.md).
-
-## Credits and license
-
-Project creator and submitting participant: **Shivam Gupta**. Built with AI-assisted research, software development, testing, and documentation. The repository and walkthrough are designed so the submitting participant can inspect, understand, modify, and explain the work.
-
-Original project code and synthetic datasets: MIT license. Bundled framework components retain their own notices; PDF.js is Apache-2.0. [License](LICENSE) · [Third-party notices](THIRD-PARTY-NOTICES.md)
+Project creator and submitting participant: **Shivam Gupta**. Built with AI-assisted research, development, testing and documentation. Original project code and synthetic datasets are MIT licensed; inherited dependencies keep their notices. [License](LICENSE) · [Third-party notices](THIRD-PARTY-NOTICES.md)

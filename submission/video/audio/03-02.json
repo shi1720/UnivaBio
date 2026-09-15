@@ -1,0 +1,10 @@
+{
+  "id": "03-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "A small trained text model and explicit rules suggest follow-up items.",
+  "fingerprint": "89db9d81a8d96de0d61dcdd1380fff522ba268d43d54d076785b5aa1dc3df7e7",
+  "sha256": "4455dac4f2402ef2139b11a96f37a3c3e4c7638ee673aafa51a16cadd36179e0",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 4.5
+}

@@ -152,7 +152,7 @@ export function analyzeDocument(
     dischargeDate: string;
     sourceText: string;
   },
-  id = crypto.randomUUID(),
+  id: string = crypto.randomUUID(),
 ): Episode {
   if (input.sourceText.length > 40000)
     throw Error("Keep the source under 40,000 characters.");
@@ -246,7 +246,7 @@ export function analyzeDocument(
           part.text,
         )
       )
-        flags.push("Conditional instruction — ask whether it applies.");
+        flags.push("Conditional instruction. Ask whether it applies.");
       if (
         /\band\b/i.test(part.text) &&
         (part.text.match(

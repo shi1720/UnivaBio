@@ -1,0 +1,7 @@
+{
+  "indexes": [],
+  "fieldOverrides": [
+    { "collectionGroup": "episodes", "fieldPath": "state", "indexes": [] },
+    { "collectionGroup": "episodes", "fieldPath": "source", "indexes": [] }
+  ]
+}

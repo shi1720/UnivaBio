@@ -1,0 +1,55 @@
+{
+  "audio_files": 32,
+  "raw_voice_seconds": 151.4,
+  "words": 383,
+  "words_per_minute": 151.78335535006605,
+  "voice_names": [
+    "cedar"
+  ],
+  "all_metadata_text_matches": true,
+  "all_metadata_hash_matches": true,
+  "hard_clip_samples": 0,
+  "max_sample_peak_dbfs": -2.4157632493357823,
+  "max_true_peak_dbfs": -2.4,
+  "integrated_lufs_range": [
+    -25.2,
+    -20.1
+  ],
+  "scope": "Source WAV file integrity, PCM/loudness statistics, and local ASR. No subjective listening review. Final encoded video not covered.",
+  "asr_complete": true,
+  "asr_normalized_matches": 31,
+  "asr_semantically_equivalent_numeric_difference": [
+    "10-02"
+  ],
+  "calendar_cue_updated": true,
+  "calendar_cue_seconds": 2.95,
+  "calendar_cue_sha256": "a334b06f280026d322a20d3cd2a18d1b12043feb5ef1ea45e3fa3023f895cb33",
+  "pending_source_cues": [],
+  "timeline_action": "Recalculate all timings from current WAVs. Revised cue adds 0.25 seconds.",
+  "final_mix_target": {
+    "integrated_lufs": -16,
+    "true_peak_dbtp": -1.5
+  },
+  "report_files": {
+    "AUDIO-QA.md": {
+      "sha256": "34899c71b0e54b5f7c34bc6da4f302c7cafcd42dd00a6094489791cae7950e5c",
+      "bytes": 4565
+    },
+    "audio-statistics.json": {
+      "sha256": "296a7c7b0e1dc87b5dfa88317ef91010f088b3009265be7742a7b643a5874390",
+      "bytes": 29947
+    },
+    "local-transcription.json": {
+      "sha256": "e3ad43cdbed37f64429ccec98043d8e0198d48254eb02d448fc9db173b24c442",
+      "bytes": 12900
+    },
+    "audit_audio.py": {
+      "sha256": "7a28f2291467148fba52868a7c44c557a80f783b09bfba6507bbc26ff5c2999b",
+      "bytes": 4923
+    },
+    "transcribe_local.py": {
+      "sha256": "978af6f55da2558bc31fa3281a5a44ac30597ae69404a4f51437d08234a4eb1a",
+      "bytes": 1537
+    }
+  }
+}

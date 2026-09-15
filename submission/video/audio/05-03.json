@@ -1,0 +1,10 @@
+{
+  "id": "05-03",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Add a missed follow-up from its original sentence.",
+  "fingerprint": "ebfc8a93e2dd22c0589f19bd1300572699b3b2c178406b5b314a37e970025663",
+  "sha256": "ea4f1079882c5b50b7b93c63de33337aa6b45eff5835be997fb055dc7160b4c0",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 2.95
+}

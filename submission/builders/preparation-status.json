@@ -1,0 +1,13 @@
+{
+  "state": "final rendered and visually reviewed",
+  "description_pages": 1,
+  "deck_slides": 7,
+  "final_visuals_inspected": 8,
+  "final_capture_status": "actual hosted Firebase captures inspected; original bytes retained",
+  "platform_qa_evidence": "57 live Firebase checks passed, reported by build owner; owner isolation and persistence verified; Google sign-in and edited-demo save/refresh GUI passed",
+  "clinical_validation": false,
+  "layout_validation": "package, layout, font policy and first-party import passed; native PowerPoint execution not tested",
+  "historical_evaluation": "20 known synthetic document fixtures, 33/34 precision and 33/44 recall; reused during fixes, not held-out or clinical validation",
+  "open_scope": "Historical note: additional UI review continued at the artifact render; code PDF preparation followed the later source freeze.",
+  "evidence_scope": "Historical artifact-render snapshot: 57 live Firebase checks were reported when these PDF/PPTX files were rendered. This is not the later source-freeze or final application test count."
+}

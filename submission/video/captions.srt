@@ -1,0 +1,150 @@
+1
+00:00:00,120 --> 00:00:05,170
+Anita is home from hospital. Her daughter, Maya, has the
+discharge notes.
+
+2
+00:00:05,230 --> 00:00:10,530
+But one result is still pending. Who will make sure somebody
+follows it through?
+
+3
+00:00:10,887 --> 00:00:14,887
+This is Looplight, a follow-up ledger by Shivam Gupta.
+
+4
+00:00:14,947 --> 00:00:20,847
+It turns the next steps already written in discharge notes
+into a plan people can inspect and track.
+
+5
+00:00:21,187 --> 00:00:26,687
+Start with Anita's fictional example. Open the source, then
+find the open loops.
+
+6
+00:00:26,747 --> 00:00:31,247
+A small trained text model and explicit rules suggest
+follow-up items.
+
+7
+00:00:31,307 --> 00:00:35,057
+Nothing becomes a confirmed task until someone checks it.
+
+8
+00:00:35,420 --> 00:00:40,520
+Open the pending blood culture result. Its exact source
+sentence stays attached.
+
+9
+00:00:40,580 --> 00:00:47,330
+Missing timing appears as a question for the care team, so
+an unclear instruction stays visibly unresolved.
+
+10
+00:00:47,687 --> 00:00:50,387
+A convincing task list can still miss something.
+
+11
+00:00:50,447 --> 00:00:57,297
+The original document remains reviewable sentence by
+sentence, including text the system did not turn into tasks.
+
+12
+00:00:57,357 --> 00:01:00,307
+Add a missed follow-up from its original sentence.
+
+13
+00:01:00,653 --> 00:01:06,903
+Now name Maya as the person tracking the result, review the
+details, and confirm the follow-up.
+
+14
+00:01:06,963 --> 00:01:11,963
+Maya is tracking the next step. The app does not assign her
+clinical responsibility.
+
+15
+00:01:12,320 --> 00:01:16,370
+Here is the important distinction. Record that the result
+has arrived.
+
+16
+00:01:16,430 --> 00:01:21,230
+The task stays open because receipt and clinician review are
+separate steps.
+
+17
+00:01:21,290 --> 00:01:24,340
+A file arriving does not tell the family what happens next.
+
+18
+00:01:24,687 --> 00:01:29,487
+After a conversation with the clinician, record who reviewed
+the result and what they said.
+
+19
+00:01:29,547 --> 00:01:33,497
+Confirm that this is your report, then record completion.
+
+20
+00:01:33,557 --> 00:01:38,707
+The history preserves a user-reported ending, not
+independent proof of clinical review.
+
+21
+00:01:39,053 --> 00:01:45,203
+Take the plan to the next conversation. The visit brief
+keeps follow-ups and source text together.
+
+22
+00:01:45,263 --> 00:01:48,213
+Calendar entries use confirmed dates.
+
+23
+00:01:48,273 --> 00:01:53,523
+In a signed-in care space, create a plan and refresh: the
+saved plan returns.
+
+24
+00:01:53,887 --> 00:01:59,837
+The first customer to test is a primary-care or transitions
+coordinator already chasing discharge follow-up.
+
+25
+00:01:59,897 --> 00:02:05,397
+The starting price hypothesis is one hundred and forty-nine
+dollars a month, for one hundred episodes.
+
+26
+00:02:05,457 --> 00:02:10,207
+A supervised pilot must test preparation time and correction
+burden.
+
+27
+00:02:10,553 --> 00:02:14,453
+Looplight is a working prototype evaluated on synthetic
+examples.
+
+28
+00:02:14,513 --> 00:02:17,863
+It can miss instructions and needs human review.
+
+29
+00:02:17,923 --> 00:02:23,673
+It does not diagnose, interpret a result, or demonstrate a
+proven health benefit.
+
+30
+00:02:24,020 --> 00:02:28,220
+Shivam Gupta built Looplight with AI-assisted development.
+
+31
+00:02:28,280 --> 00:02:33,080
+Every next step has a source, a person tracking it, and a
+recorded ending.
+
+32
+00:02:33,140 --> 00:02:36,590
+That is the work Looplight helps make visible.
+

@@ -53,3 +53,11 @@ __pycache__/
 !/.env.example
 /dayweave-handoff-guard/
 /dayweave-submission-drafts/
+
+# Firebase local deployment logs and emulator state
+/.firebase/
+/firebase-debug.log*
+/firestore-debug.log*
+
+# Reproduced from the installed PDF.js package by predev/prebuild hooks.
+/public/vendor/pdfjs/

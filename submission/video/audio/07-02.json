@@ -1,0 +1,10 @@
+{
+  "id": "07-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "The task stays open because receipt and clinician review are separate steps.",
+  "fingerprint": "d05f0b37e4bc75e478c0ba9dce64f4d83e4b77501d7911d77f6ec97bb38aef09",
+  "sha256": "a473882902b68573fa95575cbdbfe13895ed244fc5e424bd4e837de3859b8010",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 4.8
+}

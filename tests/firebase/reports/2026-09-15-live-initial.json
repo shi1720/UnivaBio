@@ -1,0 +1,334 @@
+{
+  "runId": "da455d55-5a07-43d6-8241-a201b33ffcd7",
+  "checkedAt": "2026-09-15T17:06:39.881Z",
+  "projectId": "looplight-care",
+  "scope": "Actual Firebase Auth and Firestore plus the app adapter. No browser interaction. User-reported transitions are client-validated, not clinical assertions enforced by rules.",
+  "passed": 56,
+  "failed": 2,
+  "fatal": false,
+  "cleanupFailed": false,
+  "tests": [
+    {
+      "name": "Unauthenticated adapter refuses account operations",
+      "status": "pass",
+      "ms": 0
+    },
+    {
+      "name": "Unauthenticated SDK cannot read or list another path",
+      "status": "pass",
+      "ms": 296
+    },
+    {
+      "name": "Create generated Auth account A",
+      "status": "pass",
+      "ms": 1071
+    },
+    {
+      "name": "Create generated Auth account B",
+      "status": "pass",
+      "ms": 961
+    },
+    {
+      "name": "Fresh account has an empty owner-scoped list",
+      "status": "pass",
+      "ms": 337
+    },
+    {
+      "name": "Adapter creates a source-linked care space and increments quota atomically",
+      "status": "pass",
+      "ms": 715
+    },
+    {
+      "name": "Independent SDK creates and reads its own account fixture",
+      "status": "pass",
+      "ms": 606
+    },
+    {
+      "name": "Import replay uses the same record and does not increment quota",
+      "status": "pass",
+      "ms": 570
+    },
+    {
+      "name": "Same import ID cannot be reused for different notes",
+      "status": "pass",
+      "ms": 445
+    },
+    {
+      "name": "Adapter update persists user-confirmed command and immutable source",
+      "status": "pass",
+      "ms": 277
+    },
+    {
+      "name": "Lost-success replay returns committed command without duplicate history",
+      "status": "pass",
+      "ms": 195
+    },
+    {
+      "name": "Different stale-version command reports ConflictError with latest record",
+      "status": "pass",
+      "ms": 60
+    },
+    {
+      "name": "Fresh SDK sign-in reloads the same server record across client instances",
+      "status": "pass",
+      "ms": 795
+    },
+    {
+      "name": "Independent tab transaction advances state and adapter detects stale version",
+      "status": "pass",
+      "ms": 397
+    },
+    {
+      "name": "Concurrent same-version commands yield one commit and one conflict",
+      "status": "fail",
+      "code": "ERR_ASSERTION",
+      "ms": 424
+    },
+    {
+      "name": "Signed-in account B cannot read account A episode",
+      "status": "pass",
+      "ms": 41
+    },
+    {
+      "name": "Signed-in account B cannot list account A episodes",
+      "status": "pass",
+      "ms": 64
+    },
+    {
+      "name": "Signed-in account B cannot read account A quota metadata",
+      "status": "pass",
+      "ms": 120
+    },
+    {
+      "name": "Signed-in account B cannot update account A episode",
+      "status": "pass",
+      "ms": 82
+    },
+    {
+      "name": "Signed-in account B cannot delete account A using a correctly coupled quota batch",
+      "status": "pass",
+      "ms": 215
+    },
+    {
+      "name": "Signed-in account B cannot create an episode under account A",
+      "status": "pass",
+      "ms": 135
+    },
+    {
+      "name": "Global users and episode collection-group queries are denied",
+      "status": "pass",
+      "ms": 281
+    },
+    {
+      "name": "Unauthenticated SDK cannot update or delete existing records",
+      "status": "pass",
+      "ms": 383
+    },
+    {
+      "name": "Create isolated rule-boundary fixture",
+      "status": "pass",
+      "ms": 233
+    },
+    {
+      "name": "Rules preserve immutable source",
+      "status": "pass",
+      "ms": 139
+    },
+    {
+      "name": "Rules preserve immutable patientName",
+      "status": "pass",
+      "ms": 294
+    },
+    {
+      "name": "Rules preserve immutable documentTitle",
+      "status": "pass",
+      "ms": 148
+    },
+    {
+      "name": "Rules preserve immutable createdAt",
+      "status": "pass",
+      "ms": 239
+    },
+    {
+      "name": "Rules preserve discharge date and sentence provenance inside immutable source",
+      "status": "pass",
+      "ms": 469
+    },
+    {
+      "name": "Rules reject invalid next version 1",
+      "status": "pass",
+      "ms": 190
+    },
+    {
+      "name": "Rules reject invalid next version 3",
+      "status": "pass",
+      "ms": 121
+    },
+    {
+      "name": "Rules reject invalid next version 1.5",
+      "status": "pass",
+      "ms": 215
+    },
+    {
+      "name": "Rules reject invalid next version 1002",
+      "status": "pass",
+      "ms": 189
+    },
+    {
+      "name": "Rules reject non-string state",
+      "status": "pass",
+      "ms": 150
+    },
+    {
+      "name": "Rules reject missing-size state",
+      "status": "pass",
+      "ms": 226
+    },
+    {
+      "name": "Rules reject oversized state",
+      "status": "pass",
+      "ms": 723
+    },
+    {
+      "name": "Rules reject unexpected field",
+      "status": "pass",
+      "ms": 136
+    },
+    {
+      "name": "Rules reject empty mutation identifier",
+      "status": "pass",
+      "ms": 184
+    },
+    {
+      "name": "Rules reject client timestamp",
+      "status": "pass",
+      "ms": 186
+    },
+    {
+      "name": "Adapter rejects malformed command and surplus trust fields before writing",
+      "status": "pass",
+      "ms": 96
+    },
+    {
+      "name": "Episode creation without matching quota transaction is denied",
+      "status": "pass",
+      "ms": 84
+    },
+    {
+      "name": "Episode deletion without matching quota transaction is denied",
+      "status": "pass",
+      "ms": 175
+    },
+    {
+      "name": "Standalone quota increment cannot invent an episode",
+      "status": "pass",
+      "ms": 206
+    },
+    {
+      "name": "Standalone quota decrement cannot hide an existing episode",
+      "status": "pass",
+      "ms": 137
+    },
+    {
+      "name": "Quota increment must match the exact created episode identifier",
+      "status": "pass",
+      "ms": 314
+    },
+    {
+      "name": "Quota increments by one for a single created episode",
+      "status": "pass",
+      "ms": 127
+    },
+    {
+      "name": "Two creates cannot share one quota increment",
+      "status": "pass",
+      "ms": 208
+    },
+    {
+      "name": "Quota count outside its upper bound is denied",
+      "status": "pass",
+      "ms": 188
+    },
+    {
+      "name": "Malformed record cannot be bootstrapped through a valid quota transaction",
+      "status": "pass",
+      "ms": 126
+    },
+    {
+      "name": "Oversized source cannot be bootstrapped through a valid quota transaction",
+      "status": "pass",
+      "ms": 735
+    },
+    {
+      "name": "Demo copy preserves edited loops and history while becoming a new private record",
+      "status": "pass",
+      "ms": 610
+    },
+    {
+      "name": "Create isolated malformed-storage recovery fixture",
+      "status": "pass",
+      "ms": 166
+    },
+    {
+      "name": "Opaque mutable JSON is user-owned data; decoder rejects corrupted serialization",
+      "status": "pass",
+      "ms": 181
+    },
+    {
+      "name": "Owner can delete a malformed record using its valid outer version and recover quota",
+      "status": "pass",
+      "ms": 430
+    },
+    {
+      "name": "Actual 100-space quota rejects the 101st create without changing count",
+      "status": "pass",
+      "ms": 20191
+    },
+    {
+      "name": "Stale delete refuses to remove a newer record",
+      "status": "fail",
+      "code": "ERR_ASSERTION",
+      "ms": 107
+    },
+    {
+      "name": "Valid delete and repeated delete are idempotent with one quota decrement",
+      "status": "pass",
+      "ms": 411
+    },
+    {
+      "name": "Sign-out blocks adapter access and server reads despite prior memory cache",
+      "status": "pass",
+      "ms": 116
+    }
+  ],
+  "cleanup": [
+    {
+      "account": "A",
+      "status": "fixtures-removed-zero-meta-retained"
+    },
+    {
+      "account": "A",
+      "status": "generated-auth-user-deleted"
+    },
+    {
+      "account": "B",
+      "status": "fixtures-removed-zero-meta-retained"
+    },
+    {
+      "account": "B",
+      "status": "generated-auth-user-deleted"
+    }
+  ],
+  "observations": [
+    "Rules enforce ownership, metadata, size and version. They do not parse mutable JSON or attest clinical state. Decoder rejected an owner-corrupted record."
+  ],
+  "hashes": {
+    "firebase/store.ts": "885a6da3ef06f9b81824e15e706a543430a2b013e0c8675a0608bf41692faa45",
+    "firebase/client.ts": "7874cbaab06219b029e738385bbb655e24e26510fae154be1f0bff238554d1ca",
+    "firebase/firestore.rules": "18298b14b96c8cc18cb4b3cd5e98c47c4384009b0277d5365cd11e8b4af513e5",
+    "lib/snapshot.ts": "84d4fa81cb2f24b47219fbe8f3cd8d12835996cea615efe84ded362e59b820c0",
+    "lib/commands.ts": "86eded0fc5cb5d809b3c1e17e99d6b1e71239b61247cdc04e0996e039b2a671f",
+    "lib/exports.ts": "38c2901194d740677c5df184c9875dfaa73b8df3bd48d0f7bb3798a6bcfa54fe"
+  },
+  "provenance": "Deployed Firebase run executed by the owner; sanitized test labels, codes, counts and source hashes retained."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "02-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "It turns the next steps already written in discharge notes into a plan people can inspect and track.",
+  "fingerprint": "da25528ce230ed5dfd0486da4dd909aadb75d0a5b8a1d73bd420ba0c7087503b",
+  "sha256": "8499c461a33df1af384b392bd545eb4d9bd10ed1a7de689119fb5fa730e186e6",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.9
+}

@@ -1,0 +1,579 @@
+{
+  "artifact_builder_root": "submission/builders",
+  "video_root": "submission/video",
+  "platform": "Firebase Hosting/Auth/Firestore",
+  "public_app": "https://looplight-care.web.app",
+  "public_code_pdf": "https://looplight-care.web.app/submission/looplight-code.pdf",
+  "repo_visibility": "private",
+  "upload_status": "Historical copy-time status: terms and CAPTCHA confirmations were pending. Consult current submission instructions for live status.",
+  "scope": "Artifact integration snapshot of the listed final builder/content/image/video files. Hashes were refreshed against the repository immediately before the source-PDF freeze. Restored video helper sources and their README are included. Mutable upload/release instructions are excluded; this is not a live deployment status or a claim that every media file is included in the separate source ZIP.",
+  "files": [
+    {
+      "path": "submission/builders/content.json",
+      "bytes": 12636,
+      "sha256": "70d0316bc58a0cb9f5e316a4a8132f51b927f400ee380706cf4c1907693974ec"
+    },
+    {
+      "path": "submission/builders/preparation-status.json",
+      "bytes": 1081,
+      "sha256": "bf61c53b2a2e10edda3265e3c3f9a215d7254fb14998adcda8098b7e6b340df4"
+    },
+    {
+      "path": "submission/builders/scripts/apply-native-crops.py",
+      "bytes": 1980,
+      "sha256": "5d4eca78648b8c38f21c2f250554199d5b7be86c7bf815a9737fcc6cee9fc71c"
+    },
+    {
+      "path": "submission/builders/scripts/build-deck.mjs",
+      "bytes": 8986,
+      "sha256": "259d431ad99fa056a46aff5eea8766bb1549c05004aa272a039a59a4b3988f25"
+    },
+    {
+      "path": "submission/builders/scripts/build-onepager.py",
+      "bytes": 4366,
+      "sha256": "eb0e4ee14784148be67306a3969a9944c70f588dd4166395f5d61c9f912ace1b"
+    },
+    {
+      "path": "submission/builders/scripts/inspect-capture.py",
+      "bytes": 471,
+      "sha256": "3f28a21b6e8e848792d4de96117505b6b732c57a084f32a79191dcdc4d93a226"
+    },
+    {
+      "path": "submission/builders/scripts/render_and_verify.py",
+      "bytes": 1860,
+      "sha256": "59f6c15875a43dacef816bfb7194fd52a1f0533e0440d91813fb05c661a31a84"
+    },
+    {
+      "path": "submission/builders/assets/firebase-desktop.png",
+      "bytes": 110932,
+      "sha256": "ae793a30fb52fc59975bb6bd96a73d725176bbba1eb652160a725d34a51ee512"
+    },
+    {
+      "path": "submission/builders/assets/firebase-mobile-detail.png",
+      "bytes": 40433,
+      "sha256": "f339c511fafbd04f89b03e5c18145a584a831e1e004d5c66f94d09eb06cfe2c1"
+    },
+    {
+      "path": "submission/builders/assets/firebase-mobile.png",
+      "bytes": 41891,
+      "sha256": "fe9154207297fa4cb93d8078e76c07bad8908e349048ac7794933b4013687b86"
+    },
+    {
+      "path": "submission/builders/assets/firebase-source.png",
+      "bytes": 88459,
+      "sha256": "e8374f72dbc82375d7a0a7babee5b2714ba5dd4a9d1036050e1e8e2b78973f8a"
+    },
+    {
+      "path": "submission/builders/verification/presentation-finalization.json",
+      "bytes": 3705,
+      "sha256": "dcc679aaeb1c6daefb5ae9d355b064dc25204cd60f4153b891d0ae920caae9ef"
+    },
+    {
+      "path": "submission/video/looplight-narrated-demo.mp4",
+      "bytes": 7764842,
+      "sha256": "2e7efa03e5be8450468b974b68c2227d4872c49411db98ef38b8ba54dc8a4d43"
+    },
+    {
+      "path": "submission/video/captions.srt",
+      "bytes": 3504,
+      "sha256": "af39b2879ed1813734c9979cfb91506b824da2fc7269ac043e0aae3e89d500c3"
+    },
+    {
+      "path": "submission/video/looplight-thumbnail.png",
+      "bytes": 288037,
+      "sha256": "58dee40ad2e85b18082d5ec4d714e8f606d89a155eece0e5d20015a0e28a7129"
+    },
+    {
+      "path": "submission/video/looplight-thumbnail.svg",
+      "bytes": 142985,
+      "sha256": "1b09e2b6c8c1b0e8a4194acdf5855d665c155d06071dcd77055db273b299154c"
+    },
+    {
+      "path": "submission/video/thumbnail-provenance.json",
+      "bytes": 386,
+      "sha256": "9225d4f8ef2b0bb144ce9e599d40ea5aa70a3592c5cfe181fac1d8ee302d2b43"
+    },
+    {
+      "path": "submission/video/timeline.json",
+      "bytes": 12231,
+      "sha256": "72fc9981edb7dcbe40a7703cec51aa27efdeeea5a1aa77454b2eb61fc6e3caea"
+    },
+    {
+      "path": "submission/video/verification.json",
+      "bytes": 8398,
+      "sha256": "60508eb264075955f7c6275ce395649f461e5772ae804a5523fe3b21112bd0db"
+    },
+    {
+      "path": "submission/video/delivery-manifest.json",
+      "bytes": 2200,
+      "sha256": "b5b6c610a38723ae4a33fae652d0c868e54216149d5d5f0e5d0e17a2d622aa38"
+    },
+    {
+      "path": "submission/video/scene-plan.json",
+      "bytes": 17101,
+      "sha256": "eeb8206fd337e33d8960b06ad0594420afe675c0fe7f475725ac1bf60aca8f11"
+    },
+    {
+      "path": "submission/video/narration-requests.json",
+      "bytes": 6474,
+      "sha256": "99b8eeae2ddf2d1ff57bdf287841ec19db58ee3ea95a4a16c056e426ff586db2"
+    },
+    {
+      "path": "submission/video/scene-narration-requests.json",
+      "bytes": 4855,
+      "sha256": "775f5a1a04d3772ae366a42046d4348be45a1da16f236f951a016906945df6e1"
+    },
+    {
+      "path": "submission/video/qa/final-video-checks.json",
+      "bytes": 1001,
+      "sha256": "340366c928210158965501d8bd0faa5822eac608b519c71d912c3473d4e177de"
+    },
+    {
+      "path": "submission/video/qa/capture-timing-checks.json",
+      "bytes": 4337,
+      "sha256": "3051d916b61fe5617bf176e2d72220a3aac9d8e73820ae83bc9199c94cf9fa0d"
+    },
+    {
+      "path": "submission/video/qa/contact-sheet-1.png",
+      "bytes": 709412,
+      "sha256": "0cac9e935c46754807a443e857e7213a71feaed4e6717c51e528934868fedd53"
+    },
+    {
+      "path": "submission/video/qa/contact-sheet-2.png",
+      "bytes": 744506,
+      "sha256": "d8d9948a9327e378b80c814613de0a2c152730ac186eab99897cf84acb6434b0"
+    },
+    {
+      "path": "submission/video/qa/contact-sheet-3.png",
+      "bytes": 519826,
+      "sha256": "627a838ab0f05de83f9507c6c0f309f2465b92f14435975740b1809e29a2fa2a"
+    },
+    {
+      "path": "submission/video/qa/final-decode-and-loudness.log",
+      "bytes": 251342,
+      "sha256": "eae495fd7f6077fa15eaefeb4891e0cc9016003d9abcff9fa60d0012c6e7843d"
+    },
+    {
+      "path": "submission/video/captures/cdp-conversion-report.json",
+      "bytes": 10987,
+      "sha256": "3b8441915e65eff7a731fac35e034806e97dfc9f7657b4f73e9808d7410d48d5"
+    },
+    {
+      "path": "submission/video/captures/scene-01.mp4",
+      "bytes": 284418,
+      "sha256": "2ca4feb2b4739ac3c09a7065e295fa3dffed4cad9e4a4bed2e26906b882fd8d2"
+    },
+    {
+      "path": "submission/video/audio/01-01.wav",
+      "bytes": 242444,
+      "sha256": "a36f42b657275765fe0d0dc6f43ab3f0a9f524d45de9c4a07189aa727321707f"
+    },
+    {
+      "path": "submission/video/audio/01-01.json",
+      "bytes": 419,
+      "sha256": "2845d94e454243e5ba15e0ffc6b4bae3fb98a40cae069d67ab7762245b25af0f"
+    },
+    {
+      "path": "submission/video/audio/01-02.wav",
+      "bytes": 254444,
+      "sha256": "eee6ff1d7e1326218bc9ebc3c13e7dfe9de6ac0711b59f42ff4e116df104a7c3"
+    },
+    {
+      "path": "submission/video/audio/01-02.json",
+      "bytes": 425,
+      "sha256": "8015462694e067be2ef5bd337222acf05b2a6919cb63c9c65833a9ad477deaa4"
+    },
+    {
+      "path": "submission/video/captures/scene-02.mp4",
+      "bytes": 258096,
+      "sha256": "f7077c1b3779e662791d404f0c46c41c392b6c1a618a0f6c1f43a18d08158408"
+    },
+    {
+      "path": "submission/video/audio/02-01.wav",
+      "bytes": 192044,
+      "sha256": "9f81a444d7c1fce094203f56c45182d4dd9001a06e51bcb505c423bbfc36638c"
+    },
+    {
+      "path": "submission/video/audio/02-01.json",
+      "bytes": 399,
+      "sha256": "3120eef05ee74be609a85ee721ebc8a420602a64539b66036fadd8dfc9f32f62"
+    },
+    {
+      "path": "submission/video/audio/02-02.wav",
+      "bytes": 283244,
+      "sha256": "8499c461a33df1af384b392bd545eb4d9bd10ed1a7de689119fb5fa730e186e6"
+    },
+    {
+      "path": "submission/video/audio/02-02.json",
+      "bytes": 445,
+      "sha256": "28812b2ff0bf67a7f310c1c2eb6c7bfb11a954c8413a8c86c681e61a63e200bd"
+    },
+    {
+      "path": "submission/video/captures/scene-03.mp4",
+      "bytes": 352951,
+      "sha256": "bd131abcd91c5fc32ac0bec3fa0e7ac314a325b7049c47be3ac825daca8c873c"
+    },
+    {
+      "path": "submission/video/audio/03-01.wav",
+      "bytes": 264044,
+      "sha256": "51e6968621cb353cf71f3dbb4480e83887d2605459f85c76b85cb431bf5bc74d"
+    },
+    {
+      "path": "submission/video/audio/03-01.json",
+      "bytes": 425,
+      "sha256": "5c3869bb0233de00561e13e09cb4a364c36945f3e3ff6e506a5e3de272f05da3"
+    },
+    {
+      "path": "submission/video/audio/03-02.wav",
+      "bytes": 216044,
+      "sha256": "4455dac4f2402ef2139b11a96f37a3c3e4c7638ee673aafa51a16cadd36179e0"
+    },
+    {
+      "path": "submission/video/audio/03-02.json",
+      "bytes": 415,
+      "sha256": "b268b9ed64944bfaa7b79e80c3c24b9e6ac94ea09c3089e41c006015b2c2199e"
+    },
+    {
+      "path": "submission/video/audio/03-03.wav",
+      "bytes": 180044,
+      "sha256": "5612d14543cb5b2bac167085b91e0b79a3588733e7971c5236803954d366d26f"
+    },
+    {
+      "path": "submission/video/audio/03-03.json",
+      "bytes": 403,
+      "sha256": "e197d0519cf81a836e81452ae117a9dd5f892a75c8aa527f70e8f5a7ea5574cd"
+    },
+    {
+      "path": "submission/video/captures/scene-04.mp4",
+      "bytes": 286338,
+      "sha256": "0c285886f6fbff35b54985ba87ea734c820e2a3bbd541f18a3c07d3d35c6ad98"
+    },
+    {
+      "path": "submission/video/audio/04-01.wav",
+      "bytes": 244844,
+      "sha256": "ea5cd4afc85656064b92da3672c23c54de3d48a9a2ed47b46987053517689289"
+    },
+    {
+      "path": "submission/video/audio/04-01.json",
+      "bytes": 425,
+      "sha256": "83442f66d4d7fbf86c027addd340c975e1c6bf8a72d5be326cbe125c88639abb"
+    },
+    {
+      "path": "submission/video/audio/04-02.wav",
+      "bytes": 324044,
+      "sha256": "a25e828a4def7aace055556f91c5a5921f958ec2703a1e3cf02ff6fc9f32aa77"
+    },
+    {
+      "path": "submission/video/audio/04-02.json",
+      "bytes": 453,
+      "sha256": "4b493148c26d57743bdf699d2c46dd423becef9a0b693c0fdbce500454d13ac8"
+    },
+    {
+      "path": "submission/video/captures/scene-05.mp4",
+      "bytes": 374749,
+      "sha256": "ad98f70c5a5f5a38d5d1c361a41d9fe3b8ef94a5197040db628ac55a9d55e837"
+    },
+    {
+      "path": "submission/video/audio/05-01.wav",
+      "bytes": 129644,
+      "sha256": "02477f5a7eb5177a3b1bbba3a9f1e374908b28935dd519dc6c6b0f585116abf2"
+    },
+    {
+      "path": "submission/video/audio/05-01.json",
+      "bytes": 393,
+      "sha256": "bb07276d3b5103dcf633a4fc6e8f005e23f1987c56065819c62bc252747f012a"
+    },
+    {
+      "path": "submission/video/audio/05-02.wav",
+      "bytes": 328844,
+      "sha256": "7c04285078d4819c5f012e704bcc7a881d216fdfd1b83d12c3821eb26537ebdc"
+    },
+    {
+      "path": "submission/video/audio/05-02.json",
+      "bytes": 459,
+      "sha256": "a663c43292c414fd7ef0955ffc775ce1e94c9452b54b3fa52faec42678e70cc1"
+    },
+    {
+      "path": "submission/video/audio/05-03.wav",
+      "bytes": 141644,
+      "sha256": "ea4f1079882c5b50b7b93c63de33337aa6b45eff5835be997fb055dc7160b4c0"
+    },
+    {
+      "path": "submission/video/audio/05-03.json",
+      "bytes": 396,
+      "sha256": "19276074f2302a7f9c8d97e8e8d4a2fc8b2ee12b164a7072f953f77a4bac9fc1"
+    },
+    {
+      "path": "submission/video/captures/scene-06.mp4",
+      "bytes": 267668,
+      "sha256": "6acb5302470965030d8c1ceb3d0de2dd40364a4a651de80b3215a2747aaff745"
+    },
+    {
+      "path": "submission/video/audio/06-01.wav",
+      "bytes": 300044,
+      "sha256": "e02e3ef74a7308bc7ebdd72d41046cdc0482d5b389f662e28c3cbab60252bebd"
+    },
+    {
+      "path": "submission/video/audio/06-01.json",
+      "bytes": 441,
+      "sha256": "761e084e12e01352c1baa27542263634ee2773587fb07166d26ea2fc8966276e"
+    },
+    {
+      "path": "submission/video/audio/06-02.wav",
+      "bytes": 240044,
+      "sha256": "d13a2f66dcbf4fb9c594b7ed1d44e9c7a53e9e85e7758211440d4631f4c462af"
+    },
+    {
+      "path": "submission/video/audio/06-02.json",
+      "bytes": 429,
+      "sha256": "07fcb34da144f342ba3628732d5fd1823e4adc347981df5ea6964477661e890e"
+    },
+    {
+      "path": "submission/video/captures/scene-07.mp4",
+      "bytes": 193452,
+      "sha256": "f7e56eb05aeb5cc150f0a9aa8193f4f8a2315b5c8c6d010ef4fc834353c6101f"
+    },
+    {
+      "path": "submission/video/audio/07-01.wav",
+      "bytes": 194444,
+      "sha256": "9c8a820a53de10aaa62f4b06415c0ab714eff9dbce34f6118cf24df5af1ccadc"
+    },
+    {
+      "path": "submission/video/audio/07-01.json",
+      "bytes": 416,
+      "sha256": "56c486f5946040db88e77380f4602eca78530cd9be86865bea07152f8614a739"
+    },
+    {
+      "path": "submission/video/audio/07-02.wav",
+      "bytes": 230444,
+      "sha256": "a473882902b68573fa95575cbdbfe13895ed244fc5e424bd4e837de3859b8010"
+    },
+    {
+      "path": "submission/video/audio/07-02.json",
+      "bytes": 421,
+      "sha256": "0232d69cb3eaa9ef0816e9acecde3d86e44cbb86168fac895b8ab0e455d4acfb"
+    },
+    {
+      "path": "submission/video/audio/07-03.wav",
+      "bytes": 146444,
+      "sha256": "cd575deb52e12a1ac1d93bcb7e4ab7e921ea474c7ec87b576c9966b03536ebdc"
+    },
+    {
+      "path": "submission/video/audio/07-03.json",
+      "bytes": 405,
+      "sha256": "fe0c014653076fcf6545f08aabdd1744384745c6babb205e9b503eb854086f22"
+    },
+    {
+      "path": "submission/video/captures/scene-08.mp4",
+      "bytes": 310318,
+      "sha256": "a42cd9756470b451a57d82b41f5970338a29a9b02a95d760283059c964ab2718"
+    },
+    {
+      "path": "submission/video/audio/08-01.wav",
+      "bytes": 230444,
+      "sha256": "e457deb1b3b522c46575bafb58669a767ec03731446eb545008f4a0dbb3b7001"
+    },
+    {
+      "path": "submission/video/audio/08-01.json",
+      "bytes": 436,
+      "sha256": "3070038a7707a24cef748da9d218debe43f4151f3f77b2768e9a115c99e201b4"
+    },
+    {
+      "path": "submission/video/audio/08-02.wav",
+      "bytes": 189644,
+      "sha256": "085275e078063b492062e9328f5314c3fca9f5acf054ae1ebe710cbe49596a3d"
+    },
+    {
+      "path": "submission/video/audio/08-02.json",
+      "bytes": 403,
+      "sha256": "1c18ae4d08ae448ba0bdc02c8fbd7c9ef9815db0da6018d3ad8a066108d03fad"
+    },
+    {
+      "path": "submission/video/audio/08-03.wav",
+      "bytes": 247244,
+      "sha256": "08fa89af8be4cd055b0b6f7e3aa0040b1359cf23ee9c3cc5c5cdf03efa2833d1"
+    },
+    {
+      "path": "submission/video/audio/08-03.json",
+      "bytes": 433,
+      "sha256": "6f2e8f21d8ebde67b214cd59ff07490d3d0a9891d60b8ff31dee18a536581b86"
+    },
+    {
+      "path": "submission/video/captures/scene-09.mp4",
+      "bytes": 454616,
+      "sha256": "d82b966884cba667461c05cd8f6ab64748411358da697f16b688c9a29e61130d"
+    },
+    {
+      "path": "submission/video/audio/09-01.wav",
+      "bytes": 295244,
+      "sha256": "f9eb9e5d9f354366f7463c29508f4360898bbb1d01166353563d017122ed03a0"
+    },
+    {
+      "path": "submission/video/audio/09-01.json",
+      "bytes": 444,
+      "sha256": "333d61e3e99394f905f901540feb773bf3cdcaab74aa1fbb0c489d32c0016896"
+    },
+    {
+      "path": "submission/video/audio/09-02.wav",
+      "bytes": 141644,
+      "sha256": "a334b06f280026d322a20d3cd2a18d1b12043feb5ef1ea45e3fa3023f895cb33"
+    },
+    {
+      "path": "submission/video/audio/09-02.json",
+      "bytes": 355,
+      "sha256": "d4a55f1157fc2d08952b31e1658b8bf6a76eeb8e8e3e5dfccf63bcde92204be7"
+    },
+    {
+      "path": "submission/video/audio/09-03.wav",
+      "bytes": 252044,
+      "sha256": "9cc2001aad461993eda9c09dbf75a0f3b19581466f2e98cb6d09ad27ad3225a1"
+    },
+    {
+      "path": "submission/video/audio/09-03.json",
+      "bytes": 423,
+      "sha256": "8512fa787c96dc046f7ed34a1f74c62c2393f05bf84fcb0e8103dc565906a53b"
+    },
+    {
+      "path": "submission/video/audio/10-01.wav",
+      "bytes": 285644,
+      "sha256": "73945bc8a087da140dc28c0d8275882e12b1d00c1dde00d09b3f13209868da14"
+    },
+    {
+      "path": "submission/video/audio/10-01.json",
+      "bytes": 454,
+      "sha256": "c1b5e30743e46f680f25d6bc3e05f1786544049bf52fa83b63b226bcfd9a1820"
+    },
+    {
+      "path": "submission/video/audio/10-02.wav",
+      "bytes": 264044,
+      "sha256": "83ee358d8d3c146fea9bdff4da4216134f8c4cc8fea6509a1e51c0e53167867d"
+    },
+    {
+      "path": "submission/video/audio/10-02.json",
+      "bytes": 447,
+      "sha256": "fb45f95a4505ae527fd2885218d0f5eb011bab0e89aba0db810e53d4a458eaa9"
+    },
+    {
+      "path": "submission/video/audio/10-03.wav",
+      "bytes": 228044,
+      "sha256": "9602cfebfc6cb838606bb1542756484e4edc79c4eb9dc5ddd798b85fbbc199d8"
+    },
+    {
+      "path": "submission/video/audio/10-03.json",
+      "bytes": 414,
+      "sha256": "850a8be88e7a94fcf8dd04e0859522dd5e3a03a1064b4a16290ac0b85421e483"
+    },
+    {
+      "path": "submission/video/captures/scene-11.mp4",
+      "bytes": 319728,
+      "sha256": "7d46f375a21514930e0044c56e702d3ac4f9fd3a8760559745dd2f713201f443"
+    },
+    {
+      "path": "submission/video/audio/11-01.wav",
+      "bytes": 187244,
+      "sha256": "1ce25e26fb1d32cd41ee6071df9b9a4a3b001fe78aa165a78a4e1d629f05c1ce"
+    },
+    {
+      "path": "submission/video/audio/11-01.json",
+      "bytes": 410,
+      "sha256": "5a91e907bf97edda0108f5672c6ef62de6bdf3b025297b467e6378517dabe46e"
+    },
+    {
+      "path": "submission/video/audio/11-02.wav",
+      "bytes": 160844,
+      "sha256": "ee075f95a47dc46dde3adad276587316804629bc3b53f630d640144877e74879"
+    },
+    {
+      "path": "submission/video/audio/11-02.json",
+      "bytes": 394,
+      "sha256": "4ce93dd9f6a5b0f08bdea15d11f68878321646d9c60f684c5f452432c6497908"
+    },
+    {
+      "path": "submission/video/audio/11-03.wav",
+      "bytes": 276044,
+      "sha256": "6980fc74eacfcd4887fc17ae007102b48c6256f97e7407f3b08f5ab188bc0d75"
+    },
+    {
+      "path": "submission/video/audio/11-03.json",
+      "bytes": 427,
+      "sha256": "ac4a06a63093dffbb8e2a8341b7d0e6277257a127d6061543778e35c7a307fe8"
+    },
+    {
+      "path": "submission/video/captures/scene-12.mp4",
+      "bytes": 195701,
+      "sha256": "72882054addd9686168655ba145712bca5d061664573c95536a10c71a55ca09d"
+    },
+    {
+      "path": "submission/video/audio/12-01.wav",
+      "bytes": 201644,
+      "sha256": "f7765de89802399603c151c0e882b23fe719ca0c10f0a6203cf73e2272ea3ff0"
+    },
+    {
+      "path": "submission/video/audio/12-01.json",
+      "bytes": 403,
+      "sha256": "220da6005ab8e0eb7eaac4e0d1508b92f28a675409cb56906c8fd7b8a27fc638"
+    },
+    {
+      "path": "submission/video/audio/12-02.wav",
+      "bytes": 230444,
+      "sha256": "b4837f1492cb0488c4497fb7cd95002de7bdad4b5bbc5b9285b2ce0fc871ad48"
+    },
+    {
+      "path": "submission/video/audio/12-02.json",
+      "bytes": 419,
+      "sha256": "03645d23715181cb2dfd43d35259ba6dc1a50063a7f6114ccf500246677a771b"
+    },
+    {
+      "path": "submission/video/audio/12-03.wav",
+      "bytes": 165644,
+      "sha256": "2b41354aee7afb608e68b3ed22595a97d309ca16970121e4f3983c1d85ed798e"
+    },
+    {
+      "path": "submission/video/audio/12-03.json",
+      "bytes": 392,
+      "sha256": "413d07705ecb8a54b625ab18450991216d2ae07e54268afe1e7e33a5f49e068b"
+    },
+    {
+      "path": "submission/video/qa/audio-statistics.json",
+      "bytes": 29947,
+      "sha256": "296a7c7b0e1dc87b5dfa88317ef91010f088b3009265be7742a7b643a5874390"
+    },
+    {
+      "path": "submission/video/qa/local-transcription.json",
+      "bytes": 12900,
+      "sha256": "e3ad43cdbed37f64429ccec98043d8e0198d48254eb02d448fc9db173b24c442"
+    },
+    {
+      "path": "submission/video/qa/qa-summary.json",
+      "bytes": 1741,
+      "sha256": "9c098d2d951bb58584dfd5e7323748975fc5627ea17d4c4bd8fdda6bad9fa88d"
+    },
+    {
+      "path": "submission/video/builders/build-thumbnail.py",
+      "bytes": 4418,
+      "sha256": "474e470f9961d39f5ebc06806953a6c6f90fd20ad12898526f1a452cee7792a7"
+    },
+    {
+      "path": "submission/video/builders/check_capture_timing.py",
+      "bytes": 1975,
+      "sha256": "6172be24cd6f82c709884020f1408951d4e9b5b4aff5e030ff01a64496639bfe"
+    },
+    {
+      "path": "submission/video/builders/verify_final_video.py",
+      "bytes": 3068,
+      "sha256": "2c50d859aa8508ea9101137207fb68f6484ddaa444d9e7c6cd7ce4cef042c624"
+    },
+    {
+      "path": "submission/video/README.md",
+      "bytes": 6359,
+      "sha256": "b581208dd08302d6fae30bcdca1aa203c11fb34d793114524e663d06c4f24bf6"
+    }
+  ],
+  "validation": "All three artifact images resolve from the portable content file. All 11 final video scene clips and 32 narration WAV/metadata pairs resolve, and every narration request equals the caption script.",
+  "initial_copied_file_count": 109,
+  "snapshot_file_count": 112,
+  "hashes_refreshed_at_utc": "2026-09-15T17:51:18+00:00",
+  "mutable_files_excluded": [
+    "submission/youtube.md"
+  ]
+}

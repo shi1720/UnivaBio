@@ -1,0 +1,15 @@
+{
+  "source": "captures/raw-12/000003.jpg",
+  "source_sha256": "5eed87991373078d23c07378d17e4f005db669ef815b0ac9af6cd1e6b76addf5",
+  "native_crop": [
+    830,
+    75,
+    610,
+    625
+  ],
+  "claim": "Real app capture, cropped for framing. No generated or modified interface content. SVG retains the entire original embedded screenshot.",
+  "png_dimensions": [
+    1920,
+    1080
+  ]
+}

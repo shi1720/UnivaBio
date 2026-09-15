@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FileText, Check, Plus, ArrowUpRight, Search } from "lucide-react";
 import { formatDate } from "../../lib/dates";
+import { useDraft, clearDraft } from "../../lib/drafts";
 import type { Episode, ActionCommand } from "../../lib/types";
 const labels = {
   follow_up: "Follow-up",
@@ -25,12 +26,11 @@ export default function SourceView({
   const [filter, setFilter] = useState("all"),
     [query, setQuery] = useState(""),
     [error, setError] = useState(""),
-    [adding, setAdding] = useState<string | null>(null),
-    [title, setTitle] = useState(""),
-    [category, setCategory] = useState<"follow_up" | "pending_result">(
-      "follow_up",
-    ),
     [busy, setBusy] = useState(false);
+  const draftKey = `${episode.id}:manual`;
+  const [adding, setAdding] = useDraft<string | null>(`${draftKey}:source`, null);
+  const [title, setTitle] = useDraft(`${draftKey}:title`, "");
+  const [category, setCategory] = useDraft<"follow_up" | "pending_result">(`${draftKey}:category`, "follow_up");
   const focusRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (highlight) {
@@ -136,8 +136,9 @@ export default function SourceView({
                   <button
                     className="text-button"
                     onClick={() => {
+                      if (busy) return;
                       setAdding(s.id);
-                      setTitle(s.text.slice(0, 160));
+                      if (adding !== s.id) setTitle(s.text.slice(0, 160));
                       setError("");
                     }}
                   >
@@ -161,6 +162,9 @@ export default function SourceView({
                           category,
                         });
                         setAdding(null);
+                        clearDraft(`${draftKey}:source`);
+                        clearDraft(`${draftKey}:title`);
+                        clearDraft(`${draftKey}:category`);
                       } catch (e) {
                         setError(
                           e instanceof Error
@@ -204,6 +208,7 @@ export default function SourceView({
                       <button
                         type="button"
                         className="secondary-button"
+                        disabled={busy}
                         onClick={() => setAdding(null)}
                       >
                         Cancel

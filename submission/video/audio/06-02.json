@@ -1,0 +1,10 @@
+{
+  "id": "06-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Maya is tracking the next step. The app does not assign her clinical responsibility.",
+  "fingerprint": "7c44499265aec76837afe92170e44a8f96c59583c6e7b673ade659c3d18e6af5",
+  "sha256": "d13a2f66dcbf4fb9c594b7ed1d44e9c7a53e9e85e7758211440d4631f4c462af",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.0
+}

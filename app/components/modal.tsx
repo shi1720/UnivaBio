@@ -8,6 +8,8 @@ export default function Modal({
   wide = false,
   drawer = false,
   print = false,
+  busy = false,
+  draftHint = false,
 }: {
   title: string;
   children: ReactNode;
@@ -15,6 +17,8 @@ export default function Modal({
   wide?: boolean;
   drawer?: boolean;
   print?: boolean;
+  busy?: boolean;
+  draftHint?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -35,10 +39,10 @@ export default function Modal({
       aria-label={title}
       onCancel={(e) => {
         e.preventDefault();
-        onClose();
+        if (!busy) onClose();
       }}
       onClick={(e) => {
-        if (e.target === ref.current) onClose();
+        if (!busy && e.target === ref.current) onClose();
       }}
     >
       <div className="modal-inner">
@@ -48,10 +52,16 @@ export default function Modal({
             className="icon-button"
             aria-label="Close dialog"
             onClick={onClose}
+            disabled={busy}
           >
             <X size={21} />
           </button>
         </header>
+        {draftHint && (
+          <p className="draft-hint">
+            Unfinished edits are kept in this tab when you close this panel.
+          </p>
+        )}
         {children}
       </div>
     </dialog>

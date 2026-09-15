@@ -1,3 +1,12 @@
+import { version as pdfjsVersion } from "pdfjs-dist/package.json";
+
+const pdfjsBase = `/vendor/pdfjs/${pdfjsVersion}`;
+let readerRetry = 0;
+const readerUnavailable = () =>
+  Error(
+    "The PDF reader could not load. Your current notes have been kept. Reconnect and try the file again, or paste its text instead.",
+  );
+
 /** Parse in the browser. The original PDF bytes are never uploaded or retained. */
 export async function readDocumentFile(file: File): Promise<string> {
   if (file.size > 5 * 1024 * 1024)
@@ -12,8 +21,19 @@ export async function readDocumentFile(file: File): Promise<string> {
   }
   if (!/\.pdf$/i.test(file.name) && file.type !== "application/pdf")
     throw Error("Choose a text-based PDF or a plain .txt file.");
-  const pdfjs = await import("pdfjs-dist");
-  pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+  // These package-version URLs survive app-bundle deployments. A failed fetch
+  // gets a new query on retry because browsers can cache failed module imports.
+  const retryQuery = readerRetry ? `?retry=${readerRetry}` : "";
+  const moduleUrl = `${pdfjsBase}/pdf.min.mjs${retryQuery}`;
+  let pdfjs: typeof import("pdfjs-dist");
+  try {
+    pdfjs = await import(/* @vite-ignore */ moduleUrl);
+    if (pdfjs.version !== pdfjsVersion) throw readerUnavailable();
+  } catch {
+    readerRetry++;
+    throw readerUnavailable();
+  }
+  pdfjs.GlobalWorkerOptions.workerSrc = `${pdfjsBase}/pdf.worker.min.mjs${retryQuery}`;
   const loading = pdfjs.getDocument({
     data: new Uint8Array(await file.arrayBuffer()),
     isEvalSupported: false,
@@ -46,8 +66,18 @@ export async function readDocumentFile(file: File): Promise<string> {
       throw Error(
         "This PDF is password-protected. Use an unlocked copy or paste its text.",
       );
+    if (
+      error instanceof Error &&
+      /(?:worker|dynamically imported module|module script|failed to fetch|network)/i.test(
+        error.message,
+      )
+    ) {
+      readerRetry++;
+      throw readerUnavailable();
+    }
     throw error;
   } finally {
-    await loading.destroy();
+    // Cleanup must not replace a useful reader/password/validation error.
+    await loading.destroy().catch(() => {});
   }
 }

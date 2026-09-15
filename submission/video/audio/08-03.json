@@ -1,0 +1,10 @@
+{
+  "id": "08-03",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "The history preserves a user-reported ending, not independent proof of clinical review.",
+  "fingerprint": "c53d870f3ad5ba42d0f0bb819d5575b4037cb3eae9cb5c90eae42b3ccc3b8424",
+  "sha256": "08fa89af8be4cd055b0b6f7e3aa0040b1359cf23ee9c3cc5c5cdf03efa2833d1",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.15
+}

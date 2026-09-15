@@ -1,0 +1,10 @@
+{
+  "id": "09-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Take the plan to the next conversation. The visit brief keeps follow-ups and source text together.",
+  "fingerprint": "6d867cfb41ca1f1498fa4d086312eebe0bd31a094dd1ae312d1ca8128a008add",
+  "sha256": "f9eb9e5d9f354366f7463c29508f4360898bbb1d01166353563d017122ed03a0",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 6.15
+}

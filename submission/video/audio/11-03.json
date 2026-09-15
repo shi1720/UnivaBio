@@ -1,0 +1,10 @@
+{
+  "id": "11-03",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "It does not diagnose, interpret a result, or demonstrate a proven health benefit.",
+  "fingerprint": "1f7289c7bef4daacf55c50d7e02eaf9809c18b949bad7e5488fbb8c13f7d543f",
+  "sha256": "6980fc74eacfcd4887fc17ae007102b48c6256f97e7407f3b08f5ab188bc0d75",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 5.75
+}

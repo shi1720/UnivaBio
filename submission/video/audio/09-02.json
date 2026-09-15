@@ -1,0 +1,9 @@
+{
+  "id": "09-02",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Calendar entries use confirmed dates.",
+  "fingerprint": "610e8ba66c7c9e4ec7927b46be6b7171a42a0da09e58e4d08f7c40ca963ec6ba",
+  "sha256": "a334b06f280026d322a20d3cd2a18d1b12043feb5ef1ea45e3fa3023f895cb33",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice."
+}

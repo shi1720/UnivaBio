@@ -1,0 +1,617 @@
+{
+  "schema_version": 1,
+  "project": "Looplight",
+  "creator": "Shivam Gupta",
+  "narrator_disclosure": "AI-generated narration",
+  "data_disclosure": "Fictional demo",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "font_family": "Noto Sans",
+  "notes": "Final narrated demo assembled from actual Chrome Page.screencastFrame captures on the hosted Firebase app. Capture timestamp differences are preserved at normal speed; static final frames hold through the recorded elapsed time. Fictional example. Narration timing comes from final WAV samples.",
+  "scenes": [
+    {
+      "id": "01",
+      "title": "Home from hospital. One result is still pending.",
+      "captions": [
+        {
+          "id": "01-01",
+          "text": "Anita is home from hospital. Her daughter, Maya, has the discharge notes."
+        },
+        {
+          "id": "01-02",
+          "text": "But one result is still pending. Who will make sure somebody follows it through?"
+        }
+      ],
+      "actions": [
+        "Hold on the fictional care board with the pending blood culture visible."
+      ],
+      "proof": [
+        "The Anita/Maya example is visibly fictional."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-01.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "01-01",
+            "path": "audio/01-01.wav"
+          },
+          {
+            "cue_id": "01-02",
+            "path": "audio/01-02.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "02",
+      "title": "The next step, accounted for.",
+      "captions": [
+        {
+          "id": "02-01",
+          "text": "This is Looplight, a follow-up ledger by Shivam Gupta."
+        },
+        {
+          "id": "02-02",
+          "text": "It turns the next steps already written in discharge notes into a plan people can inspect and track."
+        }
+      ],
+      "actions": [
+        "Open one care-board task and briefly show its source sentence."
+      ],
+      "proof": [
+        "The source sentence and task are visible together."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-02.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "02-01",
+            "path": "audio/02-01.wav"
+          },
+          {
+            "cue_id": "02-02",
+            "path": "audio/02-02.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "03",
+      "title": "Start with the original instructions.",
+      "captions": [
+        {
+          "id": "03-01",
+          "text": "Start with Anita's fictional example. Open the source, then find the open loops."
+        },
+        {
+          "id": "03-02",
+          "text": "A small trained text model and explicit rules suggest follow-up items."
+        },
+        {
+          "id": "03-03",
+          "text": "Nothing becomes a confirmed task until someone checks it."
+        }
+      ],
+      "actions": [
+        "Open Add discharge notes.",
+        "Select Anita's discharge.",
+        "Choose Find the open loops.",
+        "Hold on the resulting Needs review items."
+      ],
+      "proof": [
+        "Show the actual analysis action and its result in one continuous take."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-03.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "03-01",
+            "path": "audio/03-01.wav"
+          },
+          {
+            "cue_id": "03-02",
+            "path": "audio/03-02.wav"
+          },
+          {
+            "cue_id": "03-03",
+            "path": "audio/03-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "04",
+      "title": "Keep the source and the uncertainty.",
+      "captions": [
+        {
+          "id": "04-01",
+          "text": "Open the pending blood culture result. Its exact source sentence stays attached."
+        },
+        {
+          "id": "04-02",
+          "text": "Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved."
+        }
+      ],
+      "actions": [
+        "Open the pending result through Check details.",
+        "Pause on source evidence.",
+        "Show missing timing and the suggested question."
+      ],
+      "proof": [
+        "No date has been invented for the pending result."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-04.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "04-01",
+            "path": "audio/04-01.wav"
+          },
+          {
+            "cue_id": "04-02",
+            "path": "audio/04-02.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "05",
+      "title": "Review what the system missed.",
+      "captions": [
+        {
+          "id": "05-01",
+          "text": "A convincing task list can still miss something."
+        },
+        {
+          "id": "05-02",
+          "text": "The original document remains reviewable sentence by sentence, including text the system did not turn into tasks."
+        },
+        {
+          "id": "05-03",
+          "text": "Add a missed follow-up from its original sentence."
+        }
+      ],
+      "actions": [
+        "Open Source documents and a sentence without a proposed task.",
+        "Use Add a missed follow-up.",
+        "Keep the source wording and choose Add for review.",
+        "Show the new item needing review."
+      ],
+      "proof": [
+        "Show an actual manual addition with its source still attached."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-05.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "05-01",
+            "path": "audio/05-01.wav"
+          },
+          {
+            "cue_id": "05-02",
+            "path": "audio/05-02.wav"
+          },
+          {
+            "cue_id": "05-03",
+            "path": "audio/05-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "06",
+      "title": "Name the person tracking the next step.",
+      "captions": [
+        {
+          "id": "06-01",
+          "text": "Now name Maya as the person tracking the result, review the details, and confirm the follow-up."
+        },
+        {
+          "id": "06-02",
+          "text": "Maya is tracking the next step. The app does not assign her clinical responsibility."
+        }
+      ],
+      "actions": [
+        "Return to the blood culture task.",
+        "Fill the named tracker field with Maya (daughter).",
+        "Choose Confirm this follow-up.",
+        "Hold on the confirmed state."
+      ],
+      "proof": [
+        "Capture the confirmation click and resulting state."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-06.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "06-01",
+            "path": "audio/06-01.wav"
+          },
+          {
+            "cue_id": "06-02",
+            "path": "audio/06-02.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "07",
+      "title": "A result arriving is one step.",
+      "captions": [
+        {
+          "id": "07-01",
+          "text": "Here is the important distinction. Record that the result has arrived."
+        },
+        {
+          "id": "07-02",
+          "text": "The task stays open because receipt and clinician review are separate steps."
+        },
+        {
+          "id": "07-03",
+          "text": "A file arriving does not tell the family what happens next."
+        }
+      ],
+      "actions": [
+        "Open Record progress.",
+        "Enter a short fictional receipt note.",
+        "Choose Record result received.",
+        "Hold on Result received and outstanding clinician review."
+      ],
+      "proof": [
+        "Receipt must not produce reported completion."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-07.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "07-01",
+            "path": "audio/07-01.wav"
+          },
+          {
+            "cue_id": "07-02",
+            "path": "audio/07-02.wav"
+          },
+          {
+            "cue_id": "07-03",
+            "path": "audio/07-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "08",
+      "title": "Give the follow-up a recorded ending.",
+      "captions": [
+        {
+          "id": "08-01",
+          "text": "After a conversation with the clinician, record who reviewed the result and what they said."
+        },
+        {
+          "id": "08-02",
+          "text": "Confirm that this is your report, then record completion."
+        },
+        {
+          "id": "08-03",
+          "text": "The history preserves a user-reported ending, not independent proof of clinical review."
+        }
+      ],
+      "actions": [
+        "Enter Dr. Rao (fictional clinician) and a clearly fictional outcome note.",
+        "Select the user-report confirmation.",
+        "Choose Record completion.",
+        "Open History and pause on the recorded ending."
+      ],
+      "proof": [
+        "Show named clinician, outcome, acknowledgement, and completion.",
+        "Do not imply a verified clinician signed the record."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-08.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "08-01",
+            "path": "audio/08-01.wav"
+          },
+          {
+            "cue_id": "08-02",
+            "path": "audio/08-02.wav"
+          },
+          {
+            "cue_id": "08-03",
+            "path": "audio/08-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "09",
+      "title": "A plan people can bring with them.",
+      "captions": [
+        {
+          "id": "09-01",
+          "text": "Take the plan to the next conversation. The visit brief keeps follow-ups and source text together."
+        },
+        {
+          "id": "09-02",
+          "text": "Calendar entries use confirmed dates."
+        },
+        {
+          "id": "09-03",
+          "text": "In a signed-in care space, create a plan and refresh: the saved plan returns."
+        }
+      ],
+      "actions": [
+        "Open Visit brief and show the source beside each next step.",
+        "Export Calendar file and show the download confirmation.",
+        "Cut to an already signed-in care space.",
+        "Create or import a fictional plan within that space.",
+        "Refresh and show the same saved plan returning."
+      ],
+      "proof": [
+        "Do not imply anonymous demo changes transfer through sign-in.",
+        "Persistence claim requires the final Firebase implementation to pass refresh QA."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-09.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "09-01",
+            "path": "audio/09-01.wav"
+          },
+          {
+            "cue_id": "09-02",
+            "path": "audio/09-02.wav"
+          },
+          {
+            "cue_id": "09-03",
+            "path": "audio/09-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "10",
+      "title": "A focused first customer.",
+      "captions": [
+        {
+          "id": "10-01",
+          "text": "The first customer to test is a primary-care or transitions coordinator already chasing discharge follow-up."
+        },
+        {
+          "id": "10-02",
+          "text": "The starting price hypothesis is one hundred and forty-nine dollars a month, for one hundred episodes."
+        },
+        {
+          "id": "10-03",
+          "text": "A supervised pilot must test preparation time and correction burden."
+        }
+      ],
+      "actions": [
+        "Hold on the final plan, or use the supplied editorial business card.",
+        "Keep the words Pricing hypothesis visible."
+      ],
+      "proof": [
+        "No revenue, customer adoption, or measured savings claim."
+      ],
+      "media": {
+        "type": "card",
+        "headline": "$149 per month / 100 care episodes",
+        "body": "Pricing hypothesis\nOne coordinator account\nPilot measures preparation time and correction burden"
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "10-01",
+            "path": "audio/10-01.wav"
+          },
+          {
+            "cue_id": "10-02",
+            "path": "audio/10-02.wav"
+          },
+          {
+            "cue_id": "10-03",
+            "path": "audio/10-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "11",
+      "title": "A useful prototype, with visible limits.",
+      "captions": [
+        {
+          "id": "11-01",
+          "text": "Looplight is a working prototype evaluated on synthetic examples."
+        },
+        {
+          "id": "11-02",
+          "text": "It can miss instructions and needs human review."
+        },
+        {
+          "id": "11-03",
+          "text": "It does not diagnose, interpret a result, or demonstrate a proven health benefit."
+        }
+      ],
+      "actions": [
+        "Show the final Evidence & AI screen with the synthetic-data caveat.",
+        "Do not zoom into numerical results unless they match the final release report."
+      ],
+      "proof": [
+        "No clinical validation or autonomous safety claim."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-11.mp4",
+        "trim_start": 0,
+        "speed": 1
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "11-01",
+            "path": "audio/11-01.wav"
+          },
+          {
+            "cue_id": "11-02",
+            "path": "audio/11-02.wav"
+          },
+          {
+            "cue_id": "11-03",
+            "path": "audio/11-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 0.22
+    },
+    {
+      "id": "12",
+      "title": "Every next step has a recorded ending.",
+      "captions": [
+        {
+          "id": "12-01",
+          "text": "Shivam Gupta built Looplight with AI-assisted development."
+        },
+        {
+          "id": "12-02",
+          "text": "Every next step has a source, a person tracking it, and a recorded ending."
+        },
+        {
+          "id": "12-03",
+          "text": "That is the work Looplight helps make visible."
+        }
+      ],
+      "actions": [
+        "Return to the actual completed follow-up and visible history.",
+        "Hold a clean final frame for at least two seconds."
+      ],
+      "proof": [
+        "Credit Shivam as project builder without inventing specific personal coding work."
+      ],
+      "media": {
+        "type": "video",
+        "path": "captures/scene-12.mp4",
+        "trim_start": 0,
+        "speed": 1,
+        "crop": [
+          830,
+          75,
+          610,
+          625
+        ],
+        "crop_reason": "viewport focus",
+        "crop_note": "Focuses the native result source and reported ending in the actual captured drawer. No UI content is altered."
+      },
+      "audio": {
+        "mode": "cues",
+        "items": [
+          {
+            "cue_id": "12-01",
+            "path": "audio/12-01.wav"
+          },
+          {
+            "cue_id": "12-02",
+            "path": "audio/12-02.wav"
+          },
+          {
+            "cue_id": "12-03",
+            "path": "audio/12-03.wav"
+          }
+        ]
+      },
+      "lead_seconds": 0.12,
+      "cue_gap_seconds": 0.06,
+      "tail_seconds": 2.0
+    }
+  ]
+}

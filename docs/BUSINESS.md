@@ -2,52 +2,51 @@
 
 ## Starting customer
 
-An independent primary-care practice or community transitions service with one coordinator handling roughly 100 discharges each month. Their existing job includes reconstructing follow-ups, contacting families and documenting what happened. The immediate use case is preparation and follow-through for the coordinator, with a printable brief for the family.
+The proposed first buyer is one coordinator at an independent primary-care practice or community transitions service, handling roughly 100 discharges per month. Their existing work includes reconstructing next steps, contacting families and recording what happened. The proposed value is less preparation and follow-up work, with a clear source-linked brief for the family.
 
-The MVP is single-account. It does not yet support a shared staff queue, role-based invitations, EHR integration, billing, payments, clinical alerts or automated messages. Those must not appear in a sales/demo promise.
+The MVP supports one account per saved care space. Naming a caregiver or clinician does not invite them. Shared staff queues, role-based access, EHR integration, billing/payments, clinical alerts and automatic messages are future work.
 
-## Why choose this wedge
+## Why this entry point
 
-A pending result is a recognizable loose end. The product can demonstrate the complete source-to-resolution workflow without pretending to read an EHR. The pilot can begin with fictional or properly de-identified historical notes under local governance, without automating clinical decisions.
+A pending result is a recognizable unfinished step. A document-first tool can demonstrate source review and reported resolution before an EHR integration is available. Initial research can use fictional or governed de-identified notes. A patient-data pilot needs appropriate clinical and data-handling review first.
 
-Care navigation is a crowded category: SeamlessMD, Memora/Commure, Eon and Welkin overlap. Source-linked uncertainty and a narrow document-first pilot are positioning hypotheses. No verified competitor feature absence or unique intellectual property is claimed. See RESEARCH.md for primary competitor links.
+Care navigation is crowded. SeamlessMD, Memora/Commure, Eon and Welkin overlap. Source-linked uncertainty and a narrow coordinator workflow are positioning hypotheses. No competitor feature absence, unique IP, customer preference or clinical-data moat has been established. See [Research](RESEARCH.md).
 
 ## Price and cost assumptions
 
-| Assumption | Scenario | What must be measured |
+| Assumption | Test scenario | What must be measured |
 |---|---:|---|
-| Monthly price | $149 for 100 episodes | Willingness to pay; decision-maker and budget |
-| Additional episodes | $1 each | Usage pattern and marginal support |
-| Loaded coordinator cost | $35/hour | Customer-specific labor cost |
-| Time saved | 5 minutes per episode | Median preparation + review + follow-up time |
-| Gross time value | 100 × 5 / 60 × $35 = $291.67/month | Whether savings survive error review and onboarding |
-| Gross time-value / price | 1.96× | This is not ROI until full costs are measured |
-| Breakeven time saving | $149 / $35 × 60 / 100 = 2.55 minutes/episode | Staff may value capacity differently from cash savings |
-| External model API calls | 0 | Holds for current local classifier |
+| Proposed price | $149 per coordinator account/month for 100 episodes | Buyer, budget and willingness to pay |
+| Loaded staff cost | $35/hour | Customer-specific labor cost |
+| Time saved | 5 minutes per episode | Preparation plus review, correction and follow-up time |
+| Gross time value | 100 × 5 / 60 × $35 = $291.67/month | Savings after error review and onboarding |
+| Subscription-only break-even | 2.55 minutes per episode | Capacity value versus cash savings |
+| External model API fee | 0 | Current bundled classifier and local rules |
 
-Hosting, database storage, secure operations, audit retention, clinician evaluation, customer support, accessibility and integration work are not free in a production service. A free-tier prototype is not a validated gross-margin model. Sites hosting is currently account-provided; no fixed third-party production hosting price is asserted here.
+These are assumptions and arithmetic, not observed ROI or paid traction. A possible $1 additional-episode price is a later pricing experiment, not implemented billing. The current app caps stored care spaces at 100 per account; that storage limit is distinct from a proposed monthly usage allowance.
 
-## Six-week validation sequence (planned, not completed)
+The current demo uses Firebase Hosting, Firebase Auth and Firestore on the project's free tier, with the database configured in `asia-south1`. No claim is made that an arbitrary volume of use is free or that the free tier establishes sustainable gross margin. Quota limits can affect availability. Real production costs include hosting/storage, secure operations, independent validation, accessibility, support, agreements, monitoring and integration work. No future fixed provider price is assumed here.
 
-1. **Problem interviews:** five care coordinators and five caregivers; ask them to reconstruct a recent de-identified handoff, with consent. Record existing tools, missing details, time spent and failure costs. Do not lead with the product.
-2. **Independent reference set:** two appropriately qualified reviewers label consented/de-identified notes, with adjudication and an institution-separated evaluation split. Do not retrain on the final evaluation set.
-3. **Usability study:** participants perform paired tasks with ordinary notes and Looplight. Counterbalance order. Observe completion, errors, confidence, accessibility barriers and correction burden.
-4. **Supervised pilot:** only after data-handling and clinical-governance review. Start with one coordinator and a limited cohort. Keep usual clinical follow-up processes in place.
-5. **Commercial test:** present a paid pilot offer after evidence of value. Record declined offers and reasons, not just positive feedback.
-6. **Decision:** continue if users save meaningful time without unacceptable omission/correction burden and at least one buyer commits. Re-scope or stop if the workflow adds work or creates false reassurance.
+## Six-week validation sequence, planned
 
-## Measures and guardrails
+1. Interview five coordinators and five caregivers about recent handoffs, existing tools, time spent and missing details. Use consent and appropriate de-identification; do not lead with the product.
+2. Have two qualified reviewers label governed de-identified notes, adjudicate disagreements and preserve a held-back evaluation split. The existing synthetic set cannot establish clinical extraction performance.
+3. Run paired, counterbalanced usability tasks with ordinary notes and Looplight. Measure preparation time, missed actions, false additions, correction burden and accessibility barriers.
+4. Start a supervised single-coordinator pilot only after clinical and data-handling review. Keep ordinary clinical follow-up processes in place.
+5. Offer a paid pilot after evidence of value. Record declined offers and objections as well as positive responses.
+6. Continue only if the workflow saves useful time without unacceptable omissions or review burden and a buyer commits. Re-scope if it adds work or creates false reassurance.
 
-- Primary engineering measure: **action-level precision and recall**, including source-span correctness and harmful false additions. Classifier accuracy alone is insufficient.
-- Review measures: omitted actions, corrections per episode, unresolved owner/timing questions, source review completion.
-- Workflow measures: minutes to prepare a plan, time to first action, proportion with recorded ownership, reported follow-through and reopened tasks.
-- Accessibility: screen-reader task success, text enlargement, low-literacy wording, phone usability.
-- Small pilots cannot establish causal effects on readmission, morbidity or mortality. These are not current product claims.
+## Measures
 
-## What could become a moat
+- Action-level precision/recall, exact source spans, unsupported dates and harmful false additions.
+- Minutes to prepare and verify a plan, corrections per episode and unresolved questions.
+- Recorded tracking person, time to first action, reported follow-through and reopened tasks.
+- Screen-reader task success, text enlargement, phone usability and comprehension.
 
-A consented, clinician-reviewed correction dataset; reliable interoperability of source/action/outcome records; and integration into a measured coordination workflow. Today the actual assets are a reproducible model, an inspectable pipeline, working software and documentation. The model alone is easy to reproduce.
+Completion is a user report, not a verified clinical outcome. Small pilots cannot establish causal effects on readmission, morbidity or mortality. The model's current document-level ablation shows no measured additional extraction benefit; an AI-advantage claim needs new evidence.
 
-## Existing funded workflow signal
+## Defensibility and existing workflow
 
-CMS Transitional Care Management includes patient/caregiver contact and follow-up requirements. This is evidence that coordination is an established activity, not a guarantee that this software is reimbursable or sufficient for billing. [CMS booklet](https://www.cms.gov/files/document/mln908628-transitional-care-management-services.pdf)
+A consented, clinician-reviewed correction dataset and adoption within a measured workflow could become useful assets. They do not exist today. The model itself is easy to reproduce.
+
+CMS Transitional Care Management recognizes patient/caregiver contact and follow-up work. This supports the existence of an established coordination activity; it does not make this software reimbursable or sufficient for billing. [CMS booklet](https://www.cms.gov/files/document/mln908628-transitional-care-management-services.pdf)

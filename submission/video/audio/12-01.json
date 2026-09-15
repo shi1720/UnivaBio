@@ -1,0 +1,10 @@
+{
+  "id": "12-01",
+  "model": "gpt-4o-mini-tts",
+  "voice": "cedar",
+  "text": "Shivam Gupta built Looplight with AI-assisted development.",
+  "fingerprint": "485e97acdbd3d2768c9a7d4fb747b5cbedf46bc295ccc658c604c4a6fc38bd5a",
+  "sha256": "f7765de89802399603c151c0e882b23fe719ca0c10f0a6203cf73e2272ea3ff0",
+  "disclosure": "AI-generated narration. Not Shivam Gupta's voice.",
+  "duration_seconds": 4.2
+}

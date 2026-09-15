@@ -71,6 +71,24 @@ export default function EvidenceView({
           <span>5-category logistic regression</span>
         </div>
       </div>
+      <section className="evidence-section">
+        <h2>Does it find the actions in a whole document?</h2>
+        <p>
+          A separate frozen challenge used 20 synthetic documents with 44
+          annotated actions. The initial engine reached 84.2% suggestion
+          precision and 72.7% recall. After those failures informed fixes, the
+          current engine reaches 97.1% precision and 75.0% recall on the same
+          known fixtures. This is a regression check, not new-document
+          validation.
+        </p>
+        <p>
+          Eleven actions still need source review. All 44 action snippets remain
+          visible, which does not guarantee a person will find them. Disabling
+          the classifier produces the same task outputs on this set: no added
+          extraction benefit from ML has been measured here. The full report
+          retains the original failures and comparison.
+        </p>
+      </section>
       <section className="metrics-row" aria-label="Synthetic model evaluation">
         <div>
           <strong>
@@ -93,9 +111,7 @@ export default function EvidenceView({
             0<span> API calls</span>
           </strong>
           <h3>For model inference</h3>
-          <p>
-            Runs in the browser or our server. No external model service or key.
-          </p>
+          <p>Runs on your device. No external model service or key.</p>
         </div>
       </section>
       <div className="notice warning">
@@ -204,24 +220,6 @@ export default function EvidenceView({
         </p>
       </section>
       <section className="evidence-section">
-        <h2>Does it find the actions in a whole document?</h2>
-        <p>
-          A separate frozen challenge used 20 synthetic documents with 44
-          annotated actions. The initial engine reached 84.2% suggestion
-          precision and 72.7% recall. After those failures informed fixes, the
-          current engine reaches 97.1% precision and 75.0% recall on the same
-          known fixtures. This is a regression check, not new-document
-          validation.
-        </p>
-        <p>
-          Eleven actions still need source review. All 44 action snippets remain
-          visible, which does not guarantee a person will find them. Disabling
-          the classifier produces the same task outputs on this set: no added
-          extraction benefit from ML has been measured here. The full report
-          retains the original failures and comparison.
-        </p>
-      </section>
-      <section className="evidence-section">
         <h2>A workflow with a reason to exist.</h2>
         <div className="reference-list">
           <a
@@ -292,11 +290,11 @@ export default function EvidenceView({
       </section>
       <a
         className="text-button"
-        href="https://github.com/shi1720/UnivaBio"
+        href="/submission/looplight-code.pdf"
         target="_blank"
         rel="noreferrer"
       >
-        <Code2 size={17} /> Read the code and model report{" "}
+        <Code2 size={17} /> Download the code and evaluation PDF{" "}
         <ArrowUpRight size={16} />
       </a>
     </>

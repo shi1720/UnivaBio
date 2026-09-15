@@ -1,69 +1,143 @@
-# Looplight demo recording kit
+# Looplight narrated interaction demo
 
-**Presenter:** Shivam Gupta, founder and builder  
-**Target length:** about 3 minutes, at a measured 135-145 words per minute  
-**Format:** 16:9 screen recording, 1920 × 1080 or higher, with your own narration  
-**Cast:** Anita and Maya are fictional. All demonstration records are synthetic.
+**Credit:** Shivam Gupta, founder and builder. Built with AI-assisted development.
+**Narrator:** A disclosed AI voice, not an imitation of Shivam.
+**Length:** 383 words. Approximately three minutes at 135 to 145 words per minute. Final timing comes from the actual audio.
+**Visual format:** Recorded app interactions with fictional Anita/Maya records. One editorial pricing card.
 
-## Verbatim voiceover
+## Verbatim narration
 
-Hi, I'm Shivam Gupta, and this is Looplight.
+Anita is home from hospital. Her daughter, Maya, has the discharge notes. But one result is still pending. Who will make sure somebody follows it through?
 
-Anita has just left the hospital. Her daughter Maya has the discharge document. But a result is still pending, another test needs follow-up, and someone needs to track what happens next. Anita and Maya are fictional. The coordination problem is real.
+This is Looplight, a follow-up ledger by Shivam Gupta. It turns the next steps already written in discharge notes into a plan people can inspect and track.
 
-Looplight turns the instructions in a discharge document into a follow-up ledger. Every confirmed action keeps its source, the person tracking it, and a record of what happened.
+Start with Anita's fictional example. Open the source, then find the open loops. A small trained text model and explicit rules suggest follow-up items. Nothing becomes a confirmed task until someone checks it.
 
-Let's follow Anita's example. I open the sample document and run the analysis. A small trained text model works with explicit rules to suggest follow-up items. It runs without a paid model API.
+Open the pending blood culture result. Its exact source sentence stays attached. Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved.
 
-The review screen is the important part. I can see the exact sentence behind each suggestion. I review the whole document, including sentences the system did not turn into tasks. I can correct a suggestion or add something it missed.
+A convincing task list can still miss something. The original document remains reviewable sentence by sentence, including text the system did not turn into tasks. Add a missed follow-up from its original sentence.
 
-Dates remain connected to the original wording. If the document is unclear, Looplight leaves a question for the care team. It does not invent a clinical deadline.
+Now name Maya as the person tracking the result, review the details, and confirm the follow-up. Maya is tracking the next step. The app does not assign her clinical responsibility.
 
-I confirm the follow-up and give Maya responsibility for tracking one action. That records who is following up. It does not mean Maya is the clinician responsible for treatment.
+Here is the important distinction. Record that the result has arrived. The task stays open because receipt and clinician review are separate steps. A file arriving does not tell the family what happens next.
 
-Now a result has arrived. Watch what happens when I record that. The result can be received while clinician review remains outstanding. A file arriving is only one step. I record the separate report of clinician review and the outcome before closing the loop. The history shows what the user reported, rather than presenting it as independently verified medical evidence.
+After a conversation with the clinician, record who reviewed the result and what they said. Confirm that this is your report, then record completion. The history preserves a user-reported ending, not independent proof of clinical review.
 
-The plan can also leave the app. I can print a brief for the next conversation, export calendar reminders, or download the structured record. In a signed-in care space, plans are saved to the account.
+Take the plan to the next conversation. The visit brief keeps follow-ups and source text together. Calendar entries use confirmed dates. In a signed-in care space, create a plan and refresh: the saved plan returns.
 
-For the first customer, I would test this with a primary-care or transitions coordinator who already chases discharge follow-up. The initial pricing hypothesis is one hundred and forty-nine dollars per month for one hundred care episodes. The pilot must show whether staff time saved justifies that price.
+The first customer to test is a primary-care or transitions coordinator already chasing discharge follow-up. The starting price hypothesis is one hundred and forty-nine dollars a month, for one hundred episodes. A supervised pilot must test preparation time and correction burden.
 
-This is a working MVP with synthetic evaluation, not a clinically validated product. The model's raw five-category accuracy was eighty-two percent on fifty separate synthetic challenge examples. It abstained on forty-four, so human review remains central.
+Looplight is a working prototype evaluated on synthetic examples. It can miss instructions and needs human review. It does not diagnose, interpret a result, or demonstrate a proven health benefit.
 
-The next step is a supervised pilot that measures omissions and preparation time. I built Looplight with AI-assisted development. The goal is simple: every next step has a source, a person, and a recorded ending.
+Shivam Gupta built Looplight with AI-assisted development. Every next step has a source, a person tracking it, and a recorded ending. That is the work Looplight helps make visible.
 
-## Shot list
+## Recording and proof plan
 
-Record the real application. Do not use slide mockups as evidence that a feature works. The timing below is approximate. Let the voiceover determine the final cuts.
+### 01. Home from hospital. One result is still pending.
 
-| Time | Screen action | Narration cue |
-|---|---|---|
-| 0:00-0:09 | Hold on the Looplight opening screen. Keep the project name readable. | “Hi, I'm Shivam Gupta…” |
-| 0:09-0:27 | Choose Add discharge notes, then Anita’s discharge. Pause on the fictional-data label and discharge text. | “Anita has just left…” |
-| 0:27-0:44 | Choose Find the open loops. Show the resulting care board and Needs review state. | “Let's follow Anita's example…” |
-| 0:44-1:04 | Open a suggestion with Check details. Show its source sentence, then open the full sentence review. Demonstrate one correction. | “The review screen…” |
-| 1:04-1:17 | Show a date or date window and its original phrase. Show the unresolved question for an unspecified detail. | “Dates remain connected…” |
-| 1:17-1:31 | In Who will keep track of this?, set Maya as the tracker. Choose Confirm this follow-up. | “I confirm the follow-up…” |
-| 1:31-1:59 | Choose Record progress, then Record result received. Show that review remains outstanding. Enter the fictional clinician name, note, and confirmation, then choose Record completion. Show history. | “Now a result has arrived…” |
-| 1:59-2:13 | Open Visit brief for printing. Return and show Calendar file. Show JSON export in the account. Cut to the saved account view only after real sign-in has succeeded. | “The plan can also leave…” |
-| 2:13-2:33 | Show the business/pilot slide or a steady product view. | “For the first customer…” |
-| 2:33-2:50 | Show the model evidence screen or slide with the full synthetic-data caveat and abstention count. | “This is a working MVP…” |
-| 2:50-3:07 | Return to the final plan and hold for the closing line. | “The next step…” |
+- Hold on the fictional care board with the pending blood culture visible.
 
-## Before recording
+**Check:** The Anita/Maya example is visibly fictional.
 
-1. Use only fictional data. Reset the demo and check that the sample is Anita/Maya.
-2. Rehearse one complete run. The confirmed labels are Check details, Confirm this follow-up, Record progress, Record result received, Record completion, Visit brief, and Calendar file. JSON export appears in the account.
-3. Sign in before the take if sign-in would reveal personal account information. Create or import a plan inside a signed-in care space, then record a short separate clip showing it returns after refresh. Anonymous demo edits do not transfer when signing in.
-4. Close other tabs and notifications. Increase browser zoom until source text is readable in the video. Keep the cursor still while explaining a sentence.
-5. Record narration in a quiet room. Speak the voiceover exactly, with a short pause after “The review screen is the important part” and before recording closure.
-6. Read the numbers from the final model report. If the final model changes, update both the spoken metrics and the displayed slide. The current script uses 82% raw accuracy on 50 separate synthetic cases and 44 abstentions.
+### 02. The next step, accounted for.
 
-## Assembly and submission
+- Open one care-board task and briefly show its source sentence.
 
-Use simple cuts. Keep actual clicks visible. Small on-screen captions such as “Synthetic example” and “User-reported review” can clarify the demonstration. Music is optional and should remain below the narration.
+**Check:** The source sentence and task are visible together.
 
-Upload the finished video to YouTube, Vimeo, or Youku using settings that let judges view and embed it. Devpost's video field supports those hosts. Test playback from a signed-out browser. No event-specific video duration limit was found in the public rules; the three-minute target is an editorial choice.
+### 03. Start with the original instructions.
 
-The final publication still requires Shivam's spoken recording, a viewable hosted video link, and truthful eligibility/account declarations. A separate silent screenshot walkthrough is included. The narrated interaction demo still needs to be recorded and uploaded.
+- Open Add discharge notes.
+- Select Anita's discharge.
+- Choose Find the open loops.
+- Hold on the resulting Needs review items.
 
-Source: [Devpost video upload documentation](https://help.devpost.com/article/85-uploading-a-demo-video).
+**Check:** Show the actual analysis action and its result in one continuous take.
+
+### 04. Keep the source and the uncertainty.
+
+- Open the pending result through Check details.
+- Pause on source evidence.
+- Show missing timing and the suggested question.
+
+**Check:** No date has been invented for the pending result.
+
+### 05. Review what the system missed.
+
+- Open Source documents and a sentence without a proposed task.
+- Use Add a missed follow-up.
+- Keep the source wording and choose Add for review.
+- Show the new item needing review.
+
+**Check:** Show an actual manual addition with its source still attached.
+
+### 06. Name the person tracking the next step.
+
+- Return to the blood culture task.
+- Fill the named tracker field with Maya (daughter).
+- Choose Confirm this follow-up.
+- Hold on the confirmed state.
+
+**Check:** Capture the confirmation click and resulting state.
+
+### 07. A result arriving is one step.
+
+- Open Record progress.
+- Enter a short fictional receipt note.
+- Choose Record result received.
+- Hold on Result received and outstanding clinician review.
+
+**Check:** Receipt must not produce reported completion.
+
+### 08. Give the follow-up a recorded ending.
+
+- Enter Dr. Rao (fictional clinician) and a clearly fictional outcome note.
+- Select the user-report confirmation.
+- Choose Record completion.
+- Open History and pause on the recorded ending.
+
+**Check:** Show named clinician, outcome, acknowledgement, and completion. Do not imply a verified clinician signed the record.
+
+### 09. A plan people can bring with them.
+
+- Open Visit brief and show the source beside each next step.
+- Export Calendar file and show the download confirmation.
+- Cut to an already signed-in care space.
+- Create or import a fictional plan within that space.
+- Refresh and show the same saved plan returning.
+
+**Check:** Saving the current demo to an account preserves its edits; verify the saved record after refresh. Persistence claim requires the final Firebase implementation to pass refresh QA.
+
+### 10. A focused first customer.
+
+- Hold on the final plan, or use the supplied editorial business card.
+- Keep the words Pricing hypothesis visible.
+
+**Check:** No revenue, customer adoption, or measured savings claim.
+
+### 11. A useful prototype, with visible limits.
+
+- Show the final Evidence & AI screen with the synthetic-data caveat.
+- Do not zoom into numerical results unless they match the final release report.
+
+**Check:** No clinical validation or autonomous safety claim.
+
+### 12. Every next step has a recorded ending.
+
+- Return to the actual completed follow-up and visible history.
+- Hold a clean final frame for at least two seconds.
+
+**Check:** Credit Shivam as project builder without inventing specific personal coding work.
+
+## Final recording notes
+
+- Record from the final UI after the Firebase migration and persistence QA. Do not name the storage vendor in the narration.
+- Keep the disclosure "AI-generated narration" visible from the first frame. The description should also state that the voice is synthetic.
+- Use one narrator voice and consistent settings. Do not introduce the speaker as Shivam.
+- Prefer a 1280 x 720 or 1920 x 1080 browser viewport. Enlarge interface text before recording. Keep the action away from the caption area.
+- Keep receipt and completion as separate visible actions. Do not cut directly from an unconfirmed task to a completed record.
+- Show the source sentence before its related action. Demonstrate one real omission recovery.
+- For the persistence shot, save the edited fictional demo to an account or create the plan inside a signed-in space. Refresh and verify the saved edits remain.
+- Keep video speed at normal playback for decisive clicks and state changes. Use short cuts between setup steps; never fabricate a cursor or redraw UI state.
+- This script contains no performance percentages, clinical validation claim, revenue claim, or customer interview story.
+- Final handoff needs the actual clips, narrated audio, burned captions, source SRT, and signed-out playback of the uploaded video.

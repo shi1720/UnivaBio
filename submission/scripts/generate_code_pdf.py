@@ -6,7 +6,7 @@ Example:
   python generate_code_pdf.py --repo /path/to/UnivaBio --out /path/to/output
 Use --inventory-only to inspect the allowlist without creating the final PDF.
 Long source lines wrap; line numbers repeat only on their first rendered row.
-Exact original bytes are embedded as attachments and copied to a source snapshot.
+Every selected file, including hash-listed support data, is attached, copied to a source snapshot, and included in a verified source ZIP.
 """
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ import io
 import json
 import math
 import os
+import zipfile
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -185,9 +186,9 @@ def write_manifests(out: Path, manifest: dict[str, Any], data: dict[str, bytes])
     (out / 'source-inventory.json').write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     (out / 'source-inventory.sha256').write_text(''.join(f"{e['sha256']}  {e['path']}\n" for e in manifest['files']), encoding='utf-8')
     lines = ['# Looplight source inventory', '', f"Generated: {manifest['generated_at']}", '',
-             'SHA-256 values cover exact repository bytes. Printed source is also embedded in the PDF as lossless attachments. '
-             'Generated model weights, datasets, evaluation JSON, lockfile, supporting prose, and binary assets are hash-listed; '
-             'the repository holds their exact bytes.', '', manifest['authorship_note'], '',
+             'SHA-256 values cover exact repository bytes. Every listed file is embedded in the PDF as a lossless attachment and included in the source ZIP. '
+             'Generated model weights, datasets, evaluation JSON, lockfile, supporting prose, and binary assets are hash-listed rather than printed; '
+             'their exact bytes are supplied with the printed source.', '', manifest['authorship_note'], '',
              '| Repository file | Representation | Bytes | SHA-256 | PDF pages |',
              '|---|---|---:|---|---|']
     for e in manifest['files']:
@@ -197,8 +198,6 @@ def write_manifests(out: Path, manifest: dict[str, Any], data: dict[str, bytes])
     (out / 'source-inventory.md').write_text('\n'.join(lines), encoding='utf-8')
     snapshot = out / 'source-snapshot'
     for e in manifest['files']:
-        if e['representation'] != 'full_source':
-            continue
         p = snapshot / e['path']
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_bytes(data[e['path']])
@@ -256,7 +255,9 @@ def create_pdf(out: Path, manifest: dict[str, Any], rows: dict[str, list[tuple[s
     manifest['pdf'] = {'filename': 'looplight-code.pdf', 'pages': total, 'page_size': 'A4 landscape',
                        'code_font': font, 'code_font_size_pt': CODE_SIZE,
                        'line_number_convention': 'Original source line; > marks a wrapped continuation.',
-                       'source_attachment_count': len(printed)}
+                       'source_attachment_count': len(printed),
+                       'supporting_attachment_count': len(referenced),
+                       'all_inventory_files_attached': True}
     write_manifests(out, manifest, data)
     buffer = io.BytesIO()
     c = canvas.Canvas(buffer, pagesize=(PAGE_W, PAGE_H), pageCompression=1)
@@ -284,7 +285,7 @@ def create_pdf(out: Path, manifest: dict[str, Any], rows: dict[str, list[tuple[s
         'Read the filename index first. All original source lines are present: long lines wrap, and a > in the gutter marks continuation. Tabs are displayed as four spaces. Original bytes remain in embedded source attachments and the accompanying source snapshot.',
         'Characters unavailable in the embedded font are displayed as Unicode code-point escapes. This is a display convention only; attached source and SHA-256 hashes retain the exact original bytes.',
         manifest['authorship_note'],
-        'Model weights, datasets, evaluation JSON, dependency lockfile, supporting prose, and binary assets are listed with complete SHA-256 hashes in the final appendix. Obtain those exact files from the repository. No source content is truncated.',
+        'Model weights, datasets, evaluation JSON, dependency lockfile, supporting prose, and binary assets are hash-listed in the appendix and attached as exact files. The companion source ZIP contains the same inventory. No repository access is needed to obtain these included files.',
         'Repository: https://github.com/shi1720/UnivaBio'
     ]
     for note in cover_notes:
@@ -337,7 +338,7 @@ def create_pdf(out: Path, manifest: dict[str, Any], rows: dict[str, list[tuple[s
             c.showPage()
             page += 1
     for group in range(hash_pages):
-        page_chrome(c, 'Supporting and generated file inventory', page, total, 'Hash-only appendix | Repository contains exact files')
+        page_chrome(c, 'Supporting and generated file inventory', page, total, 'Hash-only appendix | Exact files attached and in source ZIP')
         y = PAGE_H - 57
         for e in referenced[group * HASH_ROWS:(group + 1) * HASH_ROWS]:
             c.setFillColor(INK)
@@ -356,7 +357,7 @@ def create_pdf(out: Path, manifest: dict[str, Any], rows: dict[str, list[tuple[s
     reader = PdfReader(buffer)
     writer = PdfWriter()
     writer.clone_document_from_reader(reader)
-    for e in printed:
+    for e in manifest['files']:
         writer.add_attachment(e['path'], data[e['path']])
     writer.add_attachment('source-inventory.json', (out / 'source-inventory.json').read_bytes())
     writer.add_attachment('source-allowlist.json', policy_bytes)
@@ -365,7 +366,7 @@ def create_pdf(out: Path, manifest: dict[str, Any], rows: dict[str, list[tuple[s
         writer.write(f)
     verified = PdfReader(target)
     assert len(verified.pages) == total, 'Final PDF page count differs.'
-    for e in printed:
+    for e in manifest['files']:
         attachments = verified.attachments[e['path']]
         assert len(attachments) == 1
         assert sha256(attachments[0]) == e['sha256'], f"Attachment mismatch: {e['path']}"
@@ -373,8 +374,48 @@ def create_pdf(out: Path, manifest: dict[str, Any], rows: dict[str, list[tuple[s
         extracted = p.extract_text() or ''
         assert extracted.strip(), f'Blank rendered page: {page_index}'
     return {'file': str(target), 'sha256': sha256(target.read_bytes()), 'pages': total,
-            'source_attachment_hashes_verified': len(printed), 'rendered_source_rows': sum(len(r) for r in rows.values()),
+            'source_attachment_hashes_verified': len(printed),
+            'supporting_attachment_hashes_verified': len(referenced),
+            'total_inventory_attachment_hashes_verified': len(manifest['files']),
+            'rendered_source_rows': sum(len(r) for r in rows.values()),
             'source_pages': source_page_checks}
+
+
+def create_source_zip(out: Path, manifest: dict[str, Any], data: dict[str, bytes]) -> dict[str, Any]:
+    """Write the exact selected files with portable paths and verify every byte."""
+    target = out / 'looplight-source.zip'
+    contents = dict(data)
+    for name in ['source-inventory.json', 'source-inventory.sha256', 'source-inventory.md']:
+        if name in contents:
+            raise ValueError(f'Generated inventory filename collides with selected source: {name}')
+        contents[name] = (out / name).read_bytes()
+    contents['SOURCE-SNAPSHOT-README.txt'] = (
+        'Looplight source snapshot\n\n'
+        'All files selected by source-inventory.json are included at their repository paths.\n'
+        'SHA-256 values cover exact source bytes. Hash-listed support files are included,\n'
+        'including model weights, synthetic datasets, the lockfile and builder images.\n'
+        'Generated artifacts, dependency trees, private credentials and unselected files\n'
+        'are not part of this snapshot. Read README.md for setup and test commands.\n'
+        'The Firebase browser configuration is public and identifies the deployed project.\n'
+        'Use the documented isolated emulators or configure your own Firebase project\n'
+        'for independent testing. Do not deploy to another owner\'s project.\n'
+    ).encode('utf8')
+    with zipfile.ZipFile(target, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+        for name, raw in sorted(contents.items()):
+            path = Path(name)
+            if path.is_absolute() or '..' in path.parts:
+                raise ValueError('Unsafe path in source inventory.')
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.create_system = 3
+            info.external_attr = 0o100644 << 16
+            info.compress_type = zipfile.ZIP_DEFLATED
+            archive.writestr(info, raw, compresslevel=9)
+    with zipfile.ZipFile(target) as archive:
+        assert set(archive.namelist()) == set(contents), 'Source ZIP inventory mismatch.'
+        for name, raw in contents.items():
+            assert sha256(archive.read(name)) == sha256(raw), f'Source ZIP byte mismatch: {name}'
+    return {'file': str(target), 'sha256': sha256(target.read_bytes()),
+            'inventory_files_verified': len(manifest['files']), 'total_entries': len(contents)}
 
 
 def main() -> None:
@@ -394,6 +435,10 @@ def main() -> None:
     printed, referenced = discover(repo, policy)
     if not printed:
         raise SystemExit('No source files matched the allowlist.')
+    included_paths = {p.relative_to(repo).as_posix() for p in printed}
+    missing_required = sorted(set(policy.get('required_printed_files', [])) - included_paths)
+    if missing_required:
+        raise SystemExit('Required release source is absent from the printed inventory: ' + ', '.join(missing_required))
     entries, data = load_sources(repo, printed, referenced)
     font, supported = configure_fonts(args)
     rows, escapes = prepare_rows(entries, data, font, supported)
@@ -416,6 +461,7 @@ def main() -> None:
                           'output': str(out)}, indent=2))
         return
     result = create_pdf(out, manifest, rows, data, font, policy_bytes)
+    result['source_zip'] = create_source_zip(out, manifest, data)
     changed = [e['path'] for e in entries if sha256((repo / e['path']).read_bytes()) != e['sha256']]
     result['source_changed_during_generation'] = changed
     result['snapshot_sha256'] = manifest['snapshot_sha256']

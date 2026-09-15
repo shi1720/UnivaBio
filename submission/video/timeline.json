@@ -1,0 +1,352 @@
+{
+  "duration_seconds": 158.6,
+  "timing_basis": "Decoded audio samples, or supplied alignment within decoded scene audio. No word-count estimates.",
+  "scenes": [
+    {
+      "id": "01",
+      "title": "Home from hospital. One result is still pending.",
+      "start": 0.0,
+      "duration": 10.766666666666667,
+      "frames": 323,
+      "audio_mode": "cues",
+      "caption_count": 2,
+      "media_type": "video"
+    },
+    {
+      "id": "02",
+      "title": "The next step, accounted for.",
+      "start": 10.766666666666667,
+      "duration": 10.3,
+      "frames": 309,
+      "audio_mode": "cues",
+      "caption_count": 2,
+      "media_type": "video"
+    },
+    {
+      "id": "03",
+      "title": "Start with the original instructions.",
+      "start": 21.066666666666666,
+      "duration": 14.233333333333333,
+      "frames": 427,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    },
+    {
+      "id": "04",
+      "title": "Keep the source and the uncertainty.",
+      "start": 35.3,
+      "duration": 12.266666666666667,
+      "frames": 368,
+      "audio_mode": "cues",
+      "caption_count": 2,
+      "media_type": "video"
+    },
+    {
+      "id": "05",
+      "title": "Review what the system missed.",
+      "start": 47.56666666666667,
+      "duration": 12.966666666666667,
+      "frames": 389,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    },
+    {
+      "id": "06",
+      "title": "Name the person tracking the next step.",
+      "start": 60.53333333333333,
+      "duration": 11.666666666666666,
+      "frames": 350,
+      "audio_mode": "cues",
+      "caption_count": 2,
+      "media_type": "video"
+    },
+    {
+      "id": "07",
+      "title": "A result arriving is one step.",
+      "start": 72.2,
+      "duration": 12.366666666666667,
+      "frames": 371,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    },
+    {
+      "id": "08",
+      "title": "Give the follow-up a recorded ending.",
+      "start": 84.56666666666666,
+      "duration": 14.366666666666667,
+      "frames": 431,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    },
+    {
+      "id": "09",
+      "title": "A plan people can bring with them.",
+      "start": 98.93333333333334,
+      "duration": 14.833333333333334,
+      "frames": 445,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    },
+    {
+      "id": "10",
+      "title": "A focused first customer.",
+      "start": 113.76666666666667,
+      "duration": 16.666666666666668,
+      "frames": 500,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "card"
+    },
+    {
+      "id": "11",
+      "title": "A useful prototype, with visible limits.",
+      "start": 130.43333333333334,
+      "duration": 13.466666666666667,
+      "frames": 404,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    },
+    {
+      "id": "12",
+      "title": "Every next step has a recorded ending.",
+      "start": 143.9,
+      "duration": 14.7,
+      "frames": 441,
+      "audio_mode": "cues",
+      "caption_count": 3,
+      "media_type": "video"
+    }
+  ],
+  "cues": [
+    {
+      "id": "01-01",
+      "text": "Anita is home from hospital. Her daughter, Maya, has the discharge notes.",
+      "start": 0.12,
+      "end": 5.17,
+      "lines": "Anita is home from hospital. Her daughter, Maya, has the\ndischarge notes."
+    },
+    {
+      "id": "01-02",
+      "text": "But one result is still pending. Who will make sure somebody follows it through?",
+      "start": 5.23,
+      "end": 10.53,
+      "lines": "But one result is still pending. Who will make sure somebody\nfollows it through?"
+    },
+    {
+      "id": "02-01",
+      "text": "This is Looplight, a follow-up ledger by Shivam Gupta.",
+      "start": 10.886666666666667,
+      "end": 14.886666666666667,
+      "lines": "This is Looplight, a follow-up ledger by Shivam Gupta."
+    },
+    {
+      "id": "02-02",
+      "text": "It turns the next steps already written in discharge notes into a plan people can inspect and track.",
+      "start": 14.946666666666667,
+      "end": 20.846666666666668,
+      "lines": "It turns the next steps already written in discharge notes\ninto a plan people can inspect and track."
+    },
+    {
+      "id": "03-01",
+      "text": "Start with Anita's fictional example. Open the source, then find the open loops.",
+      "start": 21.186666666666667,
+      "end": 26.686666666666667,
+      "lines": "Start with Anita's fictional example. Open the source, then\nfind the open loops."
+    },
+    {
+      "id": "03-02",
+      "text": "A small trained text model and explicit rules suggest follow-up items.",
+      "start": 26.746666666666666,
+      "end": 31.246666666666666,
+      "lines": "A small trained text model and explicit rules suggest\nfollow-up items."
+    },
+    {
+      "id": "03-03",
+      "text": "Nothing becomes a confirmed task until someone checks it.",
+      "start": 31.306666666666665,
+      "end": 35.056666666666665,
+      "lines": "Nothing becomes a confirmed task until someone checks it."
+    },
+    {
+      "id": "04-01",
+      "text": "Open the pending blood culture result. Its exact source sentence stays attached.",
+      "start": 35.419999999999995,
+      "end": 40.519999999999996,
+      "lines": "Open the pending blood culture result. Its exact source\nsentence stays attached."
+    },
+    {
+      "id": "04-02",
+      "text": "Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved.",
+      "start": 40.58,
+      "end": 47.33,
+      "lines": "Missing timing appears as a question for the care team, so\nan unclear instruction stays visibly unresolved."
+    },
+    {
+      "id": "05-01",
+      "text": "A convincing task list can still miss something.",
+      "start": 47.68666666666667,
+      "end": 50.38666666666667,
+      "lines": "A convincing task list can still miss something."
+    },
+    {
+      "id": "05-02",
+      "text": "The original document remains reviewable sentence by sentence, including text the system did not turn into tasks.",
+      "start": 50.44666666666667,
+      "end": 57.29666666666667,
+      "lines": "The original document remains reviewable sentence by\nsentence, including text the system did not turn into tasks."
+    },
+    {
+      "id": "05-03",
+      "text": "Add a missed follow-up from its original sentence.",
+      "start": 57.35666666666667,
+      "end": 60.30666666666667,
+      "lines": "Add a missed follow-up from its original sentence."
+    },
+    {
+      "id": "06-01",
+      "text": "Now name Maya as the person tracking the result, review the details, and confirm the follow-up.",
+      "start": 60.65333333333333,
+      "end": 66.90333333333334,
+      "lines": "Now name Maya as the person tracking the result, review the\ndetails, and confirm the follow-up."
+    },
+    {
+      "id": "06-02",
+      "text": "Maya is tracking the next step. The app does not assign her clinical responsibility.",
+      "start": 66.96333333333334,
+      "end": 71.96333333333334,
+      "lines": "Maya is tracking the next step. The app does not assign her\nclinical responsibility."
+    },
+    {
+      "id": "07-01",
+      "text": "Here is the important distinction. Record that the result has arrived.",
+      "start": 72.32000000000001,
+      "end": 76.37,
+      "lines": "Here is the important distinction. Record that the result\nhas arrived."
+    },
+    {
+      "id": "07-02",
+      "text": "The task stays open because receipt and clinician review are separate steps.",
+      "start": 76.43,
+      "end": 81.23,
+      "lines": "The task stays open because receipt and clinician review are\nseparate steps."
+    },
+    {
+      "id": "07-03",
+      "text": "A file arriving does not tell the family what happens next.",
+      "start": 81.29,
+      "end": 84.34,
+      "lines": "A file arriving does not tell the family what happens next."
+    },
+    {
+      "id": "08-01",
+      "text": "After a conversation with the clinician, record who reviewed the result and what they said.",
+      "start": 84.68666666666667,
+      "end": 89.48666666666666,
+      "lines": "After a conversation with the clinician, record who reviewed\nthe result and what they said."
+    },
+    {
+      "id": "08-02",
+      "text": "Confirm that this is your report, then record completion.",
+      "start": 89.54666666666667,
+      "end": 93.49666666666667,
+      "lines": "Confirm that this is your report, then record completion."
+    },
+    {
+      "id": "08-03",
+      "text": "The history preserves a user-reported ending, not independent proof of clinical review.",
+      "start": 93.55666666666666,
+      "end": 98.70666666666666,
+      "lines": "The history preserves a user-reported ending, not\nindependent proof of clinical review."
+    },
+    {
+      "id": "09-01",
+      "text": "Take the plan to the next conversation. The visit brief keeps follow-ups and source text together.",
+      "start": 99.05333333333334,
+      "end": 105.20333333333333,
+      "lines": "Take the plan to the next conversation. The visit brief\nkeeps follow-ups and source text together."
+    },
+    {
+      "id": "09-02",
+      "text": "Calendar entries use confirmed dates.",
+      "start": 105.26333333333334,
+      "end": 108.21333333333334,
+      "lines": "Calendar entries use confirmed dates."
+    },
+    {
+      "id": "09-03",
+      "text": "In a signed-in care space, create a plan and refresh: the saved plan returns.",
+      "start": 108.27333333333334,
+      "end": 113.52333333333334,
+      "lines": "In a signed-in care space, create a plan and refresh: the\nsaved plan returns."
+    },
+    {
+      "id": "10-01",
+      "text": "The first customer to test is a primary-care or transitions coordinator already chasing discharge follow-up.",
+      "start": 113.88666666666667,
+      "end": 119.83666666666667,
+      "lines": "The first customer to test is a primary-care or transitions\ncoordinator already chasing discharge follow-up."
+    },
+    {
+      "id": "10-02",
+      "text": "The starting price hypothesis is one hundred and forty-nine dollars a month, for one hundred episodes.",
+      "start": 119.89666666666666,
+      "end": 125.39666666666666,
+      "lines": "The starting price hypothesis is one hundred and forty-nine\ndollars a month, for one hundred episodes."
+    },
+    {
+      "id": "10-03",
+      "text": "A supervised pilot must test preparation time and correction burden.",
+      "start": 125.45666666666666,
+      "end": 130.20666666666668,
+      "lines": "A supervised pilot must test preparation time and correction\nburden."
+    },
+    {
+      "id": "11-01",
+      "text": "Looplight is a working prototype evaluated on synthetic examples.",
+      "start": 130.55333333333334,
+      "end": 134.45333333333335,
+      "lines": "Looplight is a working prototype evaluated on synthetic\nexamples."
+    },
+    {
+      "id": "11-02",
+      "text": "It can miss instructions and needs human review.",
+      "start": 134.51333333333335,
+      "end": 137.86333333333334,
+      "lines": "It can miss instructions and needs human review."
+    },
+    {
+      "id": "11-03",
+      "text": "It does not diagnose, interpret a result, or demonstrate a proven health benefit.",
+      "start": 137.92333333333335,
+      "end": 143.67333333333335,
+      "lines": "It does not diagnose, interpret a result, or demonstrate a\nproven health benefit."
+    },
+    {
+      "id": "12-01",
+      "text": "Shivam Gupta built Looplight with AI-assisted development.",
+      "start": 144.02,
+      "end": 148.22,
+      "lines": "Shivam Gupta built Looplight with AI-assisted development."
+    },
+    {
+      "id": "12-02",
+      "text": "Every next step has a source, a person tracking it, and a recorded ending.",
+      "start": 148.28,
+      "end": 153.08,
+      "lines": "Every next step has a source, a person tracking it, and a\nrecorded ending."
+    },
+    {
+      "id": "12-03",
+      "text": "That is the work Looplight helps make visible.",
+      "start": 153.14000000000001,
+      "end": 156.59,
+      "lines": "That is the work Looplight helps make visible."
+    }
+  ]
+}

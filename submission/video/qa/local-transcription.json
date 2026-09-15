@@ -1,0 +1,264 @@
+{
+  "model": "faster-whisper base.en, int8 CPU",
+  "audio_processed_locally": true,
+  "results": [
+    {
+      "id": "01-01",
+      "expected": "Anita is home from hospital. Her daughter, Maya, has the discharge notes.",
+      "transcribed": "Anita is home from hospital. Her daughter Maya has the discharge notes.",
+      "normalized_match": true,
+      "average_logprob": -0.2801930764142205,
+      "audio_sha256": "a36f42b657275765fe0d0dc6f43ab3f0a9f524d45de9c4a07189aa727321707f"
+    },
+    {
+      "id": "01-02",
+      "expected": "But one result is still pending. Who will make sure somebody follows it through?",
+      "transcribed": "But one result is still pending. Who will make sure somebody follows it through?",
+      "normalized_match": true,
+      "average_logprob": -0.27441107091449557,
+      "audio_sha256": "eee6ff1d7e1326218bc9ebc3c13e7dfe9de6ac0711b59f42ff4e116df104a7c3"
+    },
+    {
+      "id": "02-01",
+      "expected": "This is Looplight, a follow-up ledger by Shivam Gupta.",
+      "transcribed": "This is Looplight, a follow-up ledger by Shivam Gupta.",
+      "normalized_match": true,
+      "average_logprob": -0.2717500180006027,
+      "audio_sha256": "9f81a444d7c1fce094203f56c45182d4dd9001a06e51bcb505c423bbfc36638c"
+    },
+    {
+      "id": "02-02",
+      "expected": "It turns the next steps already written in discharge notes into a plan people can inspect and track.",
+      "transcribed": "It turns the next steps already written in discharge notes into a plan people can inspect and track.",
+      "normalized_match": true,
+      "average_logprob": -0.245513391494751,
+      "audio_sha256": "8499c461a33df1af384b392bd545eb4d9bd10ed1a7de689119fb5fa730e186e6"
+    },
+    {
+      "id": "03-01",
+      "expected": "Start with Anita's fictional example. Open the source, then find the open loops.",
+      "transcribed": "Start with Anita's fictional example. Open the source, then find the open loops.",
+      "normalized_match": true,
+      "average_logprob": -0.30805750042200086,
+      "audio_sha256": "51e6968621cb353cf71f3dbb4480e83887d2605459f85c76b85cb431bf5bc74d"
+    },
+    {
+      "id": "03-02",
+      "expected": "A small trained text model and explicit rules suggest follow-up items.",
+      "transcribed": "A small-trained text model and explicit rules suggest follow-up items.",
+      "normalized_match": true,
+      "average_logprob": -0.2933800336387422,
+      "audio_sha256": "4455dac4f2402ef2139b11a96f37a3c3e4c7638ee673aafa51a16cadd36179e0"
+    },
+    {
+      "id": "03-03",
+      "expected": "Nothing becomes a confirmed task until someone checks it.",
+      "transcribed": "Nothing becomes a confirmed task until someone checks it.",
+      "normalized_match": true,
+      "average_logprob": -0.2863011635266818,
+      "audio_sha256": "5612d14543cb5b2bac167085b91e0b79a3588733e7971c5236803954d366d26f"
+    },
+    {
+      "id": "04-01",
+      "expected": "Open the pending blood culture result. Its exact source sentence stays attached.",
+      "transcribed": "Open the pending blood culture result. Its exact source sentence stays attached.",
+      "normalized_match": true,
+      "average_logprob": -0.2970680029768693,
+      "audio_sha256": "ea5cd4afc85656064b92da3672c23c54de3d48a9a2ed47b46987053517689289"
+    },
+    {
+      "id": "04-02",
+      "expected": "Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved.",
+      "transcribed": "Missing timing appears as a question for the care team, so an unclear instruction stays visibly unresolved.",
+      "normalized_match": true,
+      "average_logprob": -0.2641676341493924,
+      "audio_sha256": "a25e828a4def7aace055556f91c5a5921f958ec2703a1e3cf02ff6fc9f32aa77"
+    },
+    {
+      "id": "05-01",
+      "expected": "A convincing task list can still miss something.",
+      "transcribed": "A convincing task list can still miss something.",
+      "normalized_match": true,
+      "average_logprob": -0.2598574484388034,
+      "audio_sha256": "02477f5a7eb5177a3b1bbba3a9f1e374908b28935dd519dc6c6b0f585116abf2"
+    },
+    {
+      "id": "05-02",
+      "expected": "The original document remains reviewable sentence by sentence, including text the system did not turn into tasks.",
+      "transcribed": "The original document remains reviewable, sentence-by-sentence, including text, the system did not turn into tasks.",
+      "normalized_match": true,
+      "average_logprob": -0.2477728607399123,
+      "audio_sha256": "7c04285078d4819c5f012e704bcc7a881d216fdfd1b83d12c3821eb26537ebdc"
+    },
+    {
+      "id": "05-03",
+      "expected": "Add a missed follow-up from its original sentence.",
+      "transcribed": "Add a missed follow-up from its original sentence.",
+      "normalized_match": true,
+      "average_logprob": -0.3110688626766205,
+      "audio_sha256": "ea4f1079882c5b50b7b93c63de33337aa6b45eff5835be997fb055dc7160b4c0"
+    },
+    {
+      "id": "06-01",
+      "expected": "Now name Maya as the person tracking the result, review the details, and confirm the follow-up.",
+      "transcribed": "Now, name Maya as the person tracking the result, review the details, and confirm the follow-up.",
+      "normalized_match": true,
+      "average_logprob": -0.25054598808288575,
+      "audio_sha256": "e02e3ef74a7308bc7ebdd72d41046cdc0482d5b389f662e28c3cbab60252bebd"
+    },
+    {
+      "id": "06-02",
+      "expected": "Maya is tracking the next step. The app does not assign her clinical responsibility.",
+      "transcribed": "Maya is tracking the next step. The app does not assign her clinical responsibility.",
+      "normalized_match": true,
+      "average_logprob": -0.2344026593934922,
+      "audio_sha256": "d13a2f66dcbf4fb9c594b7ed1d44e9c7a53e9e85e7758211440d4631f4c462af"
+    },
+    {
+      "id": "07-01",
+      "expected": "Here is the important distinction. Record that the result has arrived.",
+      "transcribed": "Here is the important distinction. Record that the result has arrived.",
+      "normalized_match": true,
+      "average_logprob": -0.2795136206679874,
+      "audio_sha256": "9c8a820a53de10aaa62f4b06415c0ab714eff9dbce34f6118cf24df5af1ccadc"
+    },
+    {
+      "id": "07-02",
+      "expected": "The task stays open because receipt and clinician review are separate steps.",
+      "transcribed": "The task stays open because receipt and clinician review are separate steps.",
+      "normalized_match": true,
+      "average_logprob": -0.20596878668841193,
+      "audio_sha256": "a473882902b68573fa95575cbdbfe13895ed244fc5e424bd4e837de3859b8010"
+    },
+    {
+      "id": "07-03",
+      "expected": "A file arriving does not tell the family what happens next.",
+      "transcribed": "A file arriving does not tell the family what happens next.",
+      "normalized_match": true,
+      "average_logprob": -0.23855090936024984,
+      "audio_sha256": "cd575deb52e12a1ac1d93bcb7e4ab7e921ea474c7ec87b576c9966b03536ebdc"
+    },
+    {
+      "id": "08-01",
+      "expected": "After a conversation with the clinician, record who reviewed the result and what they said.",
+      "transcribed": "After a conversation with the clinician, record who reviewed the result and what they said.",
+      "normalized_match": true,
+      "average_logprob": -0.16488823152723767,
+      "audio_sha256": "e457deb1b3b522c46575bafb58669a767ec03731446eb545008f4a0dbb3b7001"
+    },
+    {
+      "id": "08-02",
+      "expected": "Confirm that this is your report, then record completion.",
+      "transcribed": "Confirm that this is your report, then record completion.",
+      "normalized_match": true,
+      "average_logprob": -0.30508450269699094,
+      "audio_sha256": "085275e078063b492062e9328f5314c3fca9f5acf054ae1ebe710cbe49596a3d"
+    },
+    {
+      "id": "08-03",
+      "expected": "The history preserves a user-reported ending, not independent proof of clinical review.",
+      "transcribed": "The history preserves a user-reported ending, not independent proof of clinical review.",
+      "normalized_match": true,
+      "average_logprob": -0.18916224021660655,
+      "audio_sha256": "08fa89af8be4cd055b0b6f7e3aa0040b1359cf23ee9c3cc5c5cdf03efa2833d1"
+    },
+    {
+      "id": "09-01",
+      "expected": "Take the plan to the next conversation. The visit brief keeps follow-ups and source text together.",
+      "transcribed": "Take the plan to the next conversation. The visit brief keeps follow-ups and source text together.",
+      "normalized_match": true,
+      "average_logprob": -0.2596203517913818,
+      "audio_sha256": "f9eb9e5d9f354366f7463c29508f4360898bbb1d01166353563d017122ed03a0"
+    },
+    {
+      "id": "09-02",
+      "expected": "Calendar entries use confirmed dates.",
+      "transcribed": "Calendar entries use confirmed dates.",
+      "normalized_match": true,
+      "average_logprob": -0.41115837626987034,
+      "audio_sha256": "a334b06f280026d322a20d3cd2a18d1b12043feb5ef1ea45e3fa3023f895cb33"
+    },
+    {
+      "id": "09-03",
+      "expected": "In a signed-in care space, create a plan and refresh: the saved plan returns.",
+      "transcribed": "In a signed-in care space, create a plan and refresh. The saved plan returns. . . . . . . .",
+      "normalized_match": true,
+      "average_logprob": -0.461437382882344,
+      "audio_sha256": "9cc2001aad461993eda9c09dbf75a0f3b19581466f2e98cb6d09ad27ad3225a1"
+    },
+    {
+      "id": "10-01",
+      "expected": "The first customer to test is a primary-care or transitions coordinator already chasing discharge follow-up.",
+      "transcribed": "The first customer to test is a primary care or transitions coordinator, already chasing discharge follow-up.",
+      "normalized_match": true,
+      "average_logprob": -0.2732814187588899,
+      "audio_sha256": "73945bc8a087da140dc28c0d8275882e12b1d00c1dde00d09b3f13209868da14"
+    },
+    {
+      "id": "10-02",
+      "expected": "The starting price hypothesis is one hundred and forty-nine dollars a month, for one hundred episodes.",
+      "transcribed": "The starting price hypothesis is $149 a month for 100 episodes.",
+      "normalized_match": false,
+      "average_logprob": -0.2297102753072977,
+      "audio_sha256": "83ee358d8d3c146fea9bdff4da4216134f8c4cc8fea6509a1e51c0e53167867d"
+    },
+    {
+      "id": "10-03",
+      "expected": "A supervised pilot must test preparation time and correction burden.",
+      "transcribed": "A supervised pilot must test preparation time and correction burden.",
+      "normalized_match": true,
+      "average_logprob": -0.2940167316368648,
+      "audio_sha256": "9602cfebfc6cb838606bb1542756484e4edc79c4eb9dc5ddd798b85fbbc199d8"
+    },
+    {
+      "id": "11-01",
+      "expected": "Looplight is a working prototype evaluated on synthetic examples.",
+      "transcribed": "Looplight is a working prototype evaluated on synthetic examples.",
+      "normalized_match": true,
+      "average_logprob": -0.3776585651295526,
+      "audio_sha256": "1ce25e26fb1d32cd41ee6071df9b9a4a3b001fe78aa165a78a4e1d629f05c1ce"
+    },
+    {
+      "id": "11-02",
+      "expected": "It can miss instructions and needs human review.",
+      "transcribed": "It can miss instructions and needs human review.",
+      "normalized_match": true,
+      "average_logprob": -0.3104691778620084,
+      "audio_sha256": "ee075f95a47dc46dde3adad276587316804629bc3b53f630d640144877e74879"
+    },
+    {
+      "id": "11-03",
+      "expected": "It does not diagnose, interpret a result, or demonstrate a proven health benefit.",
+      "transcribed": "It does not diagnose, interpret a result, or demonstrate a proven health benefit.",
+      "normalized_match": true,
+      "average_logprob": -0.2628170973376224,
+      "audio_sha256": "6980fc74eacfcd4887fc17ae007102b48c6256f97e7407f3b08f5ab188bc0d75"
+    },
+    {
+      "id": "12-01",
+      "expected": "Shivam Gupta built Looplight with AI-assisted development.",
+      "transcribed": "Shivam Gupta built Looplight with AI-assisted development.",
+      "normalized_match": true,
+      "average_logprob": -0.44892413218816124,
+      "audio_sha256": "f7765de89802399603c151c0e882b23fe719ca0c10f0a6203cf73e2272ea3ff0"
+    },
+    {
+      "id": "12-02",
+      "expected": "Every next step has a source, a person tracking it, and a recorded ending.",
+      "transcribed": "Every next step has a source, a person tracking it, and a recorded ending.",
+      "normalized_match": true,
+      "average_logprob": -0.21984272450208664,
+      "audio_sha256": "b4837f1492cb0488c4497fb7cd95002de7bdad4b5bbc5b9285b2ce0fc871ad48"
+    },
+    {
+      "id": "12-03",
+      "expected": "That is the work Looplight helps make visible.",
+      "transcribed": "That is the work loop light helps make visible.",
+      "normalized_match": true,
+      "average_logprob": -0.3718593395673312,
+      "audio_sha256": "2b41354aee7afb608e68b3ed22595a97d309ca16970121e4f3983c1d85ed798e"
+    }
+  ],
+  "complete": true,
+  "limit": "ASR is a fallible cross-check, not auditory review."
+}
