@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { Buffer } from "node:buffer";
 import { randomBytes, randomUUID, createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
@@ -113,7 +114,7 @@ const accounts = [
     uid: "",
     signupAttempted: false,
     email: `looplight-e2e-${runId}-a@example.invalid`,
-    password: `A!7${randomBytes(24).toString("base64url")}`,
+    password: `A!7${Buffer.from(randomBytes(24)).toString("base64url")}`,
     ids: new Set<string>(),
   },
   {
@@ -123,7 +124,7 @@ const accounts = [
     uid: "",
     signupAttempted: false,
     email: `looplight-e2e-${runId}-b@example.invalid`,
-    password: `B!7${randomBytes(24).toString("base64url")}`,
+    password: `B!7${Buffer.from(randomBytes(24)).toString("base64url")}`,
     ids: new Set<string>(),
   },
 ];
